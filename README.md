@@ -1,2 +1,0 @@
-# DocumentacionDesarrolladores
-Documentación para desarrolladores
