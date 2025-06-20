@@ -137,7 +137,7 @@ Pasos manuales:
 | FullStack   | Rodrigo Rángel Martínez           | rrangel@elektron.com.mx    |
 | FullStack   | José A. Eduardo Navarro Carranza  | janavarro@elektron.com.mx  |
 | FullStack   | Samuel Valles Sánchez             | ssanchez@elektron.com.mx   |
-| FullStack   | Erick Adrián López Rojas          | @elektron.com.mx           |
+| FullStack   | Erick Adrián López Rojas          | erojas@elektron.com.mx     |
 
 ---
 
