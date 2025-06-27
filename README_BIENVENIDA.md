@@ -50,50 +50,33 @@ Bienvenido(a) al equipo 👋. Este documento te guiará para que puedas configur
 - Arquitectura:
   - Clean Architecture / Repositorio / Servicios
 - Principales carpetas:
+
+---
   📁 Estructura del Proyecto
-Raíz del proyecto
-Properties/
-⚙️ Configuraciones de compilación
-
-Core/
-
-Data/
-  🗄️ Configuración de DbContext y conexión a base de datos
-
-Modules/
-
-  Modulo/ (reemplaza con nombre real, ej. Usuarios/)
-
+  Raíz del proyecto
+  Properties/
+    ⚙️ Configuraciones de compilación
+  Core/
+  Data/
+    🗄️ Configuración de DbContext y conexión a base de datos
+  Modules/
+    Modulo/ (reemplaza con nombre real, ej. Usuarios/)
     Application/
     🧠 Lógica de negocio
-
     DTOs/
-
       Requests/ 📥 Objetos de entrada
-
       Responses/ 📤 Objetos de salida
-
     Interfaces/ 📑 Contratos de servicios
-
     Services/ 🛠️ Implementaciones de servicios
-
     Controller/ 🎮 Controladores del módulo
-
     Domain/ 🧬 Lógica de dominio
-
       Entities/ 🧱 Entidades (ej. Folio, Eltp)
-
       Interfaces/ 🧾 Contratos de repositorios
-
     Infrastructure/ 🏗️ Acceso a datos
-
       Repositories/ 🗃️ Repositorios (EF Core, SQL)
-
-Shared/ ♻️ Funciones y utilidades compartidas
-
-appsettings.json ⚙️ Configuración global (JWT, conexiones, etc.)
-
-Program.cs 🚀 Configuración de servicios y middleware
+  Shared/ ♻️ Funciones y utilidades compartidas
+  appsettings.json ⚙️ Configuración global (JWT, conexiones, etc.)
+  Program.cs 🚀 Configuración de servicios y middleware
 
 ---
 
