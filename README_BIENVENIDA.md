@@ -51,7 +51,7 @@ Bienvenido(a) al equipo 👋. Este documento te guiará para que puedas configur
   - Clean Architecture / Repositorio / Servicios
 - Principales carpetas:
 
----
+```bash
   📁 Estructura del Proyecto
   Raíz del proyecto
   Properties/
@@ -77,7 +77,7 @@ Bienvenido(a) al equipo 👋. Este documento te guiará para que puedas configur
   Shared/ ♻️ Funciones y utilidades compartidas
   appsettings.json ⚙️ Configuración global (JWT, conexiones, etc.)
   Program.cs 🚀 Configuración de servicios y middleware
-
+```
 ---
 
 ## 🛠️ Requisitos Técnicos
