@@ -15,20 +15,14 @@ Bienvenido(a) al equipo 👋. Este documento te guiará para que puedas configur
   - Angular Material
   - AG Grid
 - Organización:
- 
 
-### ⚙️ Backend (.NET 8)
-- Arquitectura:
-  - Clean Architecture / Repositorio / Servicios
-- Organización:
+ ```bash
 
-```bash
 📁 Estructura del Proyecto Angular
   src/
   app/ Código principal de la aplicación. 
 
-  core/
-    🌐 Elementos globales reutilizables en toda la app.
+  core/ 🌐 Elementos globales reutilizables en toda la app.
 
     auth/ 🔐 Autenticación (guards, login, tokens)
 
@@ -38,7 +32,7 @@ Bienvenido(a) al equipo 👋. Este documento te guiará para que puedas configur
 
   modules/  📦 Módulos por funcionalidad.
 
-    Modulo/ Módulo ejemplo Traspasos
+    Modulo/ reemplaza con nombre real, ej. Usuarios/
 
       components/ 🧩 Componentes visuales del módulo
 
@@ -54,8 +48,7 @@ Bienvenido(a) al equipo 👋. Este documento te guiará para que puedas configur
 
     traspasos-routing.module.ts 🧭 Rutas del módulo
 
-  shared/
-  ♻️ Componentes, pipes y utilidades compartidas.
+  shared/ ♻️ Componentes, pipes y utilidades compartidas.
 
   ui/ 🖼️ Componentes de interfaz comunes (botones, inputs, etc.)
 
@@ -66,35 +59,59 @@ Bienvenido(a) al equipo 👋. Este documento te guiará para que puedas configur
   environments/ 🌍 Configuraciones de entorno (dev, prod, etc.)
 
   index.html 🧱 HTML principal de la aplicación
-  
+
 ```
+
+### ⚙️ Backend (.NET 8)
+- Arquitectura:
+  - Clean Architecture / Repositorio / Servicios
+- Organización:
 
 ```bash
   📁 Estructura del Proyecto
+
   Raíz del proyecto
-  Properties/
-    ⚙️ Configuraciones de compilación
+
+  Properties/ ⚙️ Configuraciones de compilación
+
   Core/
-  Data/
-    🗄️ Configuración de DbContext y conexión a base de datos
-  Modules/
+
+    Data/ 🗄️ Configuración de DbContext y conexión a base de datos
+
+  Modules/ 
+
     Modulo/ (reemplaza con nombre real, ej. Usuarios/)
-    Application/
-    🧠 Lógica de negocio
-    DTOs/
-      Requests/ 📥 Objetos de entrada
-      Responses/ 📤 Objetos de salida
-    Interfaces/ 📑 Contratos de servicios
-    Services/ 🛠️ Implementaciones de servicios
-    Controller/ 🎮 Controladores del módulo
-    Domain/ 🧬 Lógica de dominio
-      Entities/ 🧱 Entidades (ej. Folio, Eltp)
-      Interfaces/ 🧾 Contratos de repositorios
-    Infrastructure/ 🏗️ Acceso a datos
-      Repositories/ 🗃️ Repositorios (EF Core, SQL)
+
+      Application/ 🧠 Lógica de negocio
+
+        DTOs/
+
+          Requests/ 📥 Objetos de entrada
+
+          Responses/ 📤 Objetos de salida
+
+        Interfaces/ 📑 Contratos de servicios
+
+        Services/ 🛠️ Implementaciones de servicios
+
+      Controller/ 🎮 Controladores del módulo
+
+      Domain/ 🧬 Lógica de dominio
+
+        Entities/ 🧱 Entidades (ej. Folio, Eltp)
+
+        Interfaces/ 🧾 Contratos de repositorios
+
+      Infrastructure/ 🏗️ Acceso a datos
+
+        Repositories/ 🗃️ Repositorios (EF Core, SQL)
+
   Shared/ ♻️ Funciones y utilidades compartidas
+
   appsettings.json ⚙️ Configuración global (JWT, conexiones, etc.)
+
   Program.cs 🚀 Configuración de servicios y middleware
+  
 ```
 ---
 
