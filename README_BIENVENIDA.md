@@ -101,7 +101,7 @@ Bienvenido(a) al equipo 👋. Este documento te guiará para que puedas configur
 
 ### Frontend
 ```bash
-git clone `repositorio
+git clone repositorio
 npm install --force
 ng serve
 ```
@@ -110,7 +110,7 @@ ng serve
 
 ### Backend
 ```bash
-git clone `repositorio
+git clone repositorio
 dotnet restore
 dotnet run
 ```
@@ -124,9 +124,9 @@ dotnet run
 - Branch principal: `master`
 - Branch para testing: `qa`
 - Para cada nueva funcionalidad se crea una nueva rama a partir de qa: 
-  -`feature/nombre` nuevo modulo
-  -`release/nombre` modificación o añadir nuevas funciones a un modulo
-  -`bugfix/nombre` corrección de error
+  - `feature/nombre` nuevo modulo
+  - `release/nombre` modificación o añadir nuevas funciones a un modulo
+  - `bugfix/nombre` corrección de error
 - Commits: `Que sean cortos pero que se entienda lo que se realizo`:
 - Pull Requests:
   - Validación por al menos 1 miembro
@@ -192,9 +192,9 @@ Pasos manuales:
   - Estilo tablas: `La configuración ya esta en styles.css y es global`
   - Debes basarte en el componente `TraspasosAlmacenComponent` para obtener los estilos necesarios para las ventanas de consulta.
   - Formularios realizados con componentes de angular material
-    matform-field
-      apariencia `outline`
-      class `extra-small`
+    - matform-field
+      - apariencia `outline`
+      - class `extra-small`
   - Botones de angular material
 
 ## 👥 Equipo
