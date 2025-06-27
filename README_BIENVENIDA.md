@@ -21,97 +21,57 @@ Bienvenido(a) al equipo 👋. Este documento te guiará para que puedas configur
 📁 Estructura del Proyecto Angular
   src/
   app/ Código principal de la aplicación. 
-
   core/ 🌐 Elementos globales reutilizables en toda la app.
-
     auth/ 🔐 Autenticación (guards, login, tokens)
-
     interceptors/ 🔄 Interceptores HTTP (JWT, errores)
-
     utils/ 🧰 Funciones y helpers comunes
-
   modules/  📦 Módulos por funcionalidad.
-
     Modulo/ reemplaza con nombre real, ej. Usuarios/
-
       components/ 🧩 Componentes visuales del módulo
-
       pages/ 📄 Vistas principales del módulo 
-
       services/ ⚙️ Servicios del módulo
-
       models/ 🧾 Modelos de datos del módulo
-
         requests/ 📥 Interfaces de entrada (request)
-
         responses/ 📤 Interfaces de salida (response)
-
     traspasos-routing.module.ts 🧭 Rutas del módulo
-
   shared/ ♻️ Componentes, pipes y utilidades compartidas.
-
   ui/ 🖼️ Componentes de interfaz comunes (botones, inputs, etc.)
-
     pipes/ 🔣 Pipes y directivas reutilizables
-
     assets/🎨 Recursos estáticos: estilos globales, íconos, imágenes, etc.
-
   environments/ 🌍 Configuraciones de entorno (dev, prod, etc.)
-
   index.html 🧱 HTML principal de la aplicación
 
 ```
 
 ### ⚙️ Backend (.NET 8)
 - Arquitectura:
-  - Clean Architecture / Repositorio / Servicios
+  - Controladores / Servicios / Repositorio
 - Organización:
 
 ```bash
   📁 Estructura del Proyecto
-
   Raíz del proyecto
-
   Properties/ ⚙️ Configuraciones de compilación
-
   Core/
-
     Data/ 🗄️ Configuración de DbContext y conexión a base de datos
-
   Modules/ 
-
     Modulo/ (reemplaza con nombre real, ej. Usuarios/)
-
       Application/ 🧠 Lógica de negocio
-
         DTOs/
-
           Requests/ 📥 Objetos de entrada
-
           Responses/ 📤 Objetos de salida
-
         Interfaces/ 📑 Contratos de servicios
-
         Services/ 🛠️ Implementaciones de servicios
-
       Controller/ 🎮 Controladores del módulo
-
       Domain/ 🧬 Lógica de dominio
-
         Entities/ 🧱 Entidades (ej. Folio, Eltp)
-
         Interfaces/ 🧾 Contratos de repositorios
-
       Infrastructure/ 🏗️ Acceso a datos
-
         Repositories/ 🗃️ Repositorios (EF Core, SQL)
-
   Shared/ ♻️ Funciones y utilidades compartidas
-
   appsettings.json ⚙️ Configuración global (JWT, conexiones, etc.)
-
   Program.cs 🚀 Configuración de servicios y middleware
-  
+
 ```
 ---
 
