@@ -15,41 +15,59 @@ Bienvenido(a) al equipo 👋. Este documento te guiará para que puedas configur
   - Angular Material
   - AG Grid
 - Organización:
- src/
-├── app/
-│   ├── core/                     # Servicios y elementos globales
-│   │   ├── auth/                 # Autenticación (guardias, login, tokens)
-│   │   ├── interceptors/         # Interceptores HTTP (JWT, errores)
-│   │   └── utils/                # Funciones y helpers reutilizables
-│   │
-│   ├── modules/                  # Módulos organizados por funcionalidad
-│   │   └── traspasos/
-│   │       ├── components/       # Componentes visuales del módulo
-│   │       │   ├── traspaso-list/   # Lista paginada
-│   │       │   └── traspaso-form/   # Formulario de edición
-│   │       ├── pages/            # Vistas principales
-│   │       │   ├── list/         # Página de listado
-│   │       │   └── detail/       # Página de detalle
-│   │       ├── services/         # Servicios del módulo
-│   │       │   └── traspaso.service.ts
-│   │       ├── models/           # Modelos de datos
-│   │       │   ├── requests/     # Interfaces para requests
-│   │       │   └── responses/    # Interfaces para responses
-│   │       └── traspasos-routing.module.ts  # Rutas del módulo
-│   │
-│   ├── shared/                   # Componentes y utilidades compartidas
-│   │   ├── ui/                   # Componentes de interfaz comunes
-│   │   └── pipes/                # Pipes y directivas reutilizables
-│   │
-│   └── assets/                   # Estilos, íconos, imágenes, etc.
-│
-├── environments/                 # Configuraciones por entorno (dev, prod)
-└── index.html                    # HTML principal
+ 
 
 ### ⚙️ Backend (.NET 8)
 - Arquitectura:
   - Clean Architecture / Repositorio / Servicios
-- Principales carpetas:
+- Organización:
+
+```bash
+📁 Estructura del Proyecto Angular
+  src/
+  app/ Código principal de la aplicación. 
+
+  core/
+    🌐 Elementos globales reutilizables en toda la app.
+
+    auth/ 🔐 Autenticación (guards, login, tokens)
+
+    interceptors/ 🔄 Interceptores HTTP (JWT, errores)
+
+    utils/ 🧰 Funciones y helpers comunes
+
+  modules/  📦 Módulos por funcionalidad.
+
+    Modulo/ Módulo ejemplo Traspasos
+
+      components/ 🧩 Componentes visuales del módulo
+
+      pages/ 📄 Vistas principales del módulo 
+
+      services/ ⚙️ Servicios del módulo
+
+      models/ 🧾 Modelos de datos del módulo
+
+        requests/ 📥 Interfaces de entrada (request)
+
+        responses/ 📤 Interfaces de salida (response)
+
+    traspasos-routing.module.ts 🧭 Rutas del módulo
+
+  shared/
+  ♻️ Componentes, pipes y utilidades compartidas.
+
+  ui/ 🖼️ Componentes de interfaz comunes (botones, inputs, etc.)
+
+    pipes/ 🔣 Pipes y directivas reutilizables
+
+    assets/🎨 Recursos estáticos: estilos globales, íconos, imágenes, etc.
+
+  environments/ 🌍 Configuraciones de entorno (dev, prod, etc.)
+
+  index.html 🧱 HTML principal de la aplicación
+  
+```
 
 ```bash
   📁 Estructura del Proyecto
@@ -229,7 +247,6 @@ Pasos manuales:
 
 - [ ] Clonar el repositorio
 - [ ] Instalar dependencias (frontend y backend)
-- [ ] Configurar variables de entorno
 - [ ] Ejecutar las apps localmente
 
 ---
