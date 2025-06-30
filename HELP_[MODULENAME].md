@@ -6,6 +6,13 @@
 ## 📝 Descripción
 Añadir descripción breve o detallada del módulo
 
+## 🔐 Políticas Generales
+    - Primer política general
+    - Segunda política general
+    - Tercer política general
+    - Cuarta política general
+
+
 ## 🔐 Seguridad
 |Tipo | Elemento       | Descripción                       | Rol permitido              |
 |-----|----------------|-----------------------------------|----------------------------|
