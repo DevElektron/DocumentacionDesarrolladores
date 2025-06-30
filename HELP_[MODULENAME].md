@@ -13,18 +13,18 @@ Añadir descripción breve o detallada del módulo
 
 # 🧪 Casos de prueba
 - Capturar traspaso
-    - ## 🛡️ Validaciones
-        [ ] No se puede cambier folio, fecha y almacén de salida
-        [ ] Se toma el almacen del usuario, de tener almacen 0, el usuario debe elegir el almacen de salida.
-        [ ] No se puede capturar un traspaso con un folio ya existente
-        [ ] No se puede elegir el mismo almacén de salida para el de destino
-        [ ] Articulo debe tener existencia 
+    - ### 🛡️ Validaciones
+        - [ ] No se puede cambier folio, fecha y almacén de salida
+        - [ ] Se toma el almacen del usuario, de tener almacen 0, el usuario debe elegir el almacen de salida.
+        - [ ] No se puede capturar un traspaso con un folio ya existente
+        - [ ] No se puede elegir el mismo almacén de salida para el de destino
+        - [ ] Articulo debe tener existencia 
 - Capturar traspaso con artículo de tramos
-    - ## 🛡️ Validaciones
-        [ ] No se puede cambier folio, fecha y almacén de salida
-        [ ] No se puede capturar un traspaso con un folio ya existente
-        [ ] No se puede elegir el mismo almacén de salida para el de destino
-        [ ] Articulo debe tener existencia  
+    - ### 🛡️ Validaciones
+        - [ ] No se puede cambier folio, fecha y almacén de salida
+        - [ ] No se puede capturar un traspaso con un folio ya existente
+        - [ ] No se puede elegir el mismo almacén de salida para el de destino
+        - [ ] Articulo debe tener existencia  
 
 ## 🛡️ Validaciones
 - RFC válido
