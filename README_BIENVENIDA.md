@@ -33,7 +33,8 @@ Bienvenido(a) al equipo 👋. Este documento te guiará para que puedas configur
       models/ 🧾 Modelos de datos del módulo
         requests/ 📥 Interfaces de entrada (request)
         responses/ 📤 Interfaces de salida (response)
-    traspasos-routing.module.ts 🧭 Rutas del módulo
+    routing.module.ts 🧭 Rutas del módulo
+    archivo.md Será la documentación del modulo, funcionalidad, excepciones, casos de uso.
   shared/ ♻️ Componentes, pipes y utilidades compartidas.
   ui/ 🖼️ Componentes de interfaz comunes (botones, inputs, etc.)
     pipes/ 🔣 Pipes y directivas reutilizables
