@@ -49,6 +49,6 @@
 ## 📎 Observaciones adicionales
 - Observaciones para.
 
-## > 🗓️ **Fecha de última modificación:** 2025-06-30
+> 🗓️ **Fecha de última modificación:** 2025-06-30
 > 👤 **Ignacio Carranza**
 > 🏷️ **Versión:** 2
