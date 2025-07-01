@@ -56,6 +56,7 @@
 # Comunicaciones
 |Dir|Fecha       |Firma|Comentario                    |
 |---|------------|-----|------------------------------|
+|Capturar cliente|
 |⏪| 2025/06/15 | GP |En la inserción permite guardar sin código postal capturado|
 |⏩| 2025/06/20 | IC |Corregido|
 |⏪| 2025/06/22 | GP |No es cierto|
