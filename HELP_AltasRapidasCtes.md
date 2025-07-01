@@ -18,14 +18,11 @@
 - El número de cliente, debe ser derivado de tabla de control de clientes noctuna, en donde se analiza en la noche y se asignan lugares disponibles de forma intermedia en catálogo.
 - La zona de cobranza debe coincidir con el almacén del vendedor relacionado.
 
----
 ## 🧪 Casos de Prueba
 
-### 1. Capturar cliente
-
+### Capturar cliente
 #### 💼 Operación
 - [ ] No se permite capturar un RFC que ya exista en tabla.
-
 #### 🛡️ Validaciones
 - [ ] Debe capturarse el mínimo de información, requiriendo los campos:
     - Nombre cte. SAT
@@ -34,10 +31,8 @@
     - Régimen fiscal
     - Uso CFDi
 - [ ] Se debe seleccionar la clasificación de cliente Schneider. (Default: Ninguno)
----
 
-### 2. Modificar cliente
-
+### Modificar cliente
 #### 🛡️ Validaciones
 - [ ] No se permite modificar el número de cliente
 - [ ] Si existe el bloqueo de datos fiscales, no se deben liberar los campos:
@@ -46,18 +41,14 @@
     - RFC
     - Régimen fiscal
     - Uso CFDi
----
 
-### 3. Botones ABC de contactos
-
+### Botones ABC de contactos
 #### 🛡️ Validaciones
 - [ ] El nombre del contacto es requerido
----
 
 ## 📎 Observaciones adicionales
-- Nanay.
+- Observaciones para.
 
----
-> 🗓️ **Fecha de última modificación:** 2025-06-30
+## > 🗓️ **Fecha de última modificación:** 2025-06-30
 > 👤 **Ignacio Carranza**
 > 🏷️ **Versión:** 2
