@@ -6,7 +6,6 @@
 Éste módulo permite la captura de información de nuevos clientes desde mostrador. También posibilita la consulta y modificación de los datos de facturación del cliente para correcciones provistas del cliente de forma presencial.
 
 ## 🔐 Seguridad
-
 | Tipo UI | Elemento          | Descripción                    | Rol permitido |
 |---------|-------------------|--------------------------------|----------------|
 | Botón   | Añadir contacto   | Permite añadir un contacto especial     | Ventas       |
@@ -47,8 +46,8 @@
 - [ ] El nombre del contacto es requerido
 
 ## 📎 Observaciones adicionales
-- Observaciones para.
+- Observaciones adicionales, modos de prueba o ambientes específicos de uso.
 
 > 🗓️ **Fecha de última modificación:** 2025-06-30
 > 👤 **Ignacio Carranza**
-> 🏷️ **Versión:** 2
+> 🏷️ **Versión:** 3
