@@ -1,6 +1,6 @@
 # 📦 Módulo: Altas Rápidas de Clientes...
 #### 📁 **Código:** `Modules/Ventas/altasRapidasCtes`
-#### 💻 **Menú:** Ventas > Altas rápidas de clientes [http://localhost:4200/app/ventas/altasrapidasctes](http://localhost:4200/app/ventas/altasrapidasctes)
+#### 💻 **Menú:** Ventas > Altas rápidas de clientes [Ver](http://localhost:4200/app/ventas/altasrapidasctes)
 
 ## 📝 Descripción
 Éste módulo permite la captura de información de nuevos clientes desde mostrador. También posibilita la consulta y modificación de los datos de facturación del cliente para correcciones provistas del cliente de forma presencial.
