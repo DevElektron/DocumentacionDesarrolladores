@@ -1,5 +1,4 @@
 # 📦 Módulo: Altas Rápidas de Clientes...
----
 ### 📁 **Código:** `Modules/Ventas/altasRapidasCtes`
 ### 💻 **Menú:** Ventas > Altas rápidas de clientes
 ---
