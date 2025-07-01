@@ -2,6 +2,7 @@
 ---
 ## 📁 
 **Ubicación del código:** `Modules/Ventas/altasRapidasCtes`
+---
 **Ruta:** Ventas > Altas rápidas de clientes
 ---
 
@@ -61,4 +62,8 @@
 
 > 🗓️ **Fecha de última modificación:** 2025-06-30
 > 👤 **Autor:** Ignacio Carranza
+<<<<<<< HEAD
 > 🏷️ **Versión:** 1
+=======
+> 🏷️ **Versión:** 1
+>>>>>>> b6f3e20606e68ac7aa84100c9eaac986c34920f9
