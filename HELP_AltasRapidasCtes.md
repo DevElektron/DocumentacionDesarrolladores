@@ -1,11 +1,10 @@
 # 📦 Módulo: Altas Rápidas de Clientes...
 #### 📁 **Código:** `Modules/Ventas/altasRapidasCtes`
 #### 💻 **Menú:** Ventas > Altas rápidas de clientes
----
+
 ## 📝 Descripción
 Éste módulo permite la captura de información de nuevos clientes desde mostrador. También posibilita la consulta y modificación de los datos de facturación del cliente para correcciones provistas del cliente de forma presencial.
 
----
 ## 🔐 Seguridad
 
 | Tipo UI | Elemento          | Descripción                    | Rol permitido |
@@ -14,7 +13,6 @@
 | Botón   | Modificar contacto   | Permite modificar un contacto especial     | Ventas       |
 | Botón   | Eliminar contacto   | Permite eliminar un contacto especial     | Ventas       |
 
----
 ## 💼 Políticas Generales
 - Todos los clientes nuevos deben tener el check tildado: Timbrar la factura del cliente
 - El número de cliente, debe ser derivado de tabla de control de clientes noctuna, en donde se analiza en la noche y se asignan lugares disponibles de forma intermedia en catálogo.
