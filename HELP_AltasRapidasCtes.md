@@ -48,6 +48,13 @@
 ## 📎 Observaciones adicionales
 - Observaciones adicionales, modos de prueba o ambientes específicos de uso.
 
-> 🗓️ **Fecha de última modificación:** 2025-06-30
+> 🗓️ **Fecha de última modificación:** 2025-06-01
 > 👤 **Ignacio Carranza**
 > 🏷️ **Versión:** 3
+
+---
+# Comunicaciones
+|Dir|Fecha       |Valida | Comentario                    |
+|---|------------|-------|-------------------------------|
+|⏪| 2025/06/15 | GP |En la inserción permite guardar sin código postal capturado|
+|⏩| 2025/06/20 | IC |Corregido|
