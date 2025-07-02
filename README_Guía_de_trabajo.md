@@ -1,58 +1,20 @@
-# 📦 Módulo: 
-#### 📁 **Código:** `//`
-#### 💻 **Menú:** Menú > > >  [Ver en QA](http://192.168.2.16:1089/app////)
+# 🦮 Guía de trabajo
 
-## 📝 Descripción
-Éste módulo permite 
+Al iniciar el desarrollo de un proyecto, como desarrollador, debes crear el archivo .MD (MarkDown) correspondiente en la ruta del componente que estás creando, pero en éste mismo repositorio.
+El objetivo de éste, es que plasmes los lineamientos generales y políticas, validaciones, comportamientos especiales y comportamientos excepcionales del componente que estás desarrollando, para preservarlo al final como una guía rápida de referencia de operación del mismo componente.
 
-## 🔐 Seguridad
-| Tipo UI | Elemento          | Descripción                    | Rol permitido |
-|---------|-------------------|--------------------------------|----------------|
-| Botón   | Añadir      | Permite      |        |
-| Botón   | Modificar   | Permite      |        |
-| Botón   | Eliminar    | Permite      |        |
+##🪖 Nomenclatura
+Se debe definir el nombre del archivo con la siguiente estructura:
+La palabra HELP + guion bajo + nombre del componente + extensión .md
+Ejemplo:
+HELP_AltasRapidasCtes.md
 
-## 💼 Políticas Generales
-- 1
-- 2
-- 3
+Existen archivos de tipo Machote para que puedas copiar y pegar la base de tu archivo, ya que éste mismo será sujeto a revisión por parte de gerencias, usuarios, etc. y necesitamos esa estructura embellecida que provee el archivo .MD para presentarlo a dichas entidades.
 
-## 🧪 Casos de Prueba
-
-### Añadir
-#### 💼 Operación
-- [ ] No se permite 
-#### 🛡️ Validaciones
-- [ ] Debe capturarse el mínimo de información, requiriendo los campos:
-    - 
-    - 
-    - 
-- [ ] Se debe seleccionar
-
-### Modificar
-#### 🛡️ Validaciones
-- [ ] No se permite
-- [ ] Si existe x -> se deben asegurar:
-    - 
-    - 
-    - 
-    - 
-    - 
-
-### Botón A
-#### 🛡️ Validaciones
-- [ ] xxx
-
-## 📎 Observaciones adicionales
-- Observaciones adicionales, modos de prueba o ambientes específicos de uso.
+Una vez concluido tu desarrollo y archivo, deberás enviarlo al equipo de testing para iniciar el proceso de integración a producción.
+📨lperez@elektron.com.mx
+📨icarranza@elektron.com.mx
 
 > 🗓️ **Fecha de última modificación:** 2025-07-02
 > 👤 **Tu nombre**
 > 🏷️ **Versión:** 1
-
----
-# Comunicaciones
-|Dir|Fecha       |Firma|Comentario                    |
-|---|------------|-----|------------------------------|
-|⏪| 2025/07/02 | GP |Retorno|
-|⏩| 2025/07/02 | IC |Avance|
