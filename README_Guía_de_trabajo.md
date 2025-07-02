@@ -18,11 +18,9 @@ Existen archivos de tipo Machote para que puedas copiar y pegar la base de tu ar
 
 ---
 Una vez concluido tu desarrollo y archivo, deberás enviarlo al equipo de testing para iniciar el proceso de integración a producción.
----
-📨lperez@elektron.com.mx
----
-📨icarranza@elektron.com.mx
+#### 📨lperez@elektron.com.mx
+#### 📨icarranza@elektron.com.mx
 
 > 🗓️ **Fecha de última modificación:** 2025-07-02
-> 👤 **Tu nombre**
+> 👤 **Ignacio Carranza**
 > 🏷️ **Versión:** 1
