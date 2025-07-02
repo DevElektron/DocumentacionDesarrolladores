@@ -5,7 +5,7 @@ Al iniciar el desarrollo de un proyecto, como desarrollador, debes crear el arch
 ---
 El objetivo de éste, es que plasmes los lineamientos generales y políticas, validaciones, comportamientos especiales y comportamientos excepcionales del componente que estás desarrollando, para preservarlo al final como una guía rápida de referencia de operación del mismo componente.
 
-##🪖 Nomenclatura
+## 🪖 Nomenclatura
 Se debe definir el nombre del archivo con la siguiente estructura:
 La palabra HELP + guion bajo + nombre del componente + extensión .md
 Ejemplo:
