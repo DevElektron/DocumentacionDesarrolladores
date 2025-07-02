@@ -22,4 +22,3 @@ Una vez concluido tu desarrollo y archivo, deberás enviar la notificación de f
 ---
 > 🗓️ **Fecha de última modificación:** 2025-07-02
 > 👤 **Ignacio Carranza**
-> 🏷️ **Versión:** 1
