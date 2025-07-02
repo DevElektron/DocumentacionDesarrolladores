@@ -15,7 +15,7 @@ HELP_AltasRapidasCtes.md
 Existen archivos de tipo Machote para que puedas copiar y pegar la base de tu archivo, ya que éste mismo será sujeto a revisión por parte de gerencias, usuarios, etc. y necesitamos esa estructura embellecida que provee el archivo .MD para presentarlo a dichas entidades.
 
 ### 🛬 Fin
-Una vez concluido tu desarrollo y archivo, deberás enviarlo al equipo de testing para iniciar el proceso de integración a producción.
+Una vez concluido tu desarrollo y archivo, deberás enviar la notificación de finalización al equipo de testing para iniciar el proceso de integración a producción.
 #### 📨lperez@elektron.com.mx
 #### 📨icarranza@elektron.com.mx
 
