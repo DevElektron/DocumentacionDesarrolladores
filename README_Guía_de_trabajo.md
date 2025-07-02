@@ -21,6 +21,7 @@ Una vez concluido tu desarrollo y archivo, deberás enviarlo al equipo de testin
 #### 📨lperez@elektron.com.mx
 #### 📨icarranza@elektron.com.mx
 
+---
 > 🗓️ **Fecha de última modificación:** 2025-07-02
 > 👤 **Ignacio Carranza**
 > 🏷️ **Versión:** 1
