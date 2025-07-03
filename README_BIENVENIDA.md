@@ -218,6 +218,7 @@ Pasos manuales:
   - [Documentación Angular Material](https://v18.material.angular.dev/)
   - [Documentación AG-Grid](https://www.ag-grid.com/angular-data-grid/getting-started/)
   - [Documentación .NET](https://learn.microsoft.com/es-es/dotnet/)
+  - [Documentación QuestPDF](https://www.questpdf.com/)
 
 ---
 
