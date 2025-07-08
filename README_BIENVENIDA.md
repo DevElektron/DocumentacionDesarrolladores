@@ -20,27 +20,27 @@ Bienvenido(a) al equipo 👋. Este documento te guiará para que puedas configur
 
 📁 Estructura del Proyecto Angular
   src/
-  app/ Código principal de la aplicación. 
-  core/ 🌐 Elementos globales reutilizables en toda la app.
-    auth/ 🔐 Autenticación (guards, login, tokens)
-    interceptors/ 🔄 Interceptores HTTP (JWT, errores)
-    utils/ 🧰 Funciones y helpers comunes
-  modules/  📦 Módulos por funcionalidad.
-    Modulo/ reemplaza con nombre real, ej. Usuarios/
-      components/ 🧩 Componentes visuales del módulo
-      pages/ 📄 Vistas principales del módulo 
-      services/ ⚙️ Servicios del módulo
-      models/ 🧾 Modelos de datos del módulo
-        requests/ 📥 Interfaces de entrada (request)
-        responses/ 📤 Interfaces de salida (response)
-    routing.module.ts 🧭 Rutas del módulo
-    archivo.md Será la documentación del modulo, funcionalidad, excepciones, casos de uso.
-  shared/ ♻️ Componentes, pipes y utilidades compartidas.
-  ui/ 🖼️ Componentes de interfaz comunes (botones, inputs, etc.)
-    pipes/ 🔣 Pipes y directivas reutilizables
-    assets/🎨 Recursos estáticos: estilos globales, íconos, imágenes, etc.
-  environments/ 🌍 Configuraciones de entorno (dev, prod, etc.)
-  index.html 🧱 HTML principal de la aplicación
+  ├── app/ # Código principal de la aplicación
+  │ ├── core/ # 🌐 Elementos globales reutilizables
+  │ │ ├── auth/ # 🔐 Autenticación (guards, login, tokens)
+  │ │ ├── interceptors/ # 🔄 Interceptores HTTP (JWT, errores)
+  │ │ └── utils/ # 🧰 Funciones y helpers comunes
+  │ ├── modules/ # 📦 Módulos por funcionalidad
+  │ │ ├── [Modulo]/ # Reemplazar con nombre real, ej. usuarios/
+  │ │ │ ├── components/ # 🧩 Componentes visuales del módulo
+  │ │ │ ├── pages/ # 📄 Vistas principales del módulo
+  │ │ │ ├── services/ # ⚙️ Servicios del módulo
+  │ │ │ └── models/ # 🧾 Modelos de datos
+  │ │ │  ├── requests/ # 📥 Interfaces de entrada (request)
+  │ │ │  └── responses/ # 📤 Interfaces de salida (response)
+  │ │ ├── routing.module.ts # 🧭 Rutas del módulo
+  │ │ └── archivo.md # 📘 Documentación del módulo (uso, excepciones)
+  │ ├── shared/ # ♻️ Componentes, pipes y utilidades compartidas
+  │ ├── ui/ # 🖼️ Elementos visuales comunes (botones, inputs)
+  │ └── pipes/ # 🔣 Pipes y directivas reutilizables
+  ├── assets/ # 🎨 Recursos estáticos: estilos, íconos, imágenes
+  ├── environments/ # 🌍 Configuración por entorno (dev, prod)
+  └── index.html # 🧱 HTML principal de la aplicación
 
 ```
 
@@ -51,27 +51,27 @@ Bienvenido(a) al equipo 👋. Este documento te guiará para que puedas configur
 
 ```bash
   📁 Estructura del Proyecto
-  Raíz del proyecto
-  Properties/ ⚙️ Configuraciones de compilación
-  Core/
-    Data/ 🗄️ Configuración de DbContext y conexión a base de datos
-  Modules/ 
-    Modulo/ (reemplaza con nombre real, ej. Usuarios/)
-      Application/ 🧠 Lógica de negocio
-        DTOs/
-          Requests/ 📥 Objetos de entrada
-          Responses/ 📤 Objetos de salida
-        Interfaces/ 📑 Contratos de servicios
-        Services/ 🛠️ Implementaciones de servicios
-      Controller/ 🎮 Controladores del módulo
-      Domain/ 🧬 Lógica de dominio
-        Entities/ 🧱 Entidades (ej. Folio, Eltp)
-        Interfaces/ 🧾 Contratos de repositorios
-      Infrastructure/ 🏗️ Acceso a datos
-        Repositories/ 🗃️ Repositorios (EF Core, SQL)
-  Shared/ ♻️ Funciones y utilidades compartidas
-  appsettings.json ⚙️ Configuración global (JWT, conexiones, etc.)
-  Program.cs 🚀 Configuración de servicios y middleware
+  Raíz del proyecto/
+  ├── Properties/ # ⚙️ Configuraciones de compilación
+  ├── Core/
+  │ └── Data/ # 🗄️ Configuración de DbContext y conexión a BD
+  ├── Modules/ # 🧩 Agrupación por módulos funcionales
+  │ └── [Modulo]/ # Reemplazar con nombre real, ej. Usuarios/
+  │   ├── Application/ # 🧠 Lógica de negocio
+  │   │ ├── DTOs/
+  │   │ │ ├── Requests/ # 📥 Objetos de entrada
+  │   │ │ └── Responses/ # 📤 Objetos de salida
+  │   │ ├── Interfaces/ # 📑 Contratos de servicios
+  │   │ └── Services/ # 🛠️ Implementaciones de servicios
+  │   ├── Controller/ # 🎮 Controladores del módulo
+  │   ├── Domain/ # 🧬 Lógica de dominio
+  │   │ ├── Entities/ # 🧱 Entidades (ej. Folio, Eltp)
+  │   │ └── Interfaces/ # 🧾 Contratos de repositorios
+  │   ├── Infrastructure/ # 🏗️ Acceso a datos
+  │   └── Repositories/ # 🗃️ Repositorios (EF Core, SQL, etc.)
+  ├── Shared/ # ♻️ Funciones y utilidades compartidas
+  ├── appsettings.json # ⚙️ Configuración global (JWT, conexiones, etc.)
+  └── Program.cs # 🚀 Configuración de servicios y middleware
 
 ```
 ---
@@ -92,6 +92,8 @@ Bienvenido(a) al equipo 👋. Este documento te guiará para que puedas configur
   -  EsLint by Microsoft
   -  GitLens by GitKraken
   -  Git file history new by HenryTsz
+      - Uso (En el archivo que se desea revisar):
+        - Ctrl + Shift + P > Git File History
   -  Prittier by Prittier
   -  Ident-rainbow by Oderwat
       - Configuración:
