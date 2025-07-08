@@ -94,13 +94,23 @@ Bienvenido(a) al equipo 👋. Este documento te guiará para que puedas configur
   -  Git file history new
   -  Prittier
   -  Ident-rainbow
+    -  Configuración:
+      -  Ctrl + Shift + P > Preferences: Open User Settings (JSON)
+      -  Añadir estas lineas de código, guadrar cambios y recargar VSCode:
+         "indentRainbow.indicatorStyle": "light",
+         "indentRainbow.colors": [
+             "rgba(255,255,64,0.3)",
+             "rgba(127,255,127,0.3)",
+             "rgba(255,127,255,0.3)",
+             "rgba(79,236,236,0.3)"
+         ],
   -  Material Icon Theme
   -  Angular Language Service
   -  Error Lens
   -  IntelliCode
   -  IntelliCode API Usage Examples
-  -  VSCode-Pets
-  -  VSCode-Pokemon
+  -  VSCode-Pets (Opcional)
+  -  VSCode-Pokemon (Opcional)
   -  SQL Server (mssql)
 - Visual Studio 2022 para .NET
 
