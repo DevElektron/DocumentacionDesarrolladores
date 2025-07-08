@@ -89,29 +89,32 @@ Bienvenido(a) al equipo 👋. Este documento te guiará para que puedas configur
 
 ### 🔧 IDE recomendado
 - VS Code (Frontend) con extensiones
-  -  EsLint
-  -  GitLens
-  -  Git file history new
-  -  Prittier
-  -  Ident-rainbow
-    -  Configuración:
-      -  Ctrl + Shift + P > Preferences: Open User Settings (JSON)
-      -  Añadir estas lineas de código, guadrar cambios y recargar VSCode:
-         "indentRainbow.indicatorStyle": "light",
-         "indentRainbow.colors": [
-             "rgba(255,255,64,0.3)",
-             "rgba(127,255,127,0.3)",
-             "rgba(255,127,255,0.3)",
-             "rgba(79,236,236,0.3)"
-         ],
-  -  Material Icon Theme
-  -  Angular Language Service
-  -  Error Lens
-  -  IntelliCode
-  -  IntelliCode API Usage Examples
+  -  EsLint by Microsoft
+  -  GitLens by GitKraken
+  -  Git file history new by HenryTsz
+  -  Prittier by Prittier
+  -  Ident-rainbow by Oderwat
+      - Configuración:
+        - Ctrl + Shift + P > Preferences: Open User Settings (JSON)
+        - Añadir estas líneas de código, guardar cambios y recargar VSCode:
+  
+        ```json
+        "indentRainbow.indicatorStyle": "light",
+        "indentRainbow.colors": [
+            "rgba(255,255,64,0.3)",
+            "rgba(127,255,127,0.3)",
+            "rgba(255,127,255,0.3)",
+            "rgba(79,236,236,0.3)"
+        ],
+        ```
+  -  Material Icon Theme by Philipp Kief
+  -  Angular Language Service by Angular
+  -  Error Lens by Alexander
+  -  IntelliCode by Microsoft
+  -  IntelliCode API Usage Examples by Microsoft
+  -  SQL Server (mssql) by Microsoft
   -  VSCode-Pets (Opcional)
   -  VSCode-Pokemon (Opcional)
-  -  SQL Server (mssql)
 - Visual Studio 2022 para .NET
 
 ---
