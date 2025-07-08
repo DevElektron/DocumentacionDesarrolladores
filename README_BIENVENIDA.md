@@ -194,7 +194,7 @@ Pasos manuales:
   - Modelos Dto terminan en `Dto`
   - Modelos de request terminan en `Request`
   - Modelos de response terminan en `Response`
-  - Modelos de entity `usan el nombre de la tabla en la bd`}
+  - Modelos de entity `usan el nombre de la tabla en la bd`
   - Inyección de dependencias en constructor
 - .NET:
   - Se usa camelCase
