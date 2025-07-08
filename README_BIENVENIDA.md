@@ -89,6 +89,8 @@ Bienvenido(a) al equipo 👋. Este documento te guiará para que puedas configur
 
 ### 🔧 IDE recomendado
 - VS Code (Frontend) con extensiones
+  -  GitLens
+  -  Git file history new
 - Visual Studio 2022 para .NET
 
 ---
