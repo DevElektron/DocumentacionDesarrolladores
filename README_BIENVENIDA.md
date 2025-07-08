@@ -89,8 +89,19 @@ Bienvenido(a) al equipo 👋. Este documento te guiará para que puedas configur
 
 ### 🔧 IDE recomendado
 - VS Code (Frontend) con extensiones
+  -  EsLint
   -  GitLens
   -  Git file history new
+  -  Prittier
+  -  Ident-rainbow
+  -  Material Icon Theme
+  -  Angular Language Service
+  -  Error Lens
+  -  IntelliCode
+  -  IntelliCode API Usage Examples
+  -  VSCode-Pets
+  -  VSCode-Pokemon
+  -  SQL Server (mssql)
 - Visual Studio 2022 para .NET
 
 ---
