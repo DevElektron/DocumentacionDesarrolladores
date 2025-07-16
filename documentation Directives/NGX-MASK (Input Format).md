@@ -18,7 +18,8 @@ Una máscara de entrada restringe el formato que el usuario puede escribir en un
 
 ## 🛠️ ¿Cómo implementarla?
 
-### 1. Agregar referencias en el HTML, caso usado para dar formato a valores con 2 decimales, mask="separator.2" thousandSeparator=","    decimalMarker="."
+### 1. Agregar referencias en el HTML, caso usado para dar formato a valores con 2 decimales:
+###    mask="separator.2" thousandSeparator=","    decimalMarker="."
 
 ```html
 <div class="col-md-4">
