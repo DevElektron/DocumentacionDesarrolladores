@@ -11,18 +11,23 @@ Una máscara de entrada restringe el formato que el usuario puede escribir en un
   Teléfono: (999) 999-9999  
 
   Fecha: dd/MM/yyyy  
-  
+
   RFC, CURP, etc.  
 
 ---
 
 ## 🛠️ ¿Cómo implementarla?
 
-### 1. Agregar referencias & class del contenedor superior en el HTML
+### 1. Agregar referencias en el HTML, caso usado para dar formato a valores con 2 decimales, mask="separator.2" thousandSeparator=","    decimalMarker="."
 
 ```html
-<div #grid1Container class="principal-grid-container">
-  <ag-grid-angular #grid1 style="height: 100%;" ...></ag-grid-angular>
+<div class="col-md-4">
+   <mat-form-field appearance="outline" class="w-100 extra-small">
+     <mat-label>Importe Total</mat-label>
+     <input matInput placeholder="Importe Total" formControlName="importe" autocomplete="off"
+            `mask="separator.2"` thousandSeparator="," decimalMarker="." tabindex="5">
+   </mat-form-field>
+</div>
 ```
 
 ### 2. Definir la class para el componente inferior en el HTML
