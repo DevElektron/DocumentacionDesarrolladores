@@ -30,7 +30,7 @@ La referencia de la busqueda es la siguiente:
 ● ELDPC (Se guarda en esta tabla cuando el proceso es exitoso con el proximo folio que le prosigue)  
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          ∙ Si seleccionan un banco que maneja en dolares, se guarda en la tabla ELCXC el precio del dolar con fecha deposito y el importe del 
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          anticipo se multiplica el valor del dolar por el importe del deposito.  
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∙ En la tabla ELDPI en el campo ESTADO se marca como "Aplicado" para que no sea considerado como Pendiente por Confirmar,   
            la fecha del campo FCIDENTIFICA se graba la fecha que se identifico el deposito.  
