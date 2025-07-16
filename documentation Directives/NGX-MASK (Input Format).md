@@ -31,45 +31,54 @@ Una máscara de entrada restringe el formato que el usuario puede escribir en un
 </div>
 ```
 
-### 2. Definir la class para el componente inferior en el HTML
+### 2. Instalación de Libreria en PowerShell
 
 ```html
-  <div class="detail-grid-container">
-    <ag-grid-angular style="height: 100%;" ...></ag-grid-angular>}
+     npm install ngx-mask --save
 ```
 
-### 3. Insertar la barra redimensionable
+### 3. Importar el módulo en tu app.
+```html
+    import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
+    import { provideAnimations } from '@angular/platform-browser/animations';
 
-Justo después del contenedor superior, añade:
+    @NgModule({
+    declarations: [...],
+    imports: [..., NgxMaskDirective],
+    providers: [provideNgxMask()],
+    })
+    export class AppModule {}
+```
+## ✅ Ejemplos de varios formatos
 
 ```html
-<div class="drag-handle" appResizable [targetElement]="grid1Container" [minHeight]="200"></div>
-```
+📅 Ejemplo: Fecha (dd/MM/yyyy)
+    <input type="text" mask="00/00/0000" placeholder="dd/mm/yyyy" />
 
-> 🔸 `targetElement`: referencia al elemento cuya altura se desea modificar.  
-> 🔸 `minHeight`: altura mínima que se puede asignar al contenedor.
+☎️ Ejemplo: Teléfono
+    <input type="text" mask="(000) 000-0000" />
 
-### 4. Declarar la referencia en el componente
+💳 Ejemplo: Tarjeta de crédito
+    <input type="text" mask="0000 0000 0000 0000" />
 
-```ts
-@ViewChild('grid1') grid1ElementRef!: ElementRef;
-```
+🎯 Ejemplo: RFC (4 letras + 6 dígitos + 3 alfanuméricos)
+    <input type="text" mask="SSSS000000AAA" />
+    Donde:
+    0: número
+    A: letra o número
+    S: solo letra
 
----
+🎛️ Otras opciones
+❓Input opcional (con ?)
+        <input type="text" mask="0000-0000?0" /> <!-- permite 8 o 9 dígitos -->
 
-## ✅ Ejemplo completo en HTML
+🔁 Máscaras dinámicas con Angular
+    <input [mask]="mask" />
+  
+    mask = '0000 0000 0000 0000'; // puedes cambiarla en tiempo real
 
-```html
-<section class="detail-container" style="flex: 1; display: flex; flex-direction: column;">
-  <!-- Sección superior -->
-  <div #grid1Container class="principal-grid-container">
-    <ag-grid-angular #grid1 style="height: 100%;" ...></ag-grid-angular>
-
-  <!-- Barra de separación -->
-  <div class="drag-handle" appResizable [targetElement]="grid1Container" [minHeight]="200"></div>
-
-  <!-- Sección inferior -->
-  <div class="detail-grid-container">
-    <ag-grid-angular style="height: 100%;" ...></ag-grid-angular>
-</section>
+📌 Tips adicionales
+    Puedes usarlo con formControlName si trabajas con Reactive Forms.
+    Asegúrate de importar el módulo correctamente en el módulo donde estés usando el input (puede ser un SharedModule si está separado).
+    También funciona en formularios con [(ngModel)].
 ```
