@@ -6,25 +6,15 @@
 Éste módulo permite consultar el historico de ventas de los ultimos 12 meses del cliente seleccionado. Además de permitir cambiar el estatus para permitir o negar la promoción de vales de despensa por cobranza y generar un reporte con la información generada en el modulo.
 
 ## 🔐 Seguridad
-| Tipo UI | Elemento          | Descripción                    | Rol permitido |
+| Tipo UI | Elemento          | Descripción                    | Rol permitido  |
 |---------|-------------------|--------------------------------|----------------|
 | Botón   | Imprimir Historico | Genera un reporte con los datos del historico de ventas del cliente |        |
 | Botón   | Autorizar Vales Despensa | Muestra/modifica el estatus de autorización de vales de despensa |        |
 
 ## 💼 Políticas Generales
-- 
+- Para generar un reporte es necesario primero seleccionar un cliente.
 
 ## 🧪 Casos de Prueba
-
-### Añadir
-#### 💼 Operación
-- [ ]  
-#### 🛡️ Validaciones
-- [ ] 
-
-### Modificar
-#### 🛡️ Validaciones
-- [ ] 
 
 ### Autorizar Vales Despensa
 #### 🛡️ Validaciones
