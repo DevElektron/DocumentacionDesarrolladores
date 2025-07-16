@@ -72,9 +72,9 @@ La referencia de la busqueda es la siguiente:
 ## 📎 Observaciones adicionales
 
 
-> 🗓️ **Fecha de última modificación:** 2025-07-16
-> 👤 **Ernesto Martin Hernandez Zuñiga**
-> 🏷️ **Versión:** 1
+> 🗓️ **Fecha de última modificación:** 2025-07-16  
+> 👤 **Ernesto Martin Hernandez Zuñiga**  
+> 🏷️ **Versión:** 1  
 
 ---
 # Comunicaciones
