@@ -17,7 +17,7 @@ La referencia de la busqueda es la siguiente:
 | Ventana | Captura Información | Ingresa los Datos requeridos | Clientes       |
 
 ## 💼 Políticas Generales
-- Solo debera conciliar el deposito pendiente por confirmar si es localizada la referencia en el estado de cuenta bancario y este aun esta "Pendiente" por Aplicar
+- Solo debera conciliar el deposito pendiente por confirmar si es localizada la referencia en el estado de cuenta bancario y se encuentre en "Pendiente" por Aplicar
   debera marcalo posteriormente como "Aplicado".
   
 ## ◉ TABLAS QUE OCUPA EL MODULO.
