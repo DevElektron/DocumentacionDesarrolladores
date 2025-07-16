@@ -4,8 +4,8 @@
 
 La directiva `ngx-mask` en Angular, para usar máscaras de entrada (input masks), se puede utilizar una biblioteca externa, que es una de las más populares y fáciles de integrar.
 
-🔧 ¿Qué es una máscara?
-Una máscara de entrada restringe el formato que el usuario puede escribir en un campo de texto. Por ejemplo:
+## 🔧 ¿Qué es una máscara?
+Una máscara de entrada restringe el formato que el usuario puede escribir en un campo de texto. Por ejemplo:  
    • Teléfono: (999) 999-9999  
    • Fecha: dd/MM/yyyy  
    • RFC, CURP, etc.  
