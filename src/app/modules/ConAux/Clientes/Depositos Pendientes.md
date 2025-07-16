@@ -30,12 +30,16 @@ La referencia de la busqueda es la siguiente:
 ● ELDPC (Se guarda en esta tabla cuando el proceso es exitoso con el proximo folio que le prosigue)  
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          ∙ Si seleccionan un banco que maneja en dolares, se guarda en la tabla ELCXC el precio del dolar con fecha deposito y el importe del 
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          anticipo se multiplica el valor del dolar por el importe del deposito.  
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∙ En la tabla ELDPI en el campo ESTADO se marca como "Aplicado" para que no sea considerado como Pendiente por Confirmar,   
-           la fecha del campo FCIDENTIFICA se graba la fecha que se identifico el deposito.  
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∙ Para relacionar la tabla ELDPI con la tabla ELDPC una vez que el deposito fue identificado con exito, en la tabla ELDPC en   
-           el campo CONSECUTIVO_DPI se guarda el numero de folio de la tabla ELDPI que se llama el campo CONSECUTIVO.  
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         ∙ En la tabla ELDPI en el campo ESTADO se marca como "Aplicado" para que no sea considerado como Pendiente por Confirmar,   
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         la fecha del campo FCIDENTIFICA se graba la fecha que se identifico el deposito.  
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         ∙ Para relacionar la tabla ELDPI con la tabla ELDPC una vez que el deposito fue identificado con exito, en la tabla ELDPC en   
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         el campo CONSECUTIVO_DPI se guarda el numero de folio de la tabla ELDPI que se llama el campo CONSECUTIVO.  
 
 ## 🧪 Casos de Prueba
 
