@@ -1,4 +1,4 @@
-# 📏 FORZAR PARA QUE EN VEZ DE VALORES EN LOS FILTROS PUEDAN APARECER ICONOS con `agSetColumnFilter`
+# 📏 FILTRAR CON ICONOS O INCRUSTRAR ESTADO DE UN CAMPO CON `agSetColumnFilter` DE AGGRID
 
 ## 🎯 ¿Qué hace?
 
@@ -19,7 +19,7 @@ Filtrar y/o incrustar una imagen de estatus en columna de AGGRID.
       filterParams: {
         // Forzar los valores que aparecerán en el filtro
         values: (params) => {
-          params.success([1, 0]);
+          params.success([1, 0]);                                  --aqui puede tener varios valores, 0,1,2,3,4,5,6 las entidades que necesites, en este caso 0 y 1.
         },
         // Mostrar los valores como texto
         valueFormatter: (params) => {
