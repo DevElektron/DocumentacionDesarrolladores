@@ -7,10 +7,9 @@ La directiva `ngx-mask` en Angular, para usar máscaras de entrada (input masks)
 ## 🔧 ¿Qué es una máscara?
 
 Una máscara de entrada restringe el formato que el usuario puede escribir en un campo de texto. Por ejemplo:  
-
-   • Teléfono: (999) 999-9999  
-   • Fecha: dd/MM/yyyy  
-   • RFC, CURP, etc.  
+• Teléfono: (999) 999-9999  
+• Fecha: dd/MM/yyyy  
+• RFC, CURP, etc.  
 ---
 
 ## 🛠️ ¿Cómo implementarla?
