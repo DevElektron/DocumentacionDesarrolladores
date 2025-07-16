@@ -23,27 +23,26 @@ Filtrar y/o incrustar una imagen de estatus en columna de AGGRID.
         },
         // Mostrar los valores como texto
         valueFormatter: (params) => {
-          this.iniautcob++;
           this.autcob = String(params.value);
           this.actualizarEstadoBoton();
           if (params.value === 1) return '🟢 Autorizado';
-          if (params.value === 0) return '🔴 No Autorizado';
+          if (params.value === 0) return '🔴 No Autorizado';      --aqui puedes declarar el estatus, esto en la parte del filtro, y aqui colocamos el emoji imagen
           return '';
         },
         // Este es el truco: hacer que el filtro compare texto y valor real correctamente
         keyCreator: (params) => {
           const val = Number(params.value);
-          if (params.value === 1) return 1;
-          if (params.value === 0) return 0;
-          return '';
+          if (params.value === 1) return 1;                        --se necesita identificar el valor de params.value y asignar el return para params.sucess([1,0])
+          if (params.value === 0) return 0;                        --cuando se haga la seleccion envie params.value al backend el numero y no la imagen en el filtro
+          return '';                                               
         },
       },
       // Renderizado de iconos
       cellRenderer: (params: any) => {
         if (params.value === 1) {
-          return `<span class="circle-green-small" title="Autorizado"></span>`;
+          return `<span class="circle-green-small" title="Autorizado"></span>`;    --Renderizamos iconos en todas las filas si esta autorizado o no autorizado
         } else if (params.value === 0) {
-          return `<span class="circle-red-small" title="No Autorizado"></span>`;
+          return `<span class="circle-red-small" title="No Autorizado"></span>`;   -- Esto con clases de font awesome 6, delcarados en el style.css del la ruta principal
         } else {
           return '';
         }
@@ -56,5 +55,5 @@ Filtrar y/o incrustar una imagen de estatus en columna de AGGRID.
       ...this.AlignCenter,
     },
 ```
-### 2. El resultado del encabezado Cuenta Bancaria, en la linea de arriba estara Cuenta y abajo Bancaria.
+### 2. Con ello ya podemos filtrar por icono en nuestro AGGRID.
 
