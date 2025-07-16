@@ -70,7 +70,7 @@ La referencia de la busqueda es la siguiente:
 - En el estado de cuenta bancario hay una variable que indica que si no esta "Salvo buen Cobro" se guarda como anticipo
 
 ## 📎 Observaciones adicionales
-- Observaciones adicionales, modos de prueba o ambientes específicos de uso.
+
 
 > 🗓️ **Fecha de última modificación:** 2025-07-16
 > 👤 **Ernesto Martin Hernandez Zuñiga**
@@ -80,5 +80,5 @@ La referencia de la busqueda es la siguiente:
 # Comunicaciones
 |Dir|Fecha       |Firma|Comentario                    |
 |---|------------|-----|------------------------------|
-|Capturar Deposito|
+|Capturar Deposito Pendiente por Confirmar|
 |⏪| 0000/00/00 |   | |
