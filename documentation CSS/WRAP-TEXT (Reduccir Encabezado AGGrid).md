@@ -9,7 +9,7 @@ tambien se puede usar para cuando necesitar hacer interlineados en alguna etique
 
 ## 🛠️ ¿Cómo implementarla en AGGRID?
 
-### 1. ya esta en styless.css del directorio principal del proyecto, solo es aplicarlo.
+### 1. ya esta en styless.css del directorio principal del proyecto, solo es aplicarlo en los campos del AGGRID en el typescript.
 
 ```html
  {
@@ -24,46 +24,5 @@ tambien se puede usar para cuando necesitar hacer interlineados en alguna etique
       enableRowGroup: true,
     },
 ```
+### 2. El resultado del encabezado Cuenta Bancaria, en la linea de arriba estara Cuenta y abajo Bancaria.
 
-### 2. Definir la class para el componente inferior en el HTML
-
-```html
-  <div class="detail-grid-container">
-    <ag-grid-angular style="height: 100%;" ...></ag-grid-angular>}
-```
-
-### 3. Insertar la barra redimensionable
-
-Justo después del contenedor superior, añade:
-
-```html
-<div class="drag-handle" appResizable [targetElement]="grid1Container" [minHeight]="200"></div>
-```
-
-> 🔸 `targetElement`: referencia al elemento cuya altura se desea modificar.  
-> 🔸 `minHeight`: altura mínima que se puede asignar al contenedor.
-
-### 4. Declarar la referencia en el componente
-
-```ts
-@ViewChild('grid1') grid1ElementRef!: ElementRef;
-```
-
----
-
-## ✅ Ejemplo completo en HTML
-
-```html
-<section class="detail-container" style="flex: 1; display: flex; flex-direction: column;">
-  <!-- Sección superior -->
-  <div #grid1Container class="principal-grid-container">
-    <ag-grid-angular #grid1 style="height: 100%;" ...></ag-grid-angular>
-
-  <!-- Barra de separación -->
-  <div class="drag-handle" appResizable [targetElement]="grid1Container" [minHeight]="200"></div>
-
-  <!-- Sección inferior -->
-  <div class="detail-grid-container">
-    <ag-grid-angular style="height: 100%;" ...></ag-grid-angular>
-</section>
-```
