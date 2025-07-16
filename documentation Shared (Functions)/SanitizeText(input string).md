@@ -30,7 +30,7 @@ Importar en tu componente la funcion asi:
         ctabancaria: this.form.get('ctabancaria').value?.nctab,
         transaccion: this.form.get('transaccion').value,
         importe: this.form.get('importe').value,
-        observaciones: `sanitizeText(this.form.get('descripcion')?.value || '')`,
+        observaciones: sanitizeText(this.form.get('descripcion')?.value || ''),
         netid: this.netid
       };
 ```
