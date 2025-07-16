@@ -21,19 +21,19 @@ La referencia de la busqueda es la siguiente:
   debera marcalo posteriormente como "Aplicado".
   
 ## ◉ TABLAS QUE OCUPA EL MODULO.
-● ELCTE (Para obtener el nombre)␣␣  
-● PCCTB (Lista de Cuentas bancarias)
-● ELUSD (Precio tasa de cambio dolar de la fecha deposito bancario)
-● ELDPI (Estado de Cuenta Bancario que se baja al administra todos los dias)
-● ELCXC (Tabla donde se guardan los anticipos el campo CDOC por default su identificación es "AN" y la serie del campo LFOLIO es "APA")
-         ∙ Para determinar que se guarde en esta tabla ELCXC en la tabla ELDPI campo numerico BND_SBC debe estar en 1.
-● ELDPC (Se guarda en esta tabla cuando el proceso es exitoso con el proximo folio que le prosigue)
-         ∙ Si seleccionan un banco que maneja en dolares, se guarda en la tabla ELCXC el precio del dolar con fecha deposito y
-           el importe del anticipo se multiplica el valor del dolar por el importe del deposito.
-         ∙ En la tabla ELDPI en el campo ESTADO se marca como "Aplicado" para que no sea considerado como Pendiente por Confirmar, 
-           la fecha del campo FCIDENTIFICA se graba la fecha que se identifico el deposito.
-         ∙ Para relacionar la tabla ELDPI con la tabla ELDPC una vez que el deposito fue identificado con exito, en la tabla ELDPC en 
-           el campo CONSECUTIVO_DPI se guarda el numero de folio de la tabla ELDPI que se llama el campo CONSECUTIVO.
+● ELCTE (Para obtener el nombre)  
+● PCCTB (Lista de Cuentas bancarias)  
+● ELUSD (Precio tasa de cambio dolar de la fecha deposito bancario)  
+● ELDPI (Estado de Cuenta Bancario que se baja al administra todos los dias)  
+● ELCXC (Tabla donde se guardan los anticipos el campo CDOC por default su identificación es "AN" y la serie del campo LFOLIO es "APA")  
+         ∙ Para determinar que se guarde en esta tabla ELCXC en la tabla ELDPI campo numerico BND_SBC debe estar en 1.  
+● ELDPC (Se guarda en esta tabla cuando el proceso es exitoso con el proximo folio que le prosigue)  
+         ∙ Si seleccionan un banco que maneja en dolares, se guarda en la tabla ELCXC el precio del dolar con fecha deposito y  
+           el importe del anticipo se multiplica el valor del dolar por el importe del deposito.  
+         ∙ En la tabla ELDPI en el campo ESTADO se marca como "Aplicado" para que no sea considerado como Pendiente por Confirmar,   
+           la fecha del campo FCIDENTIFICA se graba la fecha que se identifico el deposito.  
+         ∙ Para relacionar la tabla ELDPI con la tabla ELDPC una vez que el deposito fue identificado con exito, en la tabla ELDPC en   
+           el campo CONSECUTIVO_DPI se guarda el numero de folio de la tabla ELDPI que se llama el campo CONSECUTIVO.  
 
 ## 🧪 Casos de Prueba
 
