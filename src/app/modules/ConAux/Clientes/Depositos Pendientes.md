@@ -20,13 +20,14 @@ La referencia de la busqueda es la siguiente:
 - Solo debera conciliar el deposito pendiente por confirmar si es localizada la referencia en el estado de cuenta bancario y se encuentre en "Pendiente" por Aplicar
   debera marcalo posteriormente como "Aplicado".
   
-## ◉ TABLAS QUE OCUPA EL MODULO.
+## ◉ Tablas que Ocupa el Modulo.
 ● ELCTE (Para obtener el nombre)  
 ● PCCTB (Lista de Cuentas bancarias)  
 ● ELUSD (Precio tasa de cambio dolar de la fecha deposito bancario)  
 ● ELDPI (Estado de Cuenta Bancario que se baja al administra todos los dias)  
 ● ELCXC (Tabla donde se guardan los anticipos el campo CDOC por default su identificación es "AN" y la serie del campo LFOLIO es "APA")  
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∙ Para determinar que se guarde en esta tabla ELCXC en la tabla ELDPI campo numerico BND_SBC debe estar en 1.  
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         ∙ Para determinar que se guarde en esta tabla ELCXC en la tabla ELDPI campo numerico BND_SBC debe estar en 1.  
 ● ELDPC (Se guarda en esta tabla cuando el proceso es exitoso con el proximo folio que le prosigue)  
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          ∙ Si seleccionan un banco que maneja en dolares, se guarda en la tabla ELCXC el precio del dolar con fecha deposito y el importe del 
@@ -48,6 +49,7 @@ La referencia de la busqueda es la siguiente:
 - [ ] Seleccionar el cliente o nombre del cliente para definir el cliente que hizo el deposito (Requerido).
 - [ ] Selecccionar la fecha del deposito (Requerido).
 - [ ] Seleccionar la cuenta bancaria o nombre del banco donde se realizo el deposito (Requerido).
+- [ ] Seleccionar el tipo de Transacción (Transferencia / Deposito) (Requerido).
 - [ ] Ingresar el importe del deposito con 2 decimales (Requerido).
 - [ ] Ingresar una descripción u observación del deposito. (Opcional)
 - [ ] Hacer Click en el boton guardar para validar los datos capturados, si pasa la validación concilia el deposito capturado.
@@ -58,6 +60,7 @@ La referencia de la busqueda es la siguiente:
     - Cliente.
     - Fecha deposito.
     - Cuenta Bancaria.
+    - Transacción (Transferencia / Deposito)
     - Importe Total del Deposito.
 
 ### Boton Guardar
