@@ -21,7 +21,7 @@ La referencia de la busqueda es la siguiente:
   debera marcalo posteriormente como "Aplicado".
   
 ## ◉ TABLAS QUE OCUPA EL MODULO.
-● ELCTE (Para obtener el nombre)
+● ELCTE (Para obtener el nombre)␣␣  
 ● PCCTB (Lista de Cuentas bancarias)
 ● ELUSD (Precio tasa de cambio dolar de la fecha deposito bancario)
 ● ELDPI (Estado de Cuenta Bancario que se baja al administra todos los dias)
