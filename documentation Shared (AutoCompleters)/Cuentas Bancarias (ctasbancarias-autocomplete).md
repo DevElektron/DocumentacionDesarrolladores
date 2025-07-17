@@ -50,6 +50,11 @@ export class AdddepositospendientesComponent implements OnInit, OnDestroy {
         --aqui tomamos el valor numerico para enviarlo 
       };
   }
+
+ --reiniciar el autocomplete cuentabancaria y respetar el contenido de la lista
+ limpiar() {
+    this.form.get('ctabancaria')?.reset();
+ }
 }
 ```
 
