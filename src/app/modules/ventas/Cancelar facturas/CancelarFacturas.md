@@ -1,6 +1,6 @@
 # 📦 Módulo: Cancelar Facturas
 #### 📁 **Código:** `Modules/Ventas/cancelarFacturas`
-#### 💻 **Menú:** Ventas > Cancelar facturas  [Ver en QA](http://192.168.2.16:1089/app////)
+#### 💻 **Menú:** Ventas > Cancelar facturas  [Ver en QA](http://192.168.2.16:1089/app/ventas/cancelarfacturas)
 
 ## 📝 Descripción
 Éste módulo permite la cancelacion de facturas y anticipos. Permite la modificacion de tramos y poner los prodcutos o detalles en observacion.
