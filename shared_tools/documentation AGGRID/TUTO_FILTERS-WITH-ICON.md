@@ -10,7 +10,7 @@ Filtrar y/o incrustar una imagen de estatus en columna de AGGRID.
 
 ### 1. En nuestro typescript en el campo que necesitamos agregar filtro o incrustrar una imagen de estatus debemos hacer lo siguiente.
 
-```html
+```typescript
   public AgGridDepositos: (ColDef | ColGroupDef)[] = [
     {
       field: 'bndautcob',                                          --Campo del servicio usado en AGGRID

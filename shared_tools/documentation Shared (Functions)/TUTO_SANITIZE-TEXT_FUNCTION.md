@@ -16,13 +16,13 @@ Permitir letras (mayúsculas y minúsculas), números, espacios, comas, puntos, 
 
 Importar en tu componente la funcion asi:
 
-```html
+```typescript
     import { sanitizeText } from 'src/app/shared/functions/sanitize';
 ```
 
 ### 2. Se Implementa en typescript y se entre parentesis de la funcion se coloca el texto a sanitizar, para evitar guardar algun script en la variable.
 
-```html
+```typescript
       const requestData: RegistrardepositoRequest = {
         consecutivo: this.form.get('consecutivo')?.value || 0,
         ncte: this.clienteSel.ncte,

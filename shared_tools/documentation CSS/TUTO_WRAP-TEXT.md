@@ -11,7 +11,7 @@ tambien se puede usar para cuando necesitar hacer interlineados en alguna etique
 
 ### 1. ya esta en styless.css del directorio principal del proyecto, solo es aplicarlo en los campos del AGGRID en el typescript.
 
-```html
+```typescript
  {
       field: 'nctab',
       headerName: 'Cuenta Bancaria',

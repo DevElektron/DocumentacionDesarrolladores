@@ -33,12 +33,12 @@ Una máscara de entrada restringe el formato que el usuario puede escribir en un
 
 ### 2. Instalación de Libreria en PowerShell
 
-```html
+```bash
      npm install ngx-mask --save
 ```
 
 ### 3. Importar el módulo en tu app.
-```html
+```typescript
     import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
     import { provideAnimations } from '@angular/platform-browser/animations';
 

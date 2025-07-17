@@ -12,7 +12,7 @@ Lista las Cuentas Bancarias de los bancos donde nos muestra ID Cuenta Bancaria, 
 
 Importar en tu componente asi:
 
-```html
+```typescript
     import { SharedComponentsModule } from 'src/app/shared/ui/shared-components.module';
 ```
 
@@ -31,7 +31,7 @@ Importar en tu componente asi:
 
 ### 3. En Typescript 
 
-```html
+```typescript
 @Component({
   selector: 'app-adddepositospendientes',
   templateUrl: './adddepositospendientes.component.html',
@@ -47,11 +47,11 @@ export class AdddepositospendientesComponent implements OnInit, OnDestroy {
   guardar(): void {
       const requestData: RegistrardepositoRequest = {
         ctabancaria: this.form.get('ctabancaria').value?.nctab,
-        --aqui tomamos el valor numerico para enviarlo 
+        //aqui tomamos el valor numerico para enviarlo 
       };
   }
 
- --reiniciar el autocomplete cuentabancaria y respetar el contenido de la lista
+ //reiniciar el autocomplete cuentabancaria y respetar el contenido de la lista
  limpiar() {
     this.form.get('ctabancaria')?.reset();
  }
