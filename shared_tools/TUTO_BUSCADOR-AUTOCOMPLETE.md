@@ -1,4 +1,56 @@
-# 📏 Uso del Parametro `centered` en Autocompleters
+# 📏 Uso del `buscador autocomplete`
+
+## 🎯 ¿Qué hace?
+
+Componente reutilizable de entrada tipo autocomplete que despliega un listado personalizado basado en el contexto del módulo (clientes, almacenes, tipos de documento, etc.). Filtra dinámicamente las coincidencias en función del texto ingresado por el usuario y permite seleccionar un elemento del conjunto de resultados
+
+## 🔎 Ubicacioón
+
+Podemos encontrar los autocompletes ya creados en la siguiente ruta del proyecto AdministraWeb-Front: `src\app\shared\ui\autocompleters`
+
+---
+
+## 🛠️ ¿Cómo implementarla?
+
+### 1. Importamos SharedComponentsModule en el module de nuestro componente:
+
+```typescript
+import { SharedComponentsModule } from 'src/app/shared/ui/shared-components.module';
+```
+
+### 2. Implementamos la etiqueta en el HTML de nuestro componente.
+
+Aqui le asignamos los valores a los parametros del buscador como el control, el tamaño y la accion a realizar al seleccionar una opción. Con estos parametros se construira el autocomplete.
+
+```html
+<div class="col-md-4">
+    <app-ctasbancarias-autocomplete 
+        [control]="form.get('ctabancaria')" 
+        [panelWidth]="800"
+        [placeholder]="'Buscar Cuenta bancaria...'" 
+        (selected)="onCuentaBancariaSelected($event)">
+    </app-ctasbancarias-autocomplete>
+</div>
+```
+
+### 3. En el Typescript de nuestro componente creamos e inicializamos el control que usará el autocomplete.
+
+```typescript
+@Component({
+  selector: 'app-adddepositospendientes',
+  templateUrl: './adddepositospendientes.component.html',
+  styleUrl: './adddepositospendientes.component.css'
+})
+export class AdddepositospendientesComponent implements OnInit, OnDestroy {
+  ctabancaria = new FormControl(null,[Validators.required]);   👈 // Aquí declaramos el control
+
+  // [...] Resto del código
+}
+```
+
+***
+
+# 📏 Uso del Parametro `centered` en Autocompletes
 
 ## 🎯 ¿Qué hace?
 
@@ -87,15 +139,15 @@ export class ClienteAutocompleteComponent implements OnInit, ControlValueAccesso
 
 ```HTML
 <section class="detail-container">
-        <div style="height: 100%; width: 100%; display: flex; justify-content: space-between;">
-	        <!--Información general cliente-->
-	        <div style="margin-left: 20px; margin-right: 20px;">
-	            <div style="display: flex; align-items: center; margin-top: 8px; min-width: 0;">
-	                <app-cliente-autocomplete
-	                    style="width: 450px; min-width: 0;"  
-	                    (selected)="onClienteSelected($event)"
-	                    [control]="cliente"
-	                    [centered] = "false"> <!-- 👈 Aquí agregamos el nuevo parámetro -->
-	                </app-cliente-autocomplete>
-	            </div>                    
+    <div style="height: 100%; width: 100%; display: flex; justify-content: space-between;">
+        <!--Información general cliente-->
+        <div style="margin-left: 20px; margin-right: 20px;">
+            <div style="display: flex; align-items: center; margin-top: 8px; min-width: 0;">
+                <app-cliente-autocomplete
+                    style="width: 450px; min-width: 0;"  
+                    (selected)="onClienteSelected($event)"
+                    [control]="cliente"
+                    [centered] = "false"> <!-- 👈 Aquí agregamos el nuevo parámetro -->
+                </app-cliente-autocomplete>
+            </div>                    
 ```
