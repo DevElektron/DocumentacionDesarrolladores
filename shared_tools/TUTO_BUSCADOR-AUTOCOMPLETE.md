@@ -151,3 +151,166 @@ export class ClienteAutocompleteComponent implements OnInit, ControlValueAccesso
                 </app-cliente-autocomplete>
             </div>                    
 ```
+
+***
+
+# 📐 Uso del Parámetro `inputHeight` en Autocompletes
+
+## 🎯 ¿Qué hace?
+
+El parámetro `inputHeight` nos permite **ajustar dinámicamente la altura** del campo de entrada (`input`) en los componentes autocompletables, adaptándose mejor al diseño del formulario o sección en donde se utilice.
+
+---
+
+## 🛠️ ¿Cómo implementarlo?
+
+### 1. Definir el parámetro en el componente de TypeScript del autocomplete
+
+```typescript
+@Input() inputHeight: number = 32;
+```
+
+> Este valor por defecto es `32`, pero puede modificarse según la necesidad del diseño.
+
+---
+
+### 2. Modificar el HTML del autocomplete
+
+Ubica el `mat-form-field` donde está el `<input>` y reemplázalo por el siguiente fragmento para aplicar la altura dinámica:
+
+```html
+<mat-form-field 
+  appearance="outline" 
+  class="w-100 dynamic-height-field"
+  [style.--dynamic-height.px]="inputHeight">
+  <mat-label>{{ placeholder }}</mat-label>
+  <input 
+    matInput 
+    [matAutocomplete]="auto" 
+    [formControl]="control" 
+    [placeholder]="placeholder"
+    class="dynamic-height-input"
+    (keydown.tab)="onKeyDown($event)" 
+    (input)="onInputChange($event)" 
+    (blur)="onBlur()">
+</mat-form-field>
+```
+
+> 👈 Aquí se aplican las clases y estilos necesarios para que funcione la altura dinámica.
+
+---
+
+### 3. Agregar los estilos al archivo CSS del componente
+
+```css
+/* Clase para el mat-form-field con altura dinámica */
+.dynamic-height-field {
+  width: 100% !important;
+  height: var(--dynamic-height) !important;
+  min-height: var(--dynamic-height) !important;
+  max-height: var(--dynamic-height) !important;
+
+  --mat-form-field-container-height: var(--dynamic-height) !important;
+  --mat-form-field-container-vertical-padding: 2px !important;
+
+  font-size: 12px !important;
+  margin-bottom: 0 !important;
+}
+
+/* Input dentro del mat-form-field dinámico */
+.dynamic-height-field input {
+  height: calc(var(--dynamic-height) - 4px) !important;
+  min-height: calc(var(--dynamic-height) - 4px) !important;
+  max-height: calc(var(--dynamic-height) - 4px) !important;
+  line-height: calc(var(--dynamic-height) - 8px) !important;
+  padding: 2px 5px !important;
+  font-size: 12px !important;
+  box-sizing: border-box !important;
+}
+
+/* Wrappers internos de Material */
+.dynamic-height-field .mat-mdc-text-field-wrapper {
+  height: var(--dynamic-height) !important;
+  min-height: var(--dynamic-height) !important;
+  max-height: var(--dynamic-height) !important;
+}
+
+.dynamic-height-field .mat-mdc-form-field-input-control {
+  height: calc(var(--dynamic-height) - 4px) !important;
+  min-height: calc(var(--dynamic-height) - 4px) !important;
+  max-height: calc(var(--dynamic-height) - 4px) !important;
+}
+
+.dynamic-height-field .mat-mdc-form-field-infix {
+  height: calc(var(--dynamic-height) - 8px) !important;
+  min-height: calc(var(--dynamic-height) - 8px) !important;
+  padding: 2px 0 !important;
+}
+
+/* Label del mat-form-field */
+.dynamic-height-field .mat-mdc-floating-label {
+  font-size: 11px !important;
+  line-height: normal !important;
+}
+```
+
+---
+
+## ✅ Ejemplo completo de TypeScript y HTML
+
+```typescript
+export class DocumentoAutocompleteComponent implements OnInit, ControlValueAccessor {
+  @Input() control: FormControl = new FormControl("");
+  @Input() placeholder: string = "Buscar documento...";
+  @Input() panelWidth: number = 500;
+  @Input() centered: boolean = true;
+  @Input() inputHeight: number = 32; 👈 // Declaramos el nuevo parámetro
+
+  constructor(
+    private documentosService: DocumentosService
+  ) { }
+
+  ngOnInit(): void {
+    this.initializeAutocomplete();
+    this.updateEstilos();
+  }
+
+  // [...] Resto del código
+}
+```
+
+```html
+<section class="detalle-doc">
+  <div style="height: 100%; width: 100%; display: flex;">
+    <app-documento-autocomplete
+      style="width: 400px; min-width: 0;"  
+      (selected)="onDocumentoSelected($event)"
+      [control]="documento"
+      [inputHeight]="40"> <!-- 👈 Aplicamos altura personalizada -->
+    </app-documento-autocomplete>
+  </div>
+</section>
+```
+
+---
+
+## 🧪 Casos de uso
+
+```html
+<!-- Altura por defecto (32px) -->
+<app-documento-autocomplete [control]="miControl"></app-documento-autocomplete>
+
+<!-- Altura personalizada (40px) -->
+<app-documento-autocomplete 
+  [control]="miControl"
+  [inputHeight]="40">
+</app-documento-autocomplete>
+
+<!-- Altura reducida (25px) -->
+<app-documento-autocomplete 
+  [control]="miControl"
+  [inputHeight]="25">
+</app-documento-autocomplete>
+```
+
+---
