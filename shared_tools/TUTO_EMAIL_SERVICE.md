@@ -1,6 +1,6 @@
 # 📧 Documentación del Servicio de Correo Electrónico
 
-## 🎯 Descripción General
+## 🎯 ¿Qué hace?
 
 El servicio de correo electrónico proporciona tres endpoints RESTful para el envío de mensajes con diferentes niveles de complejidad:
 
@@ -100,5 +100,11 @@ Content-Type: application/json
 ##📌 Consideraciones Importantes
 1. **Formatos soportados:** - Los adjuntos pueden ser cualquier tipo de archivo válido
 2. **codigo (int)** - Código de configuración a tomar
+
+---
+
+> 🗓️ **Fecha de última modificación:** 2025-07-18
+> 👤 **Guillermo Pérez**
+> 🏷️ **Versión:** 1
 
 
