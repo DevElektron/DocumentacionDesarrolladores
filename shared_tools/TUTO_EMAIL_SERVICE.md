@@ -39,7 +39,7 @@ Content-Type: application/json
 **Método:** `POST`  
 **Endpoint:** `/api/email/send/advanced/`  
 **Autenticación:** Requerida
-#### Ejemplo de solicitud
+#### Estructura del cuerpo (JSON):
 ```json
 {
   "to": ["to@example.com", "to2@example.com"],
@@ -50,3 +50,42 @@ Content-Type: application/json
   "isBodyHtml": true,
   "codigo": 2
 }
+```
+**Campos requeridos:**
+1. **to (array)** - Al menos un destinatario
+2. **subject (string)** - Asunto del correo
+3. **body (string)** - Contenido del mensaje
+4. **codigo (int)** - Código de configuración a tomar
+
+---
+
+ ### 3. Envío con Archivos Adjuntos
+**Método:** `POST`  
+**Endpoint:** `/api/email/send/with-attachments`  
+**Autenticación:** Requerida
+#### Estructura del cuerpo (JSON):
+```json
+{
+  "to": ["to@example.com"],
+  "subject": "Correo con adjuntos",
+  "body": "<p>Ejemplo de adjuntos.</p>",
+  "isBodyHtml": true,
+  "codigo": 3,
+  "attachments": [
+    {
+      "content": "base64encodedstring...",
+      "fileName": "documento.pdf",
+      "contentType": "application/pdf"
+    }
+  ]
+}
+```
+**Especificación de adjuntos:**
+1. **content (string)** - Contenido del archivo en Base64
+2. **fileName (string)** - 	Nombre del archivo con extensión
+3. **contentType (string)** - Tipo MIME del archivo
+
+---
+
+
+
