@@ -106,5 +106,9 @@ Content-Type: application/json
 > 🗓️ **Fecha de última modificación:** 2025-07-18
 > 👤 **Guillermo Pérez**
 > 🏷️ **Versión:** 1
+> 
+> 🗓️ **Fecha de última modificación:** 2025-07-19
+> 👤 **Eduardo Navarro**
+> 🏷️ **Versión:** 2
 
 
