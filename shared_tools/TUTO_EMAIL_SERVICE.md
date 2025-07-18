@@ -87,5 +87,18 @@ Content-Type: application/json
 
 ---
 
+##🚦 Códigos de Respuesta
+| Parámetro | Tipo | 
+|-----------|------|
+| `200 OK` | Correo enviado exitosamente | 
+| `400 Bad Request` | Error en la solicitud o validación |
+| `401 Unauthorized` | Falta autenticación o token inválido |
+| `500 Internal Server Error` | Error en el servidor |
+
+---
+
+##📌 Consideraciones Importantes
+1. **Formatos soportados:** - Los adjuntos pueden ser cualquier tipo de archivo válido
+2. **codigo (int)** - Código de configuración a tomar
 
 
