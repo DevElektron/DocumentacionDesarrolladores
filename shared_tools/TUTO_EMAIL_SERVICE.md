@@ -23,12 +23,30 @@ El servicio de correo electrónico proporciona tres endpoints RESTful para el en
 | `to` | string | query | Sí | Dirección de correo del destinatario |
 | `subject` | string | query | Sí | Asunto del correo |
 | `body` | string | body | Sí | Contenido del mensaje (puede ser HTML) |
-| `isHtml` | boolean | query | No | Indica si el cuerpo es HTML (default: true) |
-| `codigo` | integer | query | No | Código de configuración (default: 1) |
+| `isHtml` | boolean | query | Sí | Indica si el cuerpo es HTML (default: true) |
+| `codigo` | integer | query | Sí | Código de configuración (default: 1) |
 
 #### Ejemplo de solicitud:
 ```http
 POST /api/email/send/?to=user@example.com&subject=Test&isHtml=true&codigo=1
 Content-Type: application/json
 
-"<h1>Hello</h1><p>This is a test email.</p>"
+"<h1>Hola</h1><p>Esto es un ejemplo.</p>"
+
+---
+
+### 2. Envío Avanzado de Correo
+**Método:** `POST`  
+**Endpoint:** `/api/email/send/advanced/`  
+**Autenticación:** Requerida
+#### Ejemplo de solicitud
+```json
+{
+  "to": ["to@example.com", "to2@example.com"],
+  "cc": ["cc1@example.com"],
+  "bcc": ["bcc1@example.com"],
+  "subject": "Correo Avanzado de Prueba",
+  "body": "<h1>Importante</h1><p>Esto es un ejemplo.</p>",
+  "isBodyHtml": true,
+  "codigo": 2
+}
