@@ -32,7 +32,7 @@ POST /api/email/send/?to=user@example.com&subject=Test&isHtml=true&codigo=1
 Content-Type: application/json
 
 "<h1>Hola</h1><p>Esto es un ejemplo.</p>"
-
+```
 ---
 
 ### 2. Envío Avanzado de Correo
