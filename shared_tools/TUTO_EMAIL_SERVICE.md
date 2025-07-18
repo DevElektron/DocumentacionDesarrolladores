@@ -87,7 +87,7 @@ Content-Type: application/json
 
 ---
 
-##🚦 Códigos de Respuesta
+## 🚦 Códigos de Respuesta
 | Parámetro | Tipo | 
 |-----------|------|
 | `200 OK` | Correo enviado exitosamente | 
@@ -97,7 +97,7 @@ Content-Type: application/json
 
 ---
 
-##📌 Consideraciones Importantes
+## 📌 Consideraciones Importantes
 1. **Formatos soportados:** - Los adjuntos pueden ser cualquier tipo de archivo válido
 2. **codigo (int)** - Código de configuración a tomar
 
