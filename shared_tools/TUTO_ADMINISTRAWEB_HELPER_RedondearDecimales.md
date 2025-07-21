@@ -25,6 +25,22 @@ var rounder = new DecimalRounder(2);
 En este caso, el objeto de redondeo usar 2 decimales, como para el redondeo de cantidades monetarias o contables. Este objeto contiene el método `Redondear` cuyo parámetro es el DTO  que tiene propedades de tipo `decimal`, ejemplo:
 
 ```csharp
+public class TotalesVentasPeriodoDto
+{
+    public decimal TotalObjGte { get; set; }
+    public decimal TotalObjetivo { get; set; }
+    public decimal TotalVtaHoy { get; set; }
+    public decimal TotalCto1Mensual { get; set; }
+    public decimal TotalVtaMensual { get; set; }
+    public decimal TotalVtaReq { get; set; }
+    public decimal TotalLogradox100 { get; set; }
+    public decimal TotalDifMes { get; set; }
+    public decimal TotalDifDiaria { get; set; }
+    public decimal TotalTendPesos { get; set; }
+    public decimal TotalTendx100 { get; set; }
+    public decimal TotalMargen { get; set; }
+}
+
 public class CobranzaDto
 {
     public required int NCte { get; set; }
