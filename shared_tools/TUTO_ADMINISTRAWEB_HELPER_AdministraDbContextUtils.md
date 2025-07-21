@@ -26,7 +26,6 @@ public class TuClase : ITuClase
 
     public TuClase(AdministraDbContextUtils dbUtils)
     {
-        _estadisticaVentasVendedoresRepository = estadisticaVentasVendedoresRepository;
         _dbUtils = dbUtils;
     }
     ...
