@@ -55,7 +55,7 @@ var rounder = new DecimalRounder(2, MidpointRounding.AwayFromZero);
 
 | Opción                           | Comportamiento                                                                                   | Casos de uso comunes                                                                 |
 |----------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| `ToEven`                         | Redondea al número par más cercano cuando el valor termina en `.5`                               | Predeterminado en .NET. Ideal para cálculos financieros o estadísticos, evita sesgo acumulativo |
+| `ToEven` (default)               | Redondea al número par más cercano cuando el valor termina en `.5`                               | Predeterminado en .NET. Ideal para cálculos financieros o estadísticos, evita sesgo acumulativo |
 | `AwayFromZero`                   | Redondea `.5` hacia el número más alejado del cero (ej. `2.5 → 3`, `-2.5 → -3`)                   | Presentaciones visuales, KPIs, interfaces donde se espera que `.5` suba consistentemente |
 | `ToZero` *(desde .NET 6)*        | Redondea `.5` hacia el número más cercano a cero (ej. `2.5 → 2`, `-2.5 → -2`)                     | Cálculos donde se desea minimizar sobreestimación                                     |
 | `ToNegativeInfinity` *(.NET 6)*  | Redondea siempre hacia abajo, incluso si termina en `.5`                                         | Truncamiento o cálculos conservadores                                                 |
@@ -145,7 +145,7 @@ public async Task<List<CobranzaDto>> obtenerTopCobranzaAsync(TopCobranzaRequest 
 
 ## 🔷 Resultado esperado
 
-✅ Valores de propiedades `decimal` redondeadas a los decimales especificados.
+✅ Valores de propiedades `decimal` redondeados a los decimales especificados.
 
 ---
 
