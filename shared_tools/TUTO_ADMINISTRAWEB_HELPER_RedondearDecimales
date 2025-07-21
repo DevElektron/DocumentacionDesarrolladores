@@ -152,5 +152,6 @@ public async Task<List<CobranzaDto>> obtenerTopCobranzaAsync(TopCobranzaRequest 
 ## 📝 Nota
 
 > El helper no afectará a las propiedaes que no sean de tipo `decimal`, pasa los valores a un nuevo objeto del tipo de DTO pasado como argumento en el método `Redondear`.
+> Es recomendable el crear otro objeto que recibe el uso del helper como buena práctca para el uso de un debugger.
 
 ---
