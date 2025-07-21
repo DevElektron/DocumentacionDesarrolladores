@@ -40,7 +40,7 @@ public class CobranzaDto
 Para usar el método `Redondear` simplemente llámalo:
 
 ```csharp
-// Creando una copia de una lista del DTO que tendrá los valores de las propiedades
+// Creando una nueva lista del DTO que tendrá los valores de las propiedades
 // redondeadas a 2 decimales, ej. 167.745 → 167.74
 topCobranzaRedondeado2 = topCobranza.Select(v => rounder.Redondear(v)).ToList();
 ```
