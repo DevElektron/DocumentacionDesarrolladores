@@ -2,7 +2,7 @@
 
 ## 🎯 ¿Qué hace?
 
-El helper `RedondearDecimales` permite redondear todas las propiedades de un DTO de tipo de dato `decimal` con la precisión indicada en su contructor.
+El helper `RedondearDecimales` permite redondear todas las propiedades de un DTO de tipo de dato `decimal` con la precisión indicada en su constructor.
 
 ---
 
