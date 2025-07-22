@@ -10,13 +10,16 @@ Este módulo permite la captura de documentos del tipo Documentos por Cobrar y A
 |---------|-------------------|--------------------------------|----------------|
 | Botón   | Añadir      | Permite añadir un nuevo tipo de documento de naturaleza 1(documento por cobrar) o 4(anticipo) | Coordinadoras de crédito y cobranza del corporativo |
 | Botón   | Modificar   | Permite  modificar la fecha de vencimiento y descripcion dependiendo de la naturtaleza del dcto | Coordinadoras de crédito y cobranza del corporativo |
-| Botón   | Bandera    | Permite marcar un documento para evitar que sea considerado en reportes de cobranza | Coordinadoras de crédito y cobranza del corporativo |
+| Botón   | Bandera    | Permite activar/desactivar la bandera de un documento para incluir o excluir el registro de los reportes de cobranza mediante la modificación de un campo específico en base de datos | Coordinadoras de crédito y cobranza del corporativo |
 
 ## 💼 Políticas Generales
-- Al momento de agragar un nuevo documento, solo los anticipos permiten ingresar una descripción
-- El tipo de moneda dola solo será selecciobale para los clientes que pueden facturar en dolares.
-- La fecha de vencimiento es calculada acorde al usuario seleccionado.
-- El importe siempre es capturado en base de datos como moneda nacional.
+- Solo se pueden capturar documentos de naturaleza 1 (Documentos por Cobrar) y naturaleza 4 (Anticipos)
+- Al momento de agregar un nuevo documento, solo los anticipos permiten ingresar una descripción
+- El tipo de moneda dólar solo será seleccionable para los clientes que pueden facturar en dólares
+- La fecha de vencimiento se calcula automáticamente sumando los días de crédito del cliente (configurados en el catálogo de clientes, sección Datos de Crédito) a la fecha del documento
+- El importe siempre es capturado en base de datos como moneda nacional
+- El campo folio del documento se compone de: lfolio + nfolio de la tabla ELFOF
+- La tabla ELFOF se relaciona mediante el campo cfolio con la tabla de tipos de documentos ELDCC
 
 ## 🧪 Casos de Prueba
 
@@ -52,8 +55,12 @@ Este módulo permite la captura de documentos del tipo Documentos por Cobrar y A
     - Puedes seleccionar el tipo de moneda dólar
 
 ### Botón No considerar documentos en reportes de cobranza
+#### 💼 Operación
+- [ ] Permite activar/desactivar una bandera que controla si el documento será considerado en reportes de cobranza
 #### 🛡️ Validaciones
-- [ ] Seleccionar un registro el cual quiera modificar
+- [ ] Se debe seleccionar un registro de la tabla principal antes de presionar el botón
+- [ ] Al activar la bandera, el documento será excluido de los reportes de cobranza
+- [ ] Cuando la bandera está activa, se muestra un punto de color rojo junto al tipo de documento como indicador visualles
 
 ## 📎 Observaciones adicionales
 - Observaciones adicionales, modos de prueba o ambientes específicos de uso.
