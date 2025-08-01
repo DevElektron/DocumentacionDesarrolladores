@@ -313,4 +313,8 @@ export class DocumentoAutocompleteComponent implements OnInit, ControlValueAcces
 </app-documento-autocomplete>
 ```
 
----
+***
+
+> 🗓️ **Fecha de última modificación:** 2025-07-18
+> 👤 **Erick López**
+> 🏷️ **Versión:** 3
