@@ -46,8 +46,25 @@
 
 </details>
 
+---
+
+<details>
+<summary><strong>📑 Zonas de Cobranza Disponibles para Gerentes</strong> <code>zonas-cobranza-disponibles-autocomplete</code></summary>
+
+- 🗂️ **Código:** `src\app\shared\ui\autocompleters\zonas-cobranza-disponibles-autocomplete`  
+- 📋 **Tablas involucradas:** `ELGTE` & `ELCZO`
+- 🧾 **Contenido:** `GTE:NCZO`, `CZO:DESCRIPCION`, `GTE:CIUDAD`
+- 📏 **Filtro de Búsqueda:**
+ 	- **Joins:** 
+ 		- `GTE:NCZO = CZO:NCZO`  
+ 	- **Where:**
+   		- **Número de Vendedor asociado al Gerente**
+     		- `GTE:NVEN = [NVen]`
+
+</details>
+
 ***
 
-> 🗓️ **Fecha de última modificación:** 2025-08-01
-> 👤 **Eduardo Navarro**
-> 🏷️ **Versión:** 1
+> 🗓️ **Fecha de última modificación:** 2025-08-04
+> 👤 **Eduardo Navarro, Sergio Tostado**
+> 🏷️ **Versión:** 2
