@@ -315,6 +315,80 @@ export class DocumentoAutocompleteComponent implements OnInit, ControlValueAcces
 
 ***
 
-> 🗓️ **Fecha de última modificación:** 2025-07-18
-> 👤 **Erick López**
-> 🏷️ **Versión:** 3
+# 📏 Uso del Parametro `fieldLabel` en Autocompletes
+
+## 🎯 ¿Qué hace?
+
+El parametro `fieldLabel` nos permite **modificar el mat-label del autocomplete** con el proposito de poder tener el nombre del campo que requiramos sin tener que usar una etiqueta extra.
+
+---
+
+## 🛠️ ¿Cómo implementarla?
+
+### 1. Definir el paramtro en el componente de TypeScript de nuestro autocomplete
+
+> Dejamos un valor inicializado para que se muestre en caso de no usar el parametro al momento de implementar el autocomplete en alguno de nuestros componentes.
+
+```typescript
+@Input() fieldLabel: string = 'Factura';
+```
+
+### 2. Modificamos la etiqueta `<mat-label>` en el HTML de nuestro autocomplete
+
+```html
+<mat-form-field
+    appearance="outline"
+    class="w-100 extra-small"
+    [matTooltip]="tooltipMsg"
+    [matTooltipDisabled]="!showTooltip"
+    matTooltipPosition="above"
+>
+<mat-label>{{fieldLabel}}</mat-label> <!-- 👈 Aquí agregamos el nuevo parámetro -->
+    <input matInput 
+    [matAutocomplete]="auto" 
+    [formControl]="control" 
+    [placeholder]="placeholder"
+    (keydown.tab)="onKeyDown($event)" 
+    (input)="onInputChange($event)" 
+    (blur)="onBlur()">
+</mat-form-field>
+```
+
+### 3. Agregamos el parametro a la etiqueta del autocomplete en el HTML del modulo donde lo estamos implementando.
+
+> Podemos establecer el string directo en el parametro o con una variable desde el TypeScript de nuestro componente
+
+```html
+<div class="col-md-6">
+    <app-seleccionde-facrtura-autocomplete
+    #autocomplete
+    [control]="factura"
+    [fieldLabel]="'Factura Origen'"              👈 Aquí usamos el nuevo parámetro seteando el string directo
+    (selected)="onFacDestinoSelected($event)">
+    </app-seleccionde-facrtura-autocomplete>
+</div>
+
+<div class="col-md-6">
+    <app-dxc-pendienetes-saldar-autocomplete
+    #autocomplete
+    [control]="dxc"
+    [fieldLabel]="facDestString"             👈 Aquí usamos el nuevo parámetro seteando el string con una variable
+    [clientes]="clientesArray">
+    </app-dxc-pendienetes-saldar-autocomplete>
+</div>
+```
+
+```typescript
+export class ActSolicitudesDescuentoComponent {
+  public factura = new FormControl(null, [Validators.required]);
+  public dxc = new FormControl(null, [Validators.required]);
+  public facDestString = 'Factura Destino'                  // 👈 Asignamos el string 
+
+  //[Resto de declaraciones]
+```
+
+***
+
+> 🗓️ **Fecha de última modificación:** 2025-08-08
+> 👤 **Eduardo Navarro**
+> 🏷️ **Versión:** 4
