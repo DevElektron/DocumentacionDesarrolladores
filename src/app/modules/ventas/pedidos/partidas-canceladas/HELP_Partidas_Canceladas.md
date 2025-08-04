@@ -15,7 +15,7 @@ Este módulo muestra un resumen de las partidas canceladas o próximas a cancela
 
 ## 💼 Políticas Generales
 - El modal solo se muestra si existen partidas canceladas o próximas a cancelarse.
-- El acceso está restringido a usuarios con rol de "gente".
+- El acceso está restringido a usuarios con rol de "gerente" y número de vendedor con partidas canceladas eso deberá asignarse en el sistema Security.
 - El usuario debe poder identificar fácilmente el estatus de cada partida mediante el color del icono.
 
 ## 🧪 Casos de Prueba
