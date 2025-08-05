@@ -2,88 +2,88 @@
 #### 📁 **Código:** `Modules/Ventas/facturacionAnticipos`
 #### 💻 **Menú:** Ventas > Facturación de Anticipos  [Ver en QA](http://192.168.2.16:1089/app/ventas/facturacionanticipos)
 
-## 📝 Descripción
-Éste módulo permite la consulta de las facturas de anticipos así como sus detalles y observaciones.
-También, permite la captura de anticipos tanto para cliente mostrador y cliente normal.
+## 📝 Descripción  
+Este módulo permite consultar las facturas de anticipos, incluyendo sus detalles y observaciones.  
+También permite capturar anticipos tanto para clientes de mostrador como para clientes regulares.
 
-## 🔐 Seguridad
-| Tipo UI | Elemento          | Descripción                         | Rol permitido |
-|---------|-------------------|-------------------------------------|----------------|
-| Botón   | Añadir anticipo   | Abre ventana de captura de anticipo |                |
+## 🔐 Seguridad  
+| Tipo UI | Elemento        | Descripción                          | Rol permitido |
+|---------|-----------------|--------------------------------------|----------------|
+| Botón   | Añadir anticipo | Abre la ventana de captura de anticipo |                |
 
-## 💼 Políticas Generales
--  Para poder capturar, el usuario debe tener un almacén asignado
--  El almacén se asignará automáticamente dependiendo el almacén asignado al usuario y no se podrá modificar
--  La fecha será la actual y no se podrá modificar
--  La caja se asignará automáticamente dependiendo el almacén asignado al usuario y no se podrá modificar
--  Uso de Cfdi, forma de pago, método de pago y tipo de moneda se deben llenar con información del cliente seleccionado
--  Los campos con * son obligatorios y de no tener el valor necesario, no se podrá presionar `Guardar`
+## 💼 Políticas Generales  
+1. Para poder capturar, el usuario debe tener un almacén asignado.  
+2. El almacén se asignará automáticamente con base en el almacén asociado al usuario y no podrá ser modificado.  
+3. La fecha será la actual y no podrá ser modificada.  
+4. La caja se asignará automáticamente de acuerdo con el almacén del usuario y no podrá ser modificada.  
+5. El uso de CFDI, la forma de pago, el método de pago y el tipo de moneda deben llenarse con la información del cliente seleccionado.  
+6. Los campos marcados con * son obligatorios. Si no se capturan correctamente, no se podrá presionar el botón `Guardar`.
 
-## 🧪 Casos de Prueba
+## 🧪 Casos de Prueba  
 
-### Capturar Factura de Anticipo (Normal)
-#### 💼 Operación
-- [ ] No se permite guardar folios duplicados
-- [ ] No se permiten guardar facturas con datos inválidos
-#### 🛡️ Validaciones
-- [ ] Debe capturarse el mínimo de información, requiriendo los campos:
-    - Almacén
-    - Fecha documento
-    - Caja
-    - Cliente
-    - Uso de Cfdi
-    - Forma de pago
-    - Método de pago
-    - Tipo de moneda
-    - Vendedor
-    - Importe
-    - Descripción (Debe tener un minimo de 10 caracteres y válida que no sea solo simbolos al azar)
-- [ ] Se debe seleccionar un cliente válido, ya sea dando clic en el registro o haciendo tabulador al ingresar el número de cliente
-- [ ] Se debe seleccionar un vendedor válido, ya sea dando clic en el registro o haciendo tabulador al ingresar el número de vendedor
+### Captura de Factura de Anticipo (Cliente Regular)  
+#### 💼 Operación  
+- [ ] No se permite guardar folios duplicados.  
+- [ ] No se permite guardar facturas con datos inválidos.
 
-### Capturar Factura de Anticipo Cliente Mostrador
-#### 💼 Operación
-- [ ] Mismas operaciones que en la captura normal
-- [ ] Al ingresar un cliente mostrador (CTE:MODIF_VENTA == 1) se deberá abrir un modal donde se pueda modificar la información del cliente
-- [ ] Al ingresar un cliente, aparecerá un botón azul en la parte inferior izquierda del modal, al dar clic también se habrirá el modal.
-- [ ] En el nuevo modal, al seleccionar la opción de "Seleccionar datos de registro previo" deberá abrir un nuevo modal donde se podrá seleccionar información previamente registrada para el cliente actual.
-#### 🛡️ Validaciones
-- [ ] Mismas válidaciones que captura normal
-- [ ] Ventana "Captura los datos del cliente para la impresión de la factura" se deben ingresar por lo menos los siguientes datos
-    - Nombre
-    - Nombre Cliente SAT
-    - Domicilio
-    - Colonia
-    - Ciudad
-    - Municipio
-    - Estado
-    - Código Postal
-    - Método de pago
-    - Régimen Fiscal
-- [ ] Ventana "Seleccionar cliente de mostrador"
-    - Se debe seleccionar un registro de la tabla si es que existe        
-  
+#### 🛡️ Validaciones  
+- [ ] Se debe capturar al menos la siguiente información obligatoria:  
+  - Almacén  
+  - Fecha del documento  
+  - Caja  
+  - Cliente  
+  - Uso de CFDI  
+  - Forma de pago  
+  - Método de pago  
+  - Tipo de moneda  
+  - Vendedor  
+  - Importe  
+  - Descripción (mínimo 10 caracteres; no debe contener únicamente símbolos aleatorios)  
+- [ ] Se debe seleccionar un cliente válido, ya sea haciendo clic en el registro o presionando Tab al ingresar el número de cliente.  
+- [ ] Se debe seleccionar un vendedor válido, ya sea haciendo clic en el registro o presionando Tab al ingresar el número de vendedor.
 
-## 📎 Observaciones adicionales
-- Al momento de guardar la factura de anticipos, el sistema deberá preguntar:
-    - ¿Desea imprimir la factura del anticipo?
-- Deberá abrir un modal donde muestre las cuentas de correo a donde será enviado el documento y dará la opción de añadir uno o más correos.
-    - Validará que sean correos válidos y que esten separados por coma en caso de que sea más de uno
-- Deberá mostrar un modal con el folio generado y el número de caja donde se creo
-- En caso de que en el proceso de guardado de la factura existieron errores o advertencias, el sistema deberá mostrarlos al usuario
-- Deberá preguntar: ¿Éste Anticipo es Para un Pedido en Específico?
-    - En caso de decir que sí, se abrirá un modal donde se podrán vincular uno o varios pedidos a la facura
-- Deberá mostrar si el proceso fue terminado con éxito o no     
+### Captura de Factura de Anticipo (Cliente Mostrador)  
+#### 💼 Operación  
+- [ ] Se aplican las mismas operaciones que en la captura de cliente regular.  
+- [ ] Al ingresar un cliente mostrador (`CTE:MODIF_VENTA == 1`), deberá abrirse un modal para modificar los datos del cliente.  
+- [ ] Al seleccionar un cliente, aparecerá un botón azul en la parte inferior izquierda del modal; al hacer clic en él, también se abrirá el mismo modal.  
+- [ ] En el nuevo modal, al seleccionar la opción "Seleccionar datos de registro previo", deberá abrirse un segundo modal donde se pueda elegir información previamente registrada del cliente.
 
-> 🗓️ **Fecha de última modificación:** 2025-08-05
-> 👤 **Luis Guillermo Pérez Fuentes**
+#### 🛡️ Validaciones  
+- [ ] Se aplican las mismas validaciones que en la captura de cliente regular.  
+- [ ] En la ventana “Captura los datos del cliente para la impresión de la factura”, deberán capturarse al menos los siguientes campos:  
+  - Nombre  
+  - Nombre del Cliente SAT  
+  - Domicilio  
+  - Colonia  
+  - Ciudad  
+  - Municipio  
+  - Estado  
+  - Código Postal  
+  - Método de pago  
+  - Régimen Fiscal  
+- [ ] En la ventana "Seleccionar cliente de mostrador", se debe seleccionar un registro de la tabla (si existen registros).
+
+## 📎 Observaciones adicionales  
+- Al guardar la factura de anticipo, el sistema deberá preguntar:  
+  **¿Desea imprimir la factura del anticipo?**  
+- Se deberá mostrar un modal con las cuentas de correo a las que se enviará el documento, permitiendo añadir una o más direcciones.  
+  - Se validará que los correos sean válidos y estén separados por comas en caso de haber varios.  
+- Se mostrará un modal con el folio generado y el número de caja donde se creó.  
+- En caso de errores o advertencias durante el proceso de guardado, el sistema deberá mostrarlos al usuario.  
+- Se deberá preguntar: **¿Este anticipo es para un pedido en específico?**  
+  - Si la respuesta es afirmativa, se abrirá un modal que permitirá vincular uno o más pedidos a la factura.  
+- Se deberá notificar si el proceso se completó con éxito o si hubo algún fallo.
+
+> 🗓️ **Fecha de última modificación:** 2025-08-05  
+> 👤 **Luis Guillermo Pérez Fuentes**  
 > 🏷️ **Versión:** 1
-
 ---
 # Comunicaciones
 |Dir|Fecha       |Firma|Comentario                    |
 |---|------------|-----|------------------------------|
 |⏪| 2025/07/02 | GP |Entrega|
+
 
 
 
