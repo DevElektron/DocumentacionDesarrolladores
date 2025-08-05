@@ -12,12 +12,12 @@ También, permite la captura de anticipos tanto para cliente mostrador y cliente
 | Botón   | Añadir anticipo   | Abre ventana de captura de anticipo |                |
 
 ## 💼 Políticas Generales
-- 1 Para poder capturar, el usuario debe tener un almacén asignado
-- 2 El almacén se asignará automáticamente dependiendo el almacén asignado al usuario y no se podrá modificar
-- 3 La fecha será la actual y no se podrá modificar
-- 4 La caja se asignará automáticamente dependiendo el almacén asignado al usuario y no se podrá modificar
-- 5 Uso de Cfdi, forma de pago, método de pago y tipo de moneda se deben llenar con información del cliente seleccionado
-- 6 Los campos con * son obligatorios y de no tener el valor necesario, no se podrá presionar `Guardar`
+-  Para poder capturar, el usuario debe tener un almacén asignado
+-  El almacén se asignará automáticamente dependiendo el almacén asignado al usuario y no se podrá modificar
+-  La fecha será la actual y no se podrá modificar
+-  La caja se asignará automáticamente dependiendo el almacén asignado al usuario y no se podrá modificar
+-  Uso de Cfdi, forma de pago, método de pago y tipo de moneda se deben llenar con información del cliente seleccionado
+-  Los campos con * son obligatorios y de no tener el valor necesario, no se podrá presionar `Guardar`
 
 ## 🧪 Casos de Prueba
 
@@ -85,6 +85,7 @@ También, permite la captura de anticipos tanto para cliente mostrador y cliente
 |---|------------|-----|------------------------------|
 |⏪| 2025/07/02 | GP |Retorno|
 |⏩| 2025/07/02 | IC |Avance|
+
 
 
 
