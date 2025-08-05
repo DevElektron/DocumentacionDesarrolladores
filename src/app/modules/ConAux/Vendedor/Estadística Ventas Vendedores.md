@@ -1,6 +1,6 @@
 # 📦 Módulo: Estadística Ventas Vendedores
 #### 📁 **Código:** `/modules/vendedor/estadistica_ventas_vendedores`
-#### 💻 **Menú:** Menú > > >  [Ver en QA](http://192.168.2.16:1089//app/conauxiliares/vendedor/ventas-vendedor-ciudad)
+#### 💻 **Menú:** Menú > > >  [Ver en QA](http://192.168.2.16:1089/app/conauxiliares/vendedor/ventas-vendedor-ciudad)
 #### 💻 **Menú:** Menú > > >  [Ver en QA](http://192.168.2.16:1089/app/dashboard)
 
 ## 📝 Descripción
