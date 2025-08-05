@@ -1,21 +1,23 @@
 # 📦 Módulo: 
-#### 📁 **Código:** `//`
-#### 💻 **Menú:** Menú > > >  [Ver en QA](http://192.168.2.16:1089/app////)
+#### 📁 **Código:** `Modules/Ventas/facturacionAnticipos`
+#### 💻 **Menú:** Menú > > >  [Ver en QA](http://192.168.2.16:1089/app/ventas/facturacionanticipos)
 
 ## 📝 Descripción
-Éste módulo permite 
+Éste módulo permite la consulta de las facturas de anticipos así como sus detalles y observaciones.
+También, permite la captura de anticipos. 
 
 ## 🔐 Seguridad
-| Tipo UI | Elemento          | Descripción                    | Rol permitido |
-|---------|-------------------|--------------------------------|----------------|
-| Botón   | Añadir      | Permite      |        |
-| Botón   | Modificar   | Permite      |        |
-| Botón   | Eliminar    | Permite      |        |
+| Tipo UI | Elemento          | Descripción                         | Rol permitido |
+|---------|-------------------|-------------------------------------|----------------|
+| Botón   | Añadir anticipo   | Abre ventana de captura de anticipo |                |
 
 ## 💼 Políticas Generales
-- 1
-- 2
-- 3
+- 1 Para poder capturar, el usuario debe tener un almacén asignado
+- 2 El almacén se asignará automáticamente dependiendo el almacén asignado al usuario y no se podrá modificar
+- 3 La fecha será la actual y no se podrá modificar
+- 4 La caja se asignará automáticamente dependiendo el almacén asignado al usuario y no se podrá modificar
+- 5 Uso de Cfdi, forma de pago, método de pago y tipo de moneda se deben llenar con información del cliente seleccionado
+- 6 Los campos con * son obligatorios y de no tener el valor necesario, no se podrá presionar Guardar
 
 ## 🧪 Casos de Prueba
 
@@ -56,5 +58,6 @@
 |---|------------|-----|------------------------------|
 |⏪| 2025/07/02 | GP |Retorno|
 |⏩| 2025/07/02 | IC |Avance|
+
 
 
