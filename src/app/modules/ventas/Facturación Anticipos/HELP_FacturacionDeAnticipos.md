@@ -1,4 +1,4 @@
-# 📦 Módulo: 
+# 📦 Módulo: Facturación de Anticipos
 #### 📁 **Código:** `Modules/Ventas/facturacionAnticipos`
 #### 💻 **Menú:** Ventas > Facturación de Anticipos  [Ver en QA](http://192.168.2.16:1089/app/ventas/facturacionanticipos)
 
@@ -83,6 +83,7 @@ También permite capturar anticipos tanto para clientes de mostrador como para c
 |Dir|Fecha       |Firma|Comentario                    |
 |---|------------|-----|------------------------------|
 |⏪| 2025/07/02 | GP |Entrega|
+
 
 
 
