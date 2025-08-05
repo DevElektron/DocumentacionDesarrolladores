@@ -60,7 +60,7 @@ También, permite la captura de anticipos tanto para cliente mostrador y cliente
     - Código Postal
     - Método de pago
     - Régimen Fiscal
-- [] Ventana "Seleccionar cliente de mostrador"
+- [ ] Ventana "Seleccionar cliente de mostrador"
     - Se debe seleccionar un registro de la tabla si es que existe        
   
 
@@ -85,6 +85,7 @@ También, permite la captura de anticipos tanto para cliente mostrador y cliente
 |---|------------|-----|------------------------------|
 |⏪| 2025/07/02 | GP |Retorno|
 |⏩| 2025/07/02 | IC |Avance|
+
 
 
 
