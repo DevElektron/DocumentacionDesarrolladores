@@ -14,7 +14,7 @@ Este módulo muestra las ventas por vendedor y ciudad de acuerdo a que si el usu
 | ag-grid-angular | Tabla/Grid + Tarjeta Factores Críticos Gerente | Listado y Calificación de FCE para el vendedor que un gerente seleccione en la tabla de ventas por periodo. | Gerente |
 | ag-grid-angular | Tabla/Grid Top Ventas Vendedor | Listado de top ventas para el vendedor que ha iniciado sesión | Vendedor |
 | autocomplete | Buscar zona de cobranza | Permite buscar las zonas de cobranza y las ciudades disponibles para un gerente. | Gerente |
-| dashboard   | Mostrar módulo | Permite mostrar el módulo en el panel de inicio. | Vendedor |
+| dashboard   | Mostrar módulo | Permite mostrar el módulo en el panel de inicio. | Gerente / Vendedor |
 | ventana   | Mostrar opción | Permite mostrar la opción en el menú principal. | Gerente / Vendedor |
 
 ## 💼 Políticas Generales
