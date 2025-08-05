@@ -83,8 +83,8 @@ También, permite la captura de anticipos tanto para cliente mostrador y cliente
 # Comunicaciones
 |Dir|Fecha       |Firma|Comentario                    |
 |---|------------|-----|------------------------------|
-|⏪| 2025/07/02 | GP |Retorno|
-|⏩| 2025/07/02 | IC |Avance|
+|⏪| 2025/07/02 | GP |Entrega|
+
 
 
 
