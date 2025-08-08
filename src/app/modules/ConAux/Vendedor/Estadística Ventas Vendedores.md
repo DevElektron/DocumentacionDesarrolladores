@@ -9,11 +9,6 @@ Este módulo muestra las ventas por vendedor y ciudad de acuerdo a que si el usu
 ## 🔐 Seguridad
 | Tipo UI | Elemento          | Descripción                    | Rol permitido |
 |---------|-------------------|--------------------------------|----------------|
-| ag-grid-angular | Tabla/Grid Ventas por Periodo | Muestra las ventas realizadas por los vendedores y su información calculada y concentrada por el periodo indicado en la columna `Cuota`. | Gerente / Vendedor |
-| ag-grid-angular | Tabla/Grid + Tarjeta Factores Críticos Vendedor | Listado y Calificación de FCE para el vendedor que ha iniciado sesión. | Vendedor |
-| ag-grid-angular | Tabla/Grid + Tarjeta Factores Críticos Gerente | Listado y Calificación de FCE para el vendedor que un gerente seleccione en la tabla de ventas por periodo. | Gerente |
-| ag-grid-angular | Tabla/Grid Top Ventas Vendedor | Listado de top ventas para el vendedor que ha iniciado sesión | Vendedor |
-| autocomplete | Buscar zona de cobranza | Permite buscar las zonas de cobranza y las ciudades disponibles para un gerente. | Gerente |
 | dashboard   | Mostrar módulo | Permite mostrar el módulo en el panel de inicio. | Gerente / Vendedor |
 | ventana   | Mostrar opción | Permite mostrar la opción en el menú principal. | Gerente / Vendedor |
 
@@ -82,6 +77,7 @@ Este módulo muestra las ventas por vendedor y ciudad de acuerdo a que si el usu
 - En la información mostrada en el tablero migrado del ERP ElektronSQL con Clarion, hay ciertas celdas cuya información es un cálculo, y por la precisión de las tecnologías .NET algunas cantidades difieren por un centavo en su redondeo del tipo de dato decimal a 2 decimales, siendo aleatorios y muy escasos los casos al comparar la información original.
 - En la versión original del tablero viene 2 filtros, uno para la zona y otro para la ciudad. En el nuevo tablero se unificaron los filtros con el autocomplete de Zonas de Cobranza Disponible, siendo la selección de una opción el filtro que da a las tablas la zona y ciudad.
 - En la versión original del tablero tiene 2 filtros, Año y Mes, por común acuerdo de los tableros de la ruta `C. Aux. - Consultas Auxiliares Clientes / Vendedor - Vendedor` se eliminaron los filtros indicados, tomando estos datos de la tabla en la BD `ELCTRL`, columnas `CIE_ANOACTUAL` y `CIE_MESACTUAL`.
+- En este tablero sólo está como parte de la seguridad el acceso al tablero, ya que en su programación la única variante que define si se muestra una vista u la otra es el NVEN del usuario que inició sesión, buscando a partir de ese dato si es gerente o no.
 
 > 🗓️ **Fecha de última modificación:** 2025-08-05
 > 👤 **Sergio Tostado**
