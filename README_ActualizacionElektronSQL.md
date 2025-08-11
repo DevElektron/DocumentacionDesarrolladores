@@ -49,7 +49,7 @@ Cuando montes la unidad `f:`, te preguntará credenciales:
 - Usuario: `Invitado`.
 - Pass: `Invitado`.
 
-> NOTA: Si tiene otras carpetas en donde tienes tanto los archivos del proyecto (primer `robocopy`) como la ruta de la carpeta que contiene el ejecutable final (`robocopy` final), favor de modificar el script con las carpetas correspondientes en los comandos `robocopy`, ejemplo:
+> NOTA: Si tiene otras carpetas en donde tienes tanto los archivos del proyecto (primer `robocopy`) como la ruta de la carpeta que contiene el ejecutable final (`robocopy` final), favor de modificar el script con las carpetas correspondientes en los comandos `robocopy`, ejemplo, si yo tengo una carpeta `C:\aaaa` con los archivos y la carpeta `Principal` del proyecto, teniendo la carpeta `C:\APPS\ELSCA` que contiene el ejecutable `elsca.exe`:
 
 ```bat
 ...
