@@ -202,8 +202,6 @@ Donde:
 - `\Clarion6\Proyectos\ElektronSQL` es la ruta de los archivos actualizados.
 - `net use` es el comando para montar/desmontar unidades de red en CMD.
 
-> NOTA: Podrías envolver las rutas en comillas para evitar errores si contienen espacios.
-
 Cuando montes la unidad `f:`, te preguntará credenciales:
 
 - Usuario: `Invitado`.
