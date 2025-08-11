@@ -11,11 +11,11 @@ Una carpeta compartida a la máquina virtual de Windows XP que contenga Clarion 
 
 Para la actualización, deberás encontrar 2 carpetas en tu local:
 
-1. CARPETA CON ARCHIVOS DEL PROYECTO: Esta carpeta contiene todos los archivos del proyecto con el código base de Clarion, la podrás detectar entrando a la configuración de la máquina virtual, en tu local la carpeta deberá de contener la carpeta `Principal` del proyecto, ejemplo:
+**1. CARPETA CON ARCHIVOS DEL PROYECTO:** Esta carpeta contiene todos los archivos del proyecto con el código base de Clarion, la podrás detectar entrando a la configuración de la máquina virtual, en tu local la carpeta deberá de contener la carpeta `Principal` del proyecto, ejemplo:
 
 _Si tu carpeta compartida es `C:\aaaa`, hay una carpeta `Principal`, entonces tu carpeta para la actualización es `C:\aaaa`._
 
-2. CARPETA DEL EJECUTABLE: Donde ejecutas en tu local `elsca.exe`, ejemplo:
+**2. CARPETA DEL EJECUTABLE:** Donde ejecutas en tu local `elsca.exe`, ejemplo:
 
 _Si el acceso directo de tu `elsca.exe` apunta a `C:\APPS\ELSCA`, esta es tu carpeta del ejecutable._
 
@@ -23,7 +23,7 @@ _Si el acceso directo de tu `elsca.exe` apunta a `C:\APPS\ELSCA`, esta es tu car
 
 ### Script de actualización
 
-Copiar este script en un archivo con extensión `*.bat`, proporcionando los valores de  `rutaProyecto` y `rutaEjecutable` con los valores que encontramos en [`Prequisitos`](#prerequisitos), y enseguida ejecutarlo en un shell de Windows (`Powershell` o `CMD`):
+Copiar este script en un archivo con extensión `*.bat`, proporcionando los valores de  `rutaProyecto` y `rutaEjecutable` que encontramos en [`Prequisitos`](#prerequisitos), y enseguida ejecutarlo en un shell de Windows (`Powershell` o `CMD`):
 
 ```bat
 @echo off
@@ -207,13 +207,28 @@ Cuando montes la unidad `f:`, te preguntará credenciales:
 - Usuario: `Invitado`.
 - Pass: [Sin password].
 
-### Test de actualización
-
-Para comprobar la actualización, ejecuta el archivo `elsca.exe` de tu carpeta local que contiene el ejecutable.
-
 ### Actualización del proyecto de Clarion
 
-Deberás de copiar los archivos de la [FASE 3] a la carpeta compartida de tu máquina virtual en `(carpeta_compartida)\ElektronSQL\Principal`, ya que el script toma en cuenta que la carpeta de archivos del proyecto _no es la misma que la carpeta compartida_, así cuando inicies un nuevo desarrollo tendrás la última versión de ElektronSQL. Si es la misma, favor de hacer caso omiso a esta recomendación.
+1. Deberás de copiar los archivos de la [FASE 3] a la carpeta compartida de tu máquina virtual en `(carpeta_compartida)\ElektronSQL\Principal`, ya que el script toma en cuenta que la carpeta de archivos del proyecto _no es la misma que la carpeta compartida_
+2. Después en tu máquina virtual copia los archivos, de tu local a la ruta conectada a la carpeta compartida, a `C:\Clarion6\Proyectos\ElektronSQL`, ya que el IDE de Clarion hace referencia a la carpeta indicada.
+
+Ejemplo:
+
+1. Identifica tu carpeta compartida en la configuración de tu máquina virtual:
+
+- LOCAL: `C:\APPS\ELSCA`.
+- Máquina Virtual: Unidad de red `W:`.
+
+2. Copia todos los archivos de la unidad `W:` a `C:\Clarion6\Proyectos\ElektronSQL`.
+
+Así cuando inicies un nuevo desarrollo tendrás la última versión de ElektronSQL. Si es la misma, favor de hacer caso omiso a esta indicación.
+
+### Test de actualización
+
+Para comprobar la actualización,
+
+1. Ejecuta el archivo `elsca.exe` de tu carpeta local que contiene el ejecutable.
+2. En tu máquina virtual, ejecuta el IDE de Clarion abriendo el proyecto _*.APP_ deseado.
 
 🗓️ Fecha de última modificación: 2025-08-11
 👤 Santos Vallecillo, Sergio Tostado
