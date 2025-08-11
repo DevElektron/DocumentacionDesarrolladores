@@ -3,37 +3,44 @@
 
 Para los desarrollos correspondientes a las tareas del proyecto de migración, se necesita actualizar los archivos con extensiones `*.dct *.app *.lib *.dll` y `*.exe` de la unidad de red conectada al equipo del Ing. Francisco.
 
-## Prerequisitos
+### Prerequisitos
 
 Una carpeta compartida a la máquina virtual de Windows XP que contenga Clarion 6 y el proyecto ElektronSQL:
 
 - Carpeta de la máquina virtual `C:\Clarion6\Proyectos\ElektronSQL`.
 
-Esta carpeta contiene todos los archivos del proyecto con el código base de Clarion, la podrás detectar entrando a la configuración de la máquina virtual, en tu local la carpeta deberá de contener la carpeta `Principal` del proyecto, ejemplo:
+Para la actualización, deberás encontrar 2 carpetas en tu local:
 
-_Si tu carpeta compartida es `C:\APPS\ELSCA`, hay una carpeta `ElektronSQL`, donde se encontrará a su vez la carpeta `Principal`, entonces tu carpeta para la actualización es `C:\APPS\ELSCA\ElektronSQL`._
+1. CARPETA CON ARCHIVOS DEL PROYECTO: Esta carpeta contiene todos los archivos del proyecto con el código base de Clarion, la podrás detectar entrando a la configuración de la máquina virtual, en tu local la carpeta deberá de contener la carpeta `Principal` del proyecto, ejemplo:
+
+_Si tu carpeta compartida es `C:\aaaa`, hay una carpeta `Principal`, entonces tu carpeta para la actualización es `C:\aaaa`._
+
+2. CARPETA DEL EJECUTABLE: Donde ejecutas en tu local `elsca.exe`, ejemplo:
+
+_Si el acceso directo de tu `elsca.exe` apunta a `C:\APPS\ELSCA`, esta es tu carpeta del ejecutable._
 
 > NOTA: Si no tienes la máquina virtual solicitar apoyo al equipo.
 
-## Script de actualización
+### Script de actualización
 
-Copiar este script en un archivo con extensión `*.bat`, sustituyendo `[Tu Carpeta Compartida (Prerequisitos)]` con la carpeta que encontramos en [`Prequisitos`](#prerequisitos), y enseguida ejecutarlo en un shell de Windows (`Powershell` o `CMD`):
+Copiar este script en un archivo con extensión `*.bat`, sustituyendo `rutaProyecto` y `rutaEjecutable` con los valores que encontramos en [`Prequisitos`](#prerequisitos), y enseguida ejecutarlo en un shell de Windows (`Powershell` o `CMD`):
 
 ```bat
 @echo off
 
-set origen= f:\
-set destino=[Tu Carpeta Compartida (Prerequisitos)]
+set origen=F:
+set rutaProyecto=[CARPETA CON ARCHIVOS DEL PROYECTO]
+set rutaEjecutable=[CARPETA DEL EJECUTABLE]
 set archivos=*.dct *.app *.lib *.dll *.exe
 set reglog=Recupera.log
 
-net use F: \\192.168.2.145\Clarion6\Proyectos\ElektronSQL
+net use %origen% \\192.168.2.145\Clarion6\Proyectos\ElektronSQL
 
-robocopy %origen% %destino% %archivos% /s /log:%reglog%
+robocopy %origen%\ %rutaProyecto% %archivos% /s /log:%reglog%
 
-net use F: /Delete
+net use %origen% /Delete
 
-robocopy %destino%\Principal W:\ *.dll *.exe
+robocopy %rutaProyecto%\Principal %rutaEjecutable%
 
 @echo on
 ```
@@ -49,19 +56,7 @@ Cuando montes la unidad `f:`, te preguntará credenciales:
 - Usuario: `Invitado`.
 - Pass: `Invitado`.
 
-> NOTA: Si tiene otras carpetas en donde tienes tanto los archivos del proyecto (primer `robocopy`) como la ruta de la carpeta que contiene el ejecutable final (`robocopy` final), favor de modificar el script con las carpetas correspondientes en los comandos `robocopy`, ejemplo, si yo tengo una carpeta `C:\aaaa` con los archivos y la carpeta `Principal` del proyecto, teniendo la carpeta `C:\APPS\ELSCA` que contiene el ejecutable `elsca.exe`:
-
-```bat
-...
-REM Primer robocopy.
-robocopy %origen% C:\aaaa %archivos% /s /log:%reglog%
-...
-REM robocopy final.
-robocopy C:\APPS\ELSCA W:\ *.dll *.exe
-@echo on
-```
-
-## Test de actualización
+### Test de actualización
 
 Para comprobar la actualización, ejecuta el archivo `elsca.exe` de tu carpeta compartida.
 
