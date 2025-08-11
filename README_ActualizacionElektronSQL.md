@@ -17,7 +17,7 @@ _Si tu carpeta compartida es `C:\APPS\ELSCA`, hay una carpeta `ElektronSQL`, don
 
 ## Script de actualización
 
-Copiar este script en un archivo con extensión `*.bat`, sustituyendo `[Tu Carpeta Compartida (Prerequisitos)]` con la carpeta que encontramos en [`Prequisitos`](Prerequisitos), y enseguida ejecutarlo en un shell de Windows (`Powershell` o `CMD`):
+Copiar este script en un archivo con extensión `*.bat`, sustituyendo `[Tu Carpeta Compartida (Prerequisitos)]` con la carpeta que encontramos en [`Prequisitos`](#prerequisitos), y enseguida ejecutarlo en un shell de Windows (`Powershell` o `CMD`):
 
 ```bat
 @echo off
