@@ -60,7 +60,7 @@ Este módulo muestra las ventas por vendedor y ciudad de acuerdo a que si el usu
 #### 💼 Operación
 - [ ] Para el rol `Gerente`, se podrán hacer las siguientes interacciones con el tablero:
 1. Selección de Zona de Cobranza a visualizar en el Input de búsqueda de Zonas de Cobranza Disponibles, generando la información correspondiente a la Zona - Ciudad elegida en las tablas de Ventas por Periodo (filtro ciudad), Top Cobranza y Top Crédito (filtro zona).
-2. Tabla de Ventas por Periodo tendrá seleccionada por defecto la primera fila seleccionada (color verde pastel), cargando la información de Factores Críticos de Éxito (FCE) del vendedor mostrado en la columna de `Vendedor`.
+2. Tabla de Ventas por Periodo tendrá seleccionada por defecto la primera fila seleccionada (color verde pastel), cargando la información de Factores Críticos de Éxito (FCE) del vendedor mostrado en la columna de `# | Vendedor`.
 3. El usuario por dar clic o con las teclas flecha arriba / abajo para seleccionar la fila de Ventas por Periodo que contenga al vendedor del cual desea visualizar su FCE.
 4. En todas las tablas se podrá resaltar la fila deseada ya sea con clic o con las teclas indicadas.
 #### 🛡️ Validaciones
