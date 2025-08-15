@@ -7,11 +7,8 @@ Para regenerar los DbContext de la nueva arquitectura de microservicios del proy
 
 ### Prerequisitos
 
-1. Tenemos el proyecto en que generaremos el modeling.
-
-_**Este comando sólo funciona en las rutas que contiene un archivo `*.csproj`, es decir, en un proyecto .NET como tal (si lo ejecutas en una carpeta sin proyecto, te aparecerá el mensaje `No project was found. Change the current working directory or use the --project option.`), teniendo en sus paquetes los 2 siguientes: `dotnet add package Microsoft.EntityFrameworkCore.SqlServer` y `dotnet add package Microsoft.EntityFrameworkCore.Tools`.**_
-
-2. Tener instalado el paquete global de dotnet-ef: `dotnet tool install --global dotnet-ef`.
+1. Proyecto de prueba: Genera un proyecto de prueba con el script mencionado en la sección [`Proyecto para prueba segura`](#proyecto-para-prueba-segura).
+2. Tener instalado el paquete global de dotnet-ef: `dotnet tool install --global dotnet-ef`: Te recomendamos que navegues en una terminal hasta la raíz de tu proyecto, para que te instale la versión de acuerdo a la versión de .NET usada en tu proyecto.
 
 ### Uso del comando dotnet ef para segmentación del mapeado de BD
 
@@ -87,11 +84,16 @@ Ahora, cambiaron los mensajes `Skipping ...`, los cuales indican otras tablas a 
 **Se recomienda que:**
 
 1. **BANDERA `--force`:** Si quieres sobreescribir los archivos generados si son encontrados en las carpetas especificadas, agrega esta bandera.
-2. **SIEMPRE REFERENCIA A ARCHIVOS QUE NO SON LOS OFICIALES DEL PROYECTO:** Si observas en el ejemplo, `AppDbContext_TEST` y `Modulo\Modelos_TEST` son elemento a los cuales se les agregó el sufijo `_TEST`, suponiendo que tu archivo DbContext es `AppDbContext.cs` y tu carpeta de Modelos `Modulo\Modelos`. Esto se hace para asegurar queel contenido sea el correcto para tu proyecto.
+2. **SIEMPRE REFERENCIA AL PROYECTO DE PRUEBA SEGURA:** Si estás desarrollando tu módulo y "le falta algo" para que compile correctamente fallará la ejecución del comando. Esto se hace para revisar que el contenido generado en el proyecto de prueba, copiando el contenido generado para tu proyecto real.
 
-### Prueba segura
+### Proyecto para prueba segura
 
-Copiar el siguiente script en un archivo `*.bat`. éste genera un proyecto de consola con lo necesario para que el comando funcione y hagas tus pruebas de este comando:
+**El comando  mostrado en este README sólo funciona en las rutas que contiene un archivo `*.csproj` sin problemas de compilación**_, es decir, en un proyecto .NET como tal (si lo ejecutas en una carpeta sin proyecto, te aparecerá el mensaje `No project was found. Change the current working directory or use the --project option.`), teniendo en los paquetes instalados del proyecto los 2 siguientes:
+
+- `dotnet add package Microsoft.EntityFrameworkCore.SqlServer`
+- `dotnet add package Microsoft.EntityFrameworkCore.Tools`.
+
+Para generar un proyecto de prueba, copia el siguiente script en un archivo `*.bat`. éste genera un proyecto de consola con lo necesario para que el comando funcione y hagas tus pruebas de este comando:
 
 ```bat
 dotnet new console -n TestScaffoldRunner
