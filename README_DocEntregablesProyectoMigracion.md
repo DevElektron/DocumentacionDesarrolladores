@@ -44,7 +44,7 @@ Plantilla para título y mensaje de los Pull Request del proyecto Frontend en Gi
 - **[Ruta-del/priyecto/del/nuevo/recurso1]**: [Descripción breve del recurso1].
 - **[Ruta-del/priyecto/del/nuevo/recurso2]**: [Descripción breve del recurso2].
 
-> NOTA: [Detalle de alguna recurso de ayuda].
+> NOTA: [Detalle de algún recurso de ayuda].
 ```
 
 ## Pull Request - Proyecto API
