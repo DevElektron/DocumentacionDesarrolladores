@@ -35,6 +35,7 @@ Por motivos de que es una funcionalidad secundaria de la ruta `/app/ventas/pedid
 1. En cuanto a la activación del botón 123, se mostrará un mensaje al hacer clic en él si el pedido _no está autorizado por cuestiones de crédito_, es decir:
     - Si **NO está autorizado** el pedido.
     - Si el pedido es de tipo **No-Stock**.
+2. La carga de la ventana que se abre con el botón 123 será bloqueada si no hay registros relacionados con los detalles de los tiempos de los traspasos de la partida, buscándolos en la información guardada por el `FOLIO - PARTIDA` del detalle del pedido. 
 
 Véase [Seguridad](#🔐-seguridad).
 
