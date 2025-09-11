@@ -9,11 +9,11 @@ Cuando en la ruta de `/app/ventas/pedidos` se carga los detalles de las partidas
 
 1. **Registros DALMTAT:** Tabla que muestra los registros de los detalles de pedido por `FOLIO - PARTIDA` que muestra las fechas (tiempos) de los traspasos.
 2. **Total de Cantidad de registros DALMTAT:** Suma de la columna `Cantidad` de la tabla anterior.
-3. **Registros de Backorders de artículo:** Tabla que muestra los datos de backorders asociados al `almacén de destino - artículo` con un icono de semáforo del estado del backorder respecto a la cantidad objetivo (total de registros DALMTAT) y el acumulado:
+3. **Registros de Backorders de artículo:** Tabla que muestra los datos de backorders asociados al `almacén de destino - artículo`, obtenidos a partir de la información del registro DALMTAT que no tiene dato en la columna `Número`, con un icono de semáforo del estado del backorder respecto a la cantidad objetivo (total de registros DALMTAT) y el acumulado:
 
-    - Verde: Acumulado suficiente o excedente: acumulado >= 0. La cantidad acumulada cubre completamente la necesidad; no hay riesgo de incumplimiento.
-    - Amarillo: Cobertura parcial: acumulado < 0 pero aún mayor que cantidad negativa del backorder. Hay déficit, pero la partida actual contribuye a reducirlo; se está cerca de cubrir la necesidad.
-    - Rojo: Déficit crítico: acumulado <= cantidad negativa del backorder. La cantidad acumulada más la partida actual no alcanza a cubrir la necesidad; riesgo alto de incumplimiento.
+    - 🟢 Verde: Acumulado suficiente o excedente: acumulado >= 0. La cantidad acumulada cubre completamente la necesidad; no hay riesgo de incumplimiento.
+    - 🟡 Amarillo: Cobertura parcial: acumulado < 0 pero aún mayor que cantidad negativa del backorder. Hay déficit, pero la partida actual contribuye a reducirlo; se está cerca de cubrir la necesidad.
+    - 🔴 Rojo: Déficit crítico: acumulado <= cantidad negativa del backorder. La cantidad acumulada más la partida actual no alcanza a cubrir la necesidad; riesgo alto de incumplimiento.
 
 4. **Total de Cantidad de registros Backorders:** Suma de la columna `Cantidad` de la tabla anterior.
 5. **Información de Manifiestos:** Muestra los manifiestos asociado al `Folio de Traspasos` del registro DALMTAT seleccionado.
