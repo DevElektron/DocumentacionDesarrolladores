@@ -85,7 +85,7 @@ Para esta prueba, comprueba buscando los siguientes pedidos y las partidas espec
 
 #### 💼 Operación
 
-- [ ] 1. Cuando el botón 123 esté habilitado con partidas que tengan backorders y sin ninguna de los 2 detalles mencionado en la prueba 2, se cargará la ventana del botón 123 con los elementos descritos en [Descripción](#📝-descripción). Algunos datos notables:
+- [ ] 1. Cuando el botón 123 esté habilitado con partidas que tengan backorders y sin ninguna de los 2 detalles mencionados en la prueba 2, se cargará la ventana del botón 123 con los elementos descritos en [Descripción](#📝-descripción). Algunos datos notables:
 
     1. No todas las partidas que cargan la ventana tendrán información en la tablas de backorders y manifiestos.
     2. La leyenda _SIN FECHA_ en el apartado de Fecha Mayor / Reprogramado es común para las partidas que no han tenido tratamiento en algún tiempo.
