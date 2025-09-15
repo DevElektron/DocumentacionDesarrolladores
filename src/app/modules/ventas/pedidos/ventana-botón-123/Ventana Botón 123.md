@@ -132,9 +132,8 @@ Para esta prueba, comprueba buscando los siguientes pedidos y las partidas espec
     2. Editable:
         - Fecha de Entrega.
 
-- [ ] 2. Teclea una fecha de entrega menor al día de hoy, se te mostrará una validación: 'Debe ser mayor o igual a hoy.'.
-- [ ] 3. Borrar el contenido el campo de `Fecha de Entrega`, se te mostrará la validación: 'Debe seleccionar una Fecha de Entrega.'.
-- [ ] 4. Pon una fecha de entrega mayor igual a la de hoy y da clic en `Guardar`, se te pedirá confirmar la acción, confírmala y se cerrará en automático el formulario, y tu nuevo registro estará en la tabla de registros DALMTAT.
+- [ ] 2. Selecciona una fecha de entrega en el botón del calendario (derecha del campo) menor al día de hoy, se te mostrará una validación: 'Debe ser mayor o igual a hoy.'.
+- [ ] 3. Selecciona una fecha de entrega mayor igual a la de hoy y da clic en `Guardar`, se te pedirá confirmar la acción, confírmala y se cerrará en automático el formulario, y tu nuevo registro estará en la tabla de registros DALMTAT.
 
 #### 🛡️ Validaciones
 
@@ -156,9 +155,8 @@ Para esta prueba, comprueba buscando los siguientes pedidos y las partidas espec
     2. Editable:
         - Fecha de Entrega (_precargada con la fecha de entrega del registro seleccionado_).
 
-- [ ] 2. Teclea una fecha de entrega menor al día de hoy, se te mostrará una validación: 'Debe ser mayor o igual a hoy.'.
-- [ ] 3. Borrar el contenido el campo de `Fecha de Entrega`, se te mostrará la validación: 'Debe seleccionar una Fecha de Entrega.'.
-- [ ] 4. Pon una fecha de entrega mayor igual a la de hoy y da clic en `Guardar`, se te pedirá confirmar la acción, confírmala y se cerrará en automático el formulario, y tu nuevo registro estará en la tabla de registros DALMTAT.
+- [ ] 2. Selecciona una fecha de entrega en el botón del calendario (derecha del campo) menor al día de hoy, se te mostrará una validación: 'Debe ser mayor o igual a hoy.'.
+- [ ] 3. Selecciona una fecha de entrega mayor igual a la de hoy y da clic en `Guardar`, se te pedirá confirmar la acción, confírmala y se cerrará en automático el formulario, y tu nuevo registro estará en la tabla de registros DALMTAT.
 
 #### 🛡️ Validaciones
 
@@ -175,7 +173,7 @@ Para esta prueba, comprueba buscando los siguientes pedidos y las partidas espec
     1. Fecha Mayor: Fecha aproximada de entrega de la partida del pedido.
     2. Reyprogramación: Ver si se ha hecho una reprogramación de esa fecha por captura manual.
 
-> NOTA: Debes de prestar atención a los totales de cantidades en las tablas de registros DALMTAT y Backorders, ya que si el total de registros DALMTAT _ES MENOR AL_ total de Backorders, no se mostrará la fecha mayor y sólo se mostrará la leyenda _'SIN FECHA'_. Cuando es tiene una partida con un número de orden registrado, es altamente probable que se muestren cambios en este bloque.
+> NOTA: Debes de prestar atención a los totales de cantidades en las tablas de registros DALMTAT y Backorders, ya que si el total de registros DALMTAT _ES MENOR AL TOTAL_ de Backorders, no se mostrará la fecha mayor y sólo se mostrará la leyenda _'SIN FECHA'_. Cuando es tiene una partida con un número de orden registrado, es altamente probable que se muestren cambios en este bloque.
 
 #### 🛡️ Validaciones
 
