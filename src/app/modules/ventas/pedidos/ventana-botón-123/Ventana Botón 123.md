@@ -181,7 +181,8 @@ Para esta prueba, comprueba buscando los siguientes pedidos y las partidas espec
 
 ## 📎 Observaciones adicionales
 
-Se agregó al Microservicio del Gateway el método `PATCH` para no tener que depender de las características del método `PUT` del HttpClientService.
+1. Se agregó al Microservicio del Gateway el método `PATCH` para no tener que depender de las características del método `PUT` del HttpClientService.
+2. Hay campos/columnas de tipo Fecha/Hora que que calculan en tiempo de ejecución, como la última columna de la tabla de Manifiestos `Transcurrido`, cuyo cálculo toma la información de la configuración del Sistema Operativo en el que se ejecuta el proyecto. El timezone correcto es `America/Mexico_City`, ya que si está otro (por ejemplo `UTC` que es muy común en SO Linux), verificalo con el equipo si observas un comportamiento de diferencia dentre los resultados del ERP ElektronSQL basado en Clarion y el proyecto. 
 
 > 🗓️ **Fecha de última modificación:** 2025-09-09
 > 👤 **Sergio Tostado**
