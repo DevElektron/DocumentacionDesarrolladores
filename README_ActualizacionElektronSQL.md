@@ -3,17 +3,18 @@
 
 Para los desarrollos correspondientes a las tareas del proyecto de migración, se necesita actualizar los archivos con extensiones `*.dct *.app *.lib *.dll` y `*.exe` de la unidad de red conectada al equipo del Ing. Francisco Martínez.
 
-### Prerequisitos
+## Prerequisitos
 
 Una carpeta compartida a la máquina virtual de Windows XP que contenga Clarion 6 y el proyecto ElektronSQL:
 
-- Carpeta de la máquina virtual `C:\Clarion6\Proyectos\ElektronSQL`.
+- Estación de trabajo encedido del Ing. Francisco Martínez.
+- Carpeta de la máquina virtual `C:\Clarion6\Proyectos\ElektronSQL` conectada a tu local.
 
 Para la actualización, deberás encontrar 2 carpetas en tu local:
 
 **1. CARPETA CON ARCHIVOS DEL PROYECTO:** Esta carpeta contiene todos los archivos del proyecto con el código base de Clarion, la podrás detectar entrando a la configuración de la máquina virtual, en tu local la carpeta deberá de contener la carpeta `Principal` del proyecto, ejemplo:
 
-_Si tu carpeta compartida es `C:\aaaa`, hay una carpeta `Principal`, entonces tu carpeta para la actualización es `C:\aaaa`._
+_Si tu carpeta es `C:\aaaa`, hay una carpeta `Principal`, entonces tu carpeta para la actualización es `C:\aaaa`._
 
 **2. CARPETA DEL EJECUTABLE:** Donde ejecutas en tu local `elsca.exe`, ejemplo:
 
@@ -198,34 +199,34 @@ echo.
 
 Donde:
 
-- `192.168.2.145` es la IP de la unidad `f:`.
+- `192.168.2.145` es la IP de la unidad `F:`.
 - `\Clarion6\Proyectos\ElektronSQL` es la ruta de los archivos actualizados.
 - `net use` es el comando para montar/desmontar unidades de red en CMD.
 
-Cuando montes la unidad `f:`, te preguntará credenciales:
+Cuando montes la unidad `F:`, te preguntará credenciales:
 
 - Usuario: `Invitado`.
 - Pass: [Sin password].
 
 ### Actualización del proyecto de Clarion
 
-1. Deberás de copiar los archivos de la [FASE 3] a la carpeta compartida de tu máquina virtual en `(carpeta_compartida)\ElektronSQL\Principal`, ya que el script toma en cuenta que la carpeta de archivos del proyecto _no es la misma que la carpeta compartida_
-2. Después en tu máquina virtual copia los archivos, de tu local a la ruta conectada a la carpeta compartida, a `C:\Clarion6\Proyectos\ElektronSQL`, ya que el IDE de Clarion hace referencia a la carpeta indicada.
+1. Deberás de copiar los archivos de la [FASE 3] a la carpeta compartida de tu máquina virtual en `(carpeta_compartida)\ElektronSQL\Principal`, ya que el script toma en cuenta que la carpeta de archivos del proyecto _no es la misma que la carpeta compartida_.
+2. Después en tu máquina virtual copia los archivos, de tu local de la ruta conectada a la carpeta compartida, a `C:\Clarion6\Proyectos\ElektronSQL`, ya que el IDE de Clarion hace referencia a la carpeta indicada.
 
-Ejemplo:
+    Ejemplo:
 
-1. Identifica tu carpeta compartida en la configuración de tu máquina virtual:
+    1. Identifica tu carpeta compartida en la configuración de tu máquina virtual:
 
-- LOCAL: `C:\APPS\ELSCA`.
-- Máquina Virtual: Unidad de red `W:`.
+        - LOCAL: `C:\APPS\ELSCA`.
+        - Máquina Virtual: Unidad de red `W:`.
 
-2. Copia todos los archivos de la unidad `W:` a `C:\Clarion6\Proyectos\ElektronSQL`.
+    2. Copia todos los archivos de la unidad `W:` a `C:\Clarion6\Proyectos\ElektronSQL\Principal`.
 
-Así cuando inicies un nuevo desarrollo tendrás la última versión de ElektronSQL. Si es la misma, favor de hacer caso omiso a esta indicación.
+    Así cuando inicies un nuevo desarrollo tendrás la última versión de ElektronSQL. Si es la misma, favor de hacer caso omiso a esta indicación.
 
 ### Test de actualización
 
-Para comprobar la actualización,
+Para comprobar la actualización:
 
 1. Ejecuta el archivo `elsca.exe` de tu carpeta local que contiene el ejecutable.
 2. En tu máquina virtual, ejecuta el IDE de Clarion abriendo el proyecto _*.APP_ deseado.
