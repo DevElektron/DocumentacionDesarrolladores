@@ -5,7 +5,7 @@
 
 ## 📝 Descripción
 
-Cuando en la ruta de `/app/ventas/pedidos` se carga los pedidos al usuario el cual tiene el rol asignado de `Gerente`, se visualizará el botón `Aumentar días para Desasignación del Pedido` (Prórroga del pedido). Cual el usuario selecciona dando clic a un pedido, se realiza una series de validaciones para verificar si el pedido y la configuración del usuario es correcta para usar la funcionalidad de prórroga:
+Cuando en la ruta de `/app/ventas/pedidos` se carga los pedidos al usuario el cual tiene el rol asignado de `Gerente`, se visualizará el botón `Aumentar días para Desasignación del Pedido` (Prórroga del pedido). Cual el usuario selecciona dando clic a un pedido, se realiza una serie de validaciones para verificar si el pedido y la configuración del usuario es correcta para usar la funcionalidad de prórroga:
 
     1. El usuario/gerente que no sea Regional ni de Zona no podrá asignar más de 3 veces los días días adicionales del pedido seleccionado. Si es gerente de los 2 tipos mencionados, no tendrá límites de asignación, el sistema le preguntará al usuario si desea continuar con el proceso de prórroga, en caso de su confirmación (ACEPTAR), entonces se procederá a las validaciones restantes, de lo contrario, el sistema cancelará el proceso.
     2. Si el pedido no tiene apartados o no tiene fecha de última asignación, entonces no es válido para establecer prórroga y no se mostrará la ventana de prórroga.
