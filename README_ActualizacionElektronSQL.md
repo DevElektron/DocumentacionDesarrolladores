@@ -31,13 +31,9 @@ Copiar este script en un archivo con extensión `*.bat`, proporcionando los valo
 :: Salida con Encoding UTF-8. 
 chcp 65001 >nul
 
-:: Fase 1 - Preparación
-echo ================================
-echo [FASE 1] Preparación de entorno
-echo ================================
-echo [FASE 1] Preparando ...
-echo.
-
+:: ====================
+:: Variables del script
+:: ====================
 set origen=F:
 set ipOrigen=192.168.2.145
 set rutaProyecto=C:\aaaa
@@ -47,154 +43,142 @@ set fecha=%date:~6,4%%date:~3,2%%date:~0,2%
 set hora=%time:~0,2%%time:~3,2%%time:~6,2%
 set reglog=Recupera_%fecha%_%hora%.log
 
-echo Origen: %origen%
-echo Ruta del Proyecto: "%rutaProyecto%"
-echo Ruta del ejecutable (elsca.exe): "%rutaEjecutable%"
-echo Archivo de Log: %reglog%
-echo.
-
-:: Fase 2 - Montado de unidad de red
-echo =================================
-echo [FASE 2] Montado de unidad de red
-echo =================================
-
-echo [FASE 2] Montando %origen% de %ipOrigen% ...
-net use %origen% \\%ipOrigen%\Clarion6\Proyectos\ElektronSQL
-echo [FASE 2] %origen% montado exitosamente.
-echo.
-
-:: Fase 3 - Copia de archivos actualizados
-echo =======================================
-echo [FASE 3] Copia de archivos actualizados
-echo =======================================
-
-echo [FASE 3] Copiando actualización ...
-robocopy %origen%\ "%rutaProyecto%" %archivos% /s /log:%reglog%
-
-if %errorlevel% GEQ 16 (
-    echo Error fatal. Código: %errorlevel%
-) else if %errorlevel% GEQ 8 (
-    echo Fallos en algunos archivos. Código: %errorlevel%
-) else if %errorlevel% GEQ 1 (
-    echo Copia con cambios. Código: %errorlevel%
-) else (
-    echo Copia sin cambios. Código: %errorlevel%
-)
-
-echo.
-
-:: Fase 4 - Desmontado de unidad de red
-echo ====================================
-echo [FASE 4] Desmontado de unidad de red
-echo ====================================
-
-echo [FASE 4] Desmontando ...
-net use %origen% /Delete
-echo [FASE 4] %origen% desmontado.
-echo.
-
-:: Fase 5 - Copia de actualización a local
-echo =======================================
-echo [FASE 5] Copia de actualización a local
-echo =======================================
-
-echo [FASE 5] Copiando ...
-robocopy "%rutaProyecto%\Principal" "%rutaEjecutable%"
-@echo off
-:: Salida con Encoding UTF-8. 
-chcp 65001 >nul
-
+:: ================================
 :: Fase 1 - Preparación
-echo ================================
-echo [FASE 1] Preparación de entorno
-echo ================================
-echo [FASE 1] Preparando ...
-echo.
+:: ================================
+call :Log "==============================="
+call :Log "[FASE 1] Preparación de entorno"
+call :Log "==============================="
+call :Log "[FASE 1] Preparando ..."         
+call :Log __BLANK__
 
-set origen=F:
-set ipOrigen=192.168.2.145
-set rutaProyecto=C:\aaaa
-set rutaEjecutable=C:\APPS\ELSCA - copia
-set archivos=*.dct *.app *.lib *.dll *.exe
-set fecha=%date:~6,4%%date:~3,2%%date:~0,2%
-set hora=%time:~0,2%%time:~3,2%%time:~6,2%
-set reglog=Recupera_%fecha%_%hora%.log
+call :Log "Origen: %origen%"
+call :Log "Ruta del Proyecto: %rutaProyecto%"
+call :Log "Ruta del ejecutable (elsca.exe): %rutaEjecutable%"
+call :Log "Archivo de Log: %reglog%"
+call :Log __BLANK__
 
-echo Origen: %origen%
-echo Ruta del Proyecto: "%rutaProyecto%"
-echo Ruta del ejecutable (elsca.exe): "%rutaEjecutable%"
-echo Archivo de Log: %reglog%
-echo.
-
+:: =================================
 :: Fase 2 - Montado de unidad de red
-echo =================================
-echo [FASE 2] Montado de unidad de red
-echo =================================
+:: =================================
+call :Log "================================="
+call :Log "[FASE 2] Montado de unidad de red"
+call :Log "================================="
 
-echo [FASE 2] Montando %origen% de %ipOrigen% ...
-net use %origen% \\%ipOrigen%\Clarion6\Proyectos\ElektronSQL
-echo [FASE 2] %origen% montado exitosamente.
-echo.
+call :Log "[FASE 2] Montando %origen% de %ipOrigen% ..."
+net use %origen% \\%ipOrigen%\Clarion6\Proyectos\ElektronSQL /persistent:no >> %reglog% 2>&1
 
+if errorlevel 1 (
+    call :Log "[ERROR] No se pudo montar la unidad %origen%. Abortando script."
+    exit /b 1
+)
+
+call :Log "[FASE 2] %origen% montado exitosamente."
+call :Log __BLANK__
+
+:: =======================================
 :: Fase 3 - Copia de archivos actualizados
-echo =======================================
-echo [FASE 3] Copia de archivos actualizados
-echo =======================================
+:: =======================================
+call :Log "======================================="
+call :Log "[FASE 3] Copia de archivos actualizados"
+call :Log "======================================="
 
-echo [FASE 3] Copiando actualización ...
-robocopy %origen%\ "%rutaProyecto%" %archivos% /s /log:%reglog%
+call :Log "[FASE 3] Copiando actualización ..."
+robocopy %origen%\ "%rutaProyecto%" %archivos% /s /log+:%reglog%
+set rc=%errorlevel%
 
-if %errorlevel% GEQ 16 (
-    echo Error fatal. Código: %errorlevel%
-) else if %errorlevel% GEQ 8 (
-    echo Fallos en algunos archivos. Código: %errorlevel%
-) else if %errorlevel% EQU 3 (
-    echo Archivos extra detectados en destino. Código: %errorlevel%
-) else if %errorlevel% EQU 1 (
-    echo Copia con cambios. Código: %errorlevel%
-) else if %errorlevel% EQU 0 (
-    echo Copia sin cambios. Código: %errorlevel%
+if %rc% GEQ 16 (
+    call :Log "Error fatal. Código: %rc%"
+    exit /b %rc%
+) else if %rc% GEQ 8 (
+    call :Log "Fallos en algunos archivos. Código: %rc%"
+    exit /b %rc%
+) else if %rc% EQU 3 (
+    call :Log "Archivos extra detectados en destino. Código: %rc%"
+) else if %rc% EQU 1 (
+    call :Log "Copia con cambios. Código: %rc%"
+) else if %rc% EQU 0 (
+    call :Log "Copia sin cambios. Código: %rc%"
 ) else (
-    echo Resultado inesperado. Código: %errorlevel%
+    call :Log "Resultado inesperado. Código: %rc%"
+    exit /b %rc%
 )
+call :Log __BLANK__
 
-echo.
-
+:: ====================================
 :: Fase 4 - Desmontado de unidad de red
-echo ====================================
-echo [FASE 4] Desmontado de unidad de red
-echo ====================================
+:: ====================================
+call :Log "===================================="
+call :Log "[FASE 4] Desmontado de unidad de red"
+call :Log "===================================="
 
-echo [FASE 4] Desmontando ...
-net use %origen% /Delete
-echo [FASE 4] %origen% desmontado.
-echo.
-
-:: Fase 5 - Copia de actualización a local
-echo =======================================
-echo [FASE 5] Copia de actualización a local
-echo =======================================
-
-echo [FASE 5] Copiando ...
-robocopy "%rutaProyecto%\Principal" "%rutaEjecutable%"
-
-if %errorlevel% GEQ 16 (
-    echo Error fatal. Código: %errorlevel%
-) else if %errorlevel% GEQ 8 (
-    echo Fallos en algunos archivos. Código: %errorlevel%
-) else if %errorlevel% EQU 3 (
-    echo Archivos extra detectados en destino. Código: %errorlevel%
-) else if %errorlevel% EQU 1 (
-    echo Copia con cambios. Código: %errorlevel%
-) else if %errorlevel% EQU 0 (
-    echo Copia sin cambios. Código: %errorlevel%
+call :Log "[FASE 4] Desmontando ..."
+net use %origen% /Delete >> %reglog% 2>&1
+if errorlevel 1 (
+    call :Log "[WARNING] No se pudo desmontar la unidad %origen%. Continuando..."
 ) else (
-    echo Resultado inesperado. Código: %errorlevel%
+    call :Log "[FASE 4] %origen% desmontado."
 )
+call :Log __BLANK__
 
-echo.
+:: =======================================
+:: Fase 5 - Copia de actualización a local
+:: =======================================
+call :Log "======================================="
+call :Log "[FASE 5] Copia de actualización a local"
+call :Log "======================================="
+
+call :Log "[FASE 5] Copiando ..."
+robocopy "%rutaProyecto%\Principal" "%rutaEjecutable%" /log+:%reglog%
+set rc=%errorlevel%
+
+if %rc% GEQ 16 (
+    call :Log "Error fatal. Código: %rc%"
+    exit /b %rc%
+) else if %rc% GEQ 8 (
+    call :Log "Fallos en algunos archivos. Código: %rc%"
+    exit /b %rc%
+) else if %rc% EQU 3 (
+    call :Log "Archivos extra detectados en destino. Código: %rc%"
+) else if %rc% EQU 1 (
+    call :Log "Copia con cambios. Código: %rc%"
+) else if %rc% EQU 0 (
+    call :Log "Copia sin cambios. Código: %rc%"
+) else (
+    call :Log "Resultado inesperado. Código: %rc%"
+    exit /b %rc%
+)
+call :Log __BLANK__
 
 @echo on
+
+:: Fin del proceso
+goto :eof
+
+:: =======================================
+:: Helper para escribir en pantalla y log
+:: Uso: call :Log "mensaje"
+:: =======================================
+:Log
+if "%~1"=="" (
+    rem Caso: sin argumento → salto de línea
+    echo.
+    echo. >> %reglog%
+    goto :eof
+)
+
+if /i "%~1"=="__BLANK__" (
+    rem Caso: marcador explícito → salto de línea
+    echo.
+    echo. >> %reglog%
+    goto :eof
+)
+
+rem Caso general: imprimir texto
+echo %~1
+echo %~1 >> %reglog%
+goto :eof
+
 ```
 
 Donde:
