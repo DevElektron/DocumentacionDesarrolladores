@@ -128,6 +128,14 @@ call :Log "======================================="
 call :Log "[FASE 5] Copia de actualización a local"
 call :Log "======================================="
 
+rem Si ambas rutas son iguales, no es necesario hacer copia de los archivos 
+rem descargados a la carpeta compartida a tu máquina virtual.
+if "%rutaEjecutable%"=="%rutaProyecto%" (
+    call :Log "[FASE 5] Omitida: rutaEjecutable es igual a rutaProyecto."
+    call :Log __BLANK__
+    goto :FinProceso
+)
+
 call :Log "[FASE 5] Copiando ..."
 robocopy "%rutaProyecto%\Principal" "%rutaEjecutable%" /log+:%reglog%
 set rc=%errorlevel%
@@ -150,9 +158,11 @@ if %rc% GEQ 16 (
 )
 call :Log __BLANK__
 
-@echo on
+call :FinProceso
 
 :: Fin del proceso
+:FinProceso
+@echo on
 goto :eof
 
 :: =======================================
