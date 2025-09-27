@@ -65,8 +65,10 @@ call :Log "================================="
 call :Log "[FASE 2] Montado de unidad de red"
 call :Log "================================="
 
+call :Log "[FASE 2] Desmontando %origen% de %ipOrigen% (en caso de que haya quedado montada la unidad) ..."
+net use %origen% /delete >nul 2>&1
 call :Log "[FASE 2] Montando %origen% de %ipOrigen% ..."
-net use %origen% \\%ipOrigen%\Clarion6\Proyectos\ElektronSQL /persistent:no >> %reglog% 2>&1
+net use %origen% \\%ipOrigen%\Clarion6\Proyectos\ElektronSQL /user:CORPELEKTRON\Invitado "" /persistent:no >> %reglog% 2>&1
 
 if errorlevel 1 (
     call :Log "[ERROR] No se pudo montar la unidad %origen%. Abortando script."
@@ -94,6 +96,8 @@ if %rc% GEQ 16 (
     call :Log "Fallos en algunos archivos. Código: %rc%"
     exit /b %rc%
 ) else if %rc% EQU 3 (
+    call :Log "Archivos extra detectados en destino + copia con cambios. Código: %rc%"
+) else if %rc% EQU 2 (
     call :Log "Archivos extra detectados en destino. Código: %rc%"
 ) else if %rc% EQU 1 (
     call :Log "Copia con cambios. Código: %rc%"
@@ -147,6 +151,8 @@ if %rc% GEQ 16 (
     call :Log "Fallos en algunos archivos. Código: %rc%"
     exit /b %rc%
 ) else if %rc% EQU 3 (
+    call :Log "Archivos extra detectados en destino + copia con cambios. Código: %rc%"
+) else if %rc% EQU 2 (
     call :Log "Archivos extra detectados en destino. Código: %rc%"
 ) else if %rc% EQU 1 (
     call :Log "Copia con cambios. Código: %rc%"
@@ -188,7 +194,6 @@ rem Caso general: imprimir texto
 echo %~1
 echo %~1 >> %reglog%
 goto :eof
-
 ```
 
 Donde:
@@ -196,11 +201,7 @@ Donde:
 - `192.168.2.145` es la IP de la unidad `F:`.
 - `\Clarion6\Proyectos\ElektronSQL` es la ruta de los archivos actualizados.
 - `net use` es el comando para montar/desmontar unidades de red en CMD.
-
-Cuando montes la unidad `F:`, te preguntará credenciales:
-
-- Usuario: `Invitado`.
-- Pass: [Sin password].
+- `CORPELEKTRON\Invitado ""` son la credenciales para montar la unidad de red.
 
 ### Actualización del proyecto de Clarion
 
