@@ -203,6 +203,8 @@ Donde:
 - `net use` es el comando para montar/desmontar unidades de red en CMD.
 - `CORPELEKTRON\Invitado ""` son la credenciales para montar la unidad de red.
 
+> NOTA: Hay 2 instrucciones en el script `goto :eof` que se imprimen al final el script, no hay problema con ello, es la manera que el motor de `cmd`/`PowerShell` tiene de indicar que ya terminó de realizar los procesos.
+
 ### Actualización del proyecto de Clarion
 
 1. Deberás de copiar los archivos de la [FASE 3] a la carpeta compartida de tu máquina virtual en `(carpeta_compartida)\ElektronSQL\Principal`, ya que el script toma en cuenta que la carpeta de archivos del proyecto _no es la misma que la carpeta compartida_.
