@@ -44,6 +44,14 @@ set hora=%time:~0,2%%time:~3,2%%time:~6,2%
 set reglog=Recupera_%fecha%_%hora%.log
 
 :: ================================
+:: Fase 0 - Inicio
+:: ================================
+call :Log "======================================"
+call :Log "  Actualización Local de ElektronSQL  "
+call :Log "======================================"  
+call :Log __BLANK__
+
+:: ================================
 :: Fase 1 - Preparación
 :: ================================
 call :Log "==============================="
@@ -107,6 +115,8 @@ if %rc% GEQ 16 (
     call :Log "Resultado inesperado. Código: %rc%"
     exit /b %rc%
 )
+
+call :Log "[FASE 3] Actualización descargada de %ipOrigen%."
 call :Log __BLANK__
 
 :: ====================================
@@ -162,14 +172,16 @@ if %rc% GEQ 16 (
     call :Log "Resultado inesperado. Código: %rc%"
     exit /b %rc%
 )
+
+call :Log "[FASE 5] Copia de actualización a local: OK."
 call :Log __BLANK__
 
-call :FinProceso
+goto :FinProceso
 
 :: Fin del proceso
 :FinProceso
-@echo on
-goto :eof
+call :Log "Actualización exitosa, recuerda ahora copiar todos los archivos de '%rutaEjecutable%' que corresponde a tu carpeta compartida a tu MV a 'C:\Clarion6\Proyectos\ElektronSQL\Principal' dentro de tu MV."
+exit /b
 
 :: =======================================
 :: Helper para escribir en pantalla y log
@@ -194,6 +206,8 @@ rem Caso general: imprimir texto
 echo %~1
 echo %~1 >> %reglog%
 goto :eof
+
+@echo on
 ```
 
 Donde:
@@ -202,8 +216,6 @@ Donde:
 - `\Clarion6\Proyectos\ElektronSQL` es la ruta de los archivos actualizados.
 - `net use` es el comando para montar/desmontar unidades de red en CMD.
 - `CORPELEKTRON\Invitado ""` son la credenciales para montar la unidad de red.
-
-> NOTA: Hay 2 instrucciones en el script `goto :eof` que se imprimen al final el script, no hay problema con ello, es la manera que el motor de `cmd`/`PowerShell` tiene de indicar que ya terminó de realizar los procesos.
 
 ### Actualización del proyecto de Clarion
 
