@@ -42,7 +42,7 @@
    		- **Módulo Cargos y Abonos:**
      		- `CXC:Saldo > 0 && CXC:CDoc NOT IN ([Doctos. Excluidos]) && CXC:NCte = [NumCliente]`
     	- **Módulo Solicitudes de Descuento Notas de Abono:**
-      - `CXC:Saldo > 0 && DCC:Naturaleza = 1 && CXC:NCte = [NumCliente]`
+       - `CXC:Saldo > 0 && DCC:Naturaleza = 1 && CXC:NCte = [NumCliente]`
 
 </details>
 
