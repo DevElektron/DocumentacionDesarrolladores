@@ -44,6 +44,7 @@ Para estandarizar nuestra forma de trabajo en el proyecto de migración, sigue e
     - [DEL]: Se eliminaron archivos o líneas de código.
     - [UPD] o [MOD]: Actualización de archivos o código ya existentes.
     - [IMP]: Se hacen mejoras.
+    - [FIX]: ¿Qué se reparo con tus cambios?
     - [MERGE]: Merge con alguna rama.
 
 7. Una vez que hayas acabado con tu desarrollo (incluyendo tus pruebas), traer cambios de rama `qa` con `git pull origin qa` para que tu nuevo desarrollo local esté actualizada con los cambios que algunos del equipo podría haber hecho mientras tú estabas trabajando en tu desarrollo, de ser necesario resolver conflictos (ver [**RESOLUCIÓN DE CONFLICTOS**](#resolución-de-conflictos)).
@@ -252,6 +253,8 @@ Para resolver un conflicto en un archivo:
 3. Borrar las líneas que contienen `<<<<<<< HEAD`, `=======` y `>>>>>>> qa`, y decide qué lneas deben de quedar en tu version final del archivo. En la gran mayoría de casos, **ambos conjuntos de líneas se deben de conservar**, ya que `qa` es la rama de referencia del equipo.
 4. Haz `git add .` > `git commit -m "Tu mensaje de MERGE con rama origin/qa"` y `git push origin tipo_rama/nombre_de_tu_rama` para finalizar con el conflicto del archivo.
 5. Repite los pasos del 1 al 4 hasta que no haya conflictos `git push origin tipo_rama/nombre_de_tu_rama`.
+
+> NOTA: RECUERDA, CUANDO HAYA CONFLICTOS EN TU `git pull origin qa` DEBES DE CONSULTAR AL EQUIPO PARA VER EL DESARROLLADOR QUE TIENE QUE VER CON LAS LÍNEAS CONFLICTIVAS DE LOS ARCHIVOS.
 
 ## POLÍTICAS
 
