@@ -254,7 +254,7 @@ Para resolver un conflicto en un archivo:
 4. Haz `git add .` > `git commit -m "Tu mensaje de MERGE con rama origin/qa"` y `git push origin tipo_rama/nombre_de_tu_rama` para finalizar con el conflicto del archivo.
 5. Repite los pasos del 1 al 4 hasta que no haya conflictos `git push origin tipo_rama/nombre_de_tu_rama`.
 
-> NOTA: RECUERDA, CUANDO HAYA CONFLICTOS EN TU `git pull origin qa` DEBES DE CONSULTAR AL EQUIPO PARA VER EL DESARROLLADOR QUE TIENE QUE VER CON LAS LÍNEAS CONFLICTIVAS DE LOS ARCHIVOS.
+> **NOTA: RECUERDA, CUANDO HAYA CONFLICTOS EN TU `git pull origin qa` DEBES DE CONSULTAR AL EQUIPO PARA VER EL DESARROLLADOR QUE TIENE QUE VER CON LAS LÍNEAS CONFLICTIVAS DE LOS ARCHIVOS.**
 
 ## POLÍTICAS
 
