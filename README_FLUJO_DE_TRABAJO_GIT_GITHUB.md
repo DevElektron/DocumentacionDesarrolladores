@@ -4,8 +4,8 @@
 
 - [COMIENZO DE UN NUEVO TRABAJO](#comienzo-de-un-nuevo-desarrollo).
 - [EJEMPLO DE FLUJO](#ejemplo-de-flujo).
-- [RESOLUCIÓN DE CONFLICTOS](#resolución-de-conflictos)
-- [POLÍTICAS](#políticas)
+- [RESOLUCIÓN DE CONFLICTOS](#resolución-de-conflictos).
+- [POLÍTICAS](#políticas).
 
 ## COMIENZO DE UN NUEVO DESARROLLO
 
