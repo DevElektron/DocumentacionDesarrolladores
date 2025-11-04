@@ -31,8 +31,6 @@ En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente ten
         - Cotizaciones cuyo Total sea mayor igual al límite de Gerente Sucursal, sean de todos los almacenes que sea el usuario configurado como "Gerente de Plaza/Sucursal".
     - Gerente de Zona:
         - Cotizaciones cuyo Total sea mayor igual al límite de Gerente Zona, sean de todos los almacenes que sea el usuario configurado como "Gerente de Zona".
-    - Otros Gerentes:
-        - Cotizaciones que sean de todos los almacenes que sea el usuario configurado como "Otros gerentes (ej. Área)".
     - Clientes (**NO PROBADO AÚN**):
         - **_El tablero que contiene los clientes no ha sido desarrollado, más ese tablero ya está listo para esta funcionalidad_**.
         - Las cotizaciones cuyo cliente sean el que se envió para la carga del tablero.
@@ -148,9 +146,6 @@ En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente ten
 - [ ] 1. Ya en la pantalla del `LISTADO DE COTIZACIONES RELEVANTES`, y con un usuario con un rol permitido (`Vendedor` o `Gerente`), selecciona una cotización, y da clic en el botón `Actualizar Estatus de Cotización`. Si lo ves deshabilitado, es porque entraste con un usurio con el rol `Vendedor` y la cotización resaltada no tiene el mismo almacén configurado para tu vendedor.
 - [ ] 2. Se abrirá una ventana (modal) que tendrá los datos del Detalle ECR guardados en el sistema de la cotización seleccionada.
 - [ ] 3. De acuerdo al tipo de usuario, se habilitará las zonas de `Probabilidad - Fecha Estimada de Cierre - Estatus`.
-
-> NOTA: Si entras con un Gerente que no es ni de Zona ni de Plaza, no te dejará ingresar valores a los bloques ECR `Probabilidad - Fecha Estimada de Cierre - Estatus`.
-
 - [ ] 4. Al modificar o ingresar información de actualización, se hará la validación de los valores capturados al darle clic en `Guardar`. Dichas validaciones son:
 
     1. Si intentas actualizar una cotización con estatus de Cancelado ...
