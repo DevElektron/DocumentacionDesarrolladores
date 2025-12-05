@@ -16,6 +16,78 @@
 ---
 
 <details>
+<summary><strong>📑 Vendedores<strong> <code>app-vendedor-autocomplete</code></summary>
+
+- 🗂️ **Código:** `src\app\shared\ui\autocompleters\vendedor-autocomplete`  
+- 📋 **Tablas involucradas:** `ELVEN`, `ELGTE`  
+- 🧾 **Contenido:**
+        - `VEN:NVEN`
+        - `VEN:NOMBRE`
+        - `VEN:DOMICILIO`
+        - `VEN:COLONIA`
+        - `VEN:CIUDAD`
+        - `VEN:NEDO`
+        - `VEN:CPOSTAL`
+        - `VEN:TELEFONOS`
+        - `VEN:TIPO_VEND`
+        - `VEN:CELECTRONICO`
+        - `VEN:PRC_COMISION_FIJO`
+        - `VEN:NALM`
+        - `VEN:PRC_COM1`
+        - `VEN:PRC_COM2`
+        - `VEN:PRC_COMN`
+        - `VEN:PRC_COMCN`
+        - `VEN:NDIASANT`
+        - `VEN:FAC_DESCTO_GRUPO`
+        - `VEN:TIPOART`
+        - `VEN:PRES_ENERO`
+        - `VEN:PRES_FEBRERO`
+        - `VEN:PRES_MARZO`
+        - `VEN:PRES_ABRIL`
+        - `VEN:PRES_MAYO`
+        - `VEN:PRES_JUNIO`
+        - `VEN:PRES_JULIO`
+        - `VEN:PRES_AGOSTO`
+        - `VEN:PRES_SEPTIEMBRE`
+        - `VEN:PRES_OCTUBRE`
+        - `VEN:PRES_NOVIEMBRE`
+        - `VEN:PRES_DICIEMBRE`
+        - `VEN:PRC_PROCOM`
+        - `VEN:DISPONIBLE`
+        - `VEN:NCAJ`
+        - `VEN:UBICACION`
+        - `VEN:ULT_ATT`
+        - `VEN:TURNO_ID`
+        - `VEN:Bnd_Puede_Cancelar`
+        - `VEN:Clasif_Vend`
+        - `VEN:FcIngreso`
+        - `VEN:FcBaja`
+        - `VEN:Tproyecto`
+- 📏 **Filtro de Búsqueda:**
+    - `VEN:FcBaja = 0`
+    - **Modo Gerente**: Si se le parametriza `true`, devuelve todos los vendedores cuyo Gerente es el NVEN (@NVEN_GTE) del usuario que inició sesión, mediante los almacenes a cargo de dicho usuario.
+        - `AND ven.NALM in (
+                SELECT
+                    NALM
+                FROM
+                    ELGTE gte
+                WHERE
+                    gte.NVEN = @NVEN_GTE
+            )
+            AND NOT EXISTS (
+                SELECT
+                    1
+                FROM
+                    ELGTE gteV
+                WHERE
+                    gteV.NVEN = ven.NVEN
+            )`
+<i>NOTA: Este autocomplete tiene método de limpiar valores (resetar).</i>
+</details>
+
+---
+
+<details>
 <summary><strong>📑 Selección de facturas<strong> <code>seleccionde-factura-autocomplete</code></summary>
 
 - 🗂️ **Código:** `src\app\shared\ui\autocompleters\seleccionde-factura-autocomplete`  
