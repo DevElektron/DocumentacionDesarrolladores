@@ -29,38 +29,36 @@ según lo indicado en la (`Política 1`)[#💼-políticas-generales] de `Políti
 
 ### POLITICA 1. El tablero aparece según el rol
 
-    - Vendedor: En el `dashboard` al cargar el sistema una vez iniciando sesión.
-    - Gerente: En la ruta `C. Aux. / Gerente / Seguimiento Cobranza / Captura Promesas Cobranza`.
+- Vendedor: En el `dashboard` al cargar el sistema una vez iniciando sesión.
+- Gerente: En la ruta `C. Aux. / Gerente / Seguimiento Cobranza / Captura Promesas Cobranza`.
 
 ### POLÍTICA 2. La carga de información varia según el rol
 
-    - Vendedor: Desde la carga del tablero aparecerán las promesas de cobranza del vendedor.
-    - Gerente: La tabla de registros de promesas (PCXC) (y por consecuente la tabla de detalle de promesa) aparecerá vacía, por lo tanto el Gerente tendrá que hacer uso del buscador de vendedores que se encuentra en la parte superior derecha ya sea por nombre o por el NVEN asignado al vendedor.
+- Vendedor: Desde la carga del tablero aparecerán las promesas de cobranza del vendedor.
+- Gerente: La tabla de registros de promesas (PCXC) (y por consecuente la tabla de detalle de promesa) aparecerá vacía, por lo tanto el Gerente tendrá que hacer uso del buscador de vendedores que se encuentra en la parte superior derecha ya sea por nombre o por el NVEN asignado al vendedor.
 
-### POLITÍCA 3. El tablero tiene los siguientes bloques
+<a id="politica-3-el-tablero-tiene-los-siguientes-bloques"></a>
+### POLÍTICA 3. El tablero tiene los siguientes bloques
 
-    - **Tabla principal de registros de promesas (PCXC)**:
-        - La tabla más grande del tablero, que tiene 4 conjuntos de columnas con el encabezado _Etapa [número] (donde níumero = 1, 2, 3, y 4)_representado las **4 Etapas** con su primera columna especificando la promesa del vendedor a vender en esa etapa. **Sólo hay una etapa activa, reconocida por el fondo de las celdas color `blanco`**, mientras que las otras 3 etapas serán representadas por un color `gris`, y cuando las promesas no estén para la captura de datos todas se bloqueadan coon ese mismo color. La columnas de Cliente y las finales con el encabezado `Mensual` siempre estarán de fondo color blanco.
-    - **Buscador de Vendedores**:
-        - Barra de búsqueda la cual mientras vas escribiendo caracteres te listará todos los vendedores del Gerente que inició sesión que correspondan al criterio tecleado.
-    - **Botones de Acción**:
-        - Son los botones en la parte superior derecha, que son los siguientes:
-            1. Manual Editar Promesas (sólo para rol `Gerente`).
-            2. Actualizar Promesas (sólo para rol `Gerente`).
-            3. Actualizar tablero (sin distinción de rol).
-    - **Tabla secundaria de detalle de promesa seleccionada**:
-        Tablas con un registro que detalle la promesa con los saldos y demás cantidades que son útiles para clarificar el estado de la promesa seleccionada.
-    - **Campo de texto de Comentarios de promesa seleccionada**:
-        - En el fondo de tablero, en el que aparece los comentarios del registros PCXC seleccionado.
+- **Tabla principal de registros de promesas (PCXC)**: La tabla más grande del tablero, que tiene 4 conjuntos de columnas con el encabezado _Etapa [número] (donde níumero = 1, 2, 3, y 4)_representado las **4 Etapas** con su primera columna especificando la promesa del vendedor a vender en esa etapa. **Sólo hay una etapa activa, reconocida por el fondo de las celdas color `blanco`**, mientras que las otras 3 etapas serán representadas por un color `gris`, y cuando las promesas no estén para la captura de datos todas se bloqueadan coon ese mismo color. La columnas de Cliente y las finales con el encabezado `Mensual` siempre estarán de fondo color blanco.
+- **Buscador de Vendedores**: Barra de búsqueda la cual mientras vas escribiendo caracteres te listará todos los vendedores del Gerente que inició sesión que correspondan al criterio tecleado.
+- **Botones de Acción**: Son los botones en la parte superior derecha, que son los siguientes:
+    1. Manual Editar Promesas (sólo para rol `Gerente`).
+    2. Actualizar Promesas (sólo para rol `Gerente`).
+    3. Actualizar tablero (sin distinción de rol).
+- **Tabla secundaria de detalle de promesa seleccionada**:
+    Tablas con un registro que detalle la promesa con los saldos y demás cantidades que son útiles para clarificar el estado de la promesa seleccionada.
+- **Campo de texto de Comentarios de promesa seleccionada**: En el fondo de tablero, en el que aparece los comentarios del registros PCXC seleccionado.
 
-    Reiterando que no todos los elementos aparecerán para los usuarios, su rol es que decidirá qué bloques aparecerán y cuáles se habilitarán.
+Reiterando que no todos los elementos aparecerán para los usuarios, su rol es que decidirá qué bloques aparecerán y cuáles se habilitarán.
 
-    > NOTA: Si al Gerente al cargar el tablero no le carga las instrucciones de captura de promesas, significa que no hay modo captura habilitado.
+> NOTA: Si al Gerente al cargar el tablero no le carga las instrucciones de captura de promesas, significa que no hay modo captura habilitado.
 
 ### POLÍTICA 4. Acerca de celdas y campos editables
 
 Las celdas editables de promesas y compromiso mensual tiene un estilo característico indicado en el Manual de Editar Promesas que puedes abrir en el botón azul en la parte superior derecha (al lado del buscador de vendedores). Si no ves ninguna celda con ese estilo, significa que ninguna etapa de promesas ha sido habilitada para su edición. Salvo ciertas excepciones, **los días de captura son los lunes y martes del mes en curso**.
 
+<a id="politica-5-valores-permitidos-en-modo-captura"></a>
 ### POLÍTICA 5. Valores permitidos en modo captura
 
 La reglas para las capturas de promesas y compromisos en la tabla de registros PCXC son la siguientes:
@@ -149,7 +147,7 @@ Cuando la etapa activa es la 4, no se mostrara como celda editable la columna de
 - [ ] 4. Las reglas para la obtención de celdas editables de promesas y compromisos en la tabla de registros de promesas son:
     1. El usuario que está accediendo al tablero está configurado como Gerente.
     2. El periodo de la BD con la que entraste al sistema debe de ser igual al periodo obtenido por la fecha de hoy. Ejemplo: Si la fecha de hoy es 29 de Noviembre de 2025, el periodo es `Noviembre 2025`, ambos periodo deben de coincidir para que la edición de promesas esté habilitada.
-    3. Debe de haber una `etapa activa` (ver (`Política 3`)[#política-3-el-tablero-tiene-los-siguientes-bloques] de `Políticas Generales`).
+    3. Debe de haber una `etapa activa` (ver [Política 3](#politica-3-el-tablero-tiene-los-siguientes-bloques) de `Políticas Generales`).
     4. **CASO ESPECIAL**: Sólo debe de estar editable la columna `Mensual - Compromiso` si está como etapa activa la `Etapa 4`.
 - [ ] 5. Si no hay una etapa activa habilitada en la tabla de registros de promesas pero entraste al sistema con una BD del periodo actual, sólo deberá mostrar habilitado el campo de texto de los comentarios (fondo del tablero).
 - [ ] 6. Se mostrará el `Manual de Editar Promesas` al cargar el tablero si el `modo captura` está habilitado (o si actualizas la pestaña del navegador en donde tiene abierto el tablero).
@@ -170,7 +168,7 @@ Cuando la etapa activa es la 4, no se mostrara como celda editable la columna de
 
     1. **EDITA LA CELDA**: Presiona `ENTER` o `F2` o con `DOBLE CLIC`.
     2. **SIGUE LAS REGLAS DE LOS VALORES PERMITIDOS**:
-        - En la tabla principal de los registros de promesas, los datos permitidos son los descritos en la (`Política 5`)[#política-5-valores-permitidos-en-modo-captura] de `Políticas Generales`.
+        - En la tabla principal de los registros de promesas, los datos permitidos son los descritos en la [`Política 5`](#politica-5-valores-permitidos-en-modo-captura) de `Políticas Generales`.
         - Puedes poner cualquier observación en el campo de comentarios **del registro de promesa seleccionado**, cuya fila se muestra con un color verde claro.
         - Cuando ingresas un valor no permitido, se aparece un mensaje en color rojo en la esquina superior izquierda: _Edición de Registros de Promesas ... La cantidad debe ser un número entero entre $0 y $999,999,999_.
     3. **CONFIRMAR EL VALOR CAPTURADO**: Para las celdas editables de la tabla de registros de promesas, presiona `ENTER` o cambia la selección por otro registro, verás un mensaje en color azul que indica _Edición de Registros de Promesas ... Totales recalculados._ en la parte superior izquierda. Para confirmar la edición del comentario capturado, presiona `CTRL + ENTER` y en la misma ubicación del mensaje anterior aparece un mensaje _COMENTARIO DE LA PROMESA ... El comentario ha sido editado._.
