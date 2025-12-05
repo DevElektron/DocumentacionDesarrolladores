@@ -10,7 +10,7 @@ Este módulo muestra el tablero correspondiente al **Framework de Cobranza**, te
 1. **SÓLO LECTURA (read-only)**: Usuario con el rol `Vendedor`, visualiza la información de sus promesas. **Se comprenderá como `modo sólo lectura` cuando no se encuentre ninguna celda o campo editable en el tablero**.
 2. **MODO CAPTURA (editable)**: Usuario con rol `Gerente`, y de acuerdo a las fechas de captura impuestas por la configuración entre otras restricciones, se mostrará celdas editables y el campo de comentarios habilitados para la actualización con los datos acordados entre Gerente y Vendedor. Por lo tanto, **se comprenderá con `modo captura` cuando en el tablero haya al menos una celda o campo editable**.
 
-> NOTA: _Framework_ es un procedimiento especificado entre persona con un objetivo en específico, ejemplo: el _Framework de Cobranza_ es el procedimiento para visualizar las promesas de Cobranza entre un vendedor y sus clientes, capturadas por un Gerente.
+> NOTA: _Framework_ es un procedimiento especificado entre personas con un objetivo en específico, ejemplo: el _Framework de Cobranza_ es el procedimiento para visualizar las promesas de Cobranza entre un vendedor y sus clientes, capturadas por un Gerente.
 
 ## 🔐 Seguridad
 
