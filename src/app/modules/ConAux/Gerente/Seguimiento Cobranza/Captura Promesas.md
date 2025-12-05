@@ -36,7 +36,7 @@ según lo indicado en la [`Política 1`](#politica-1-el-tablero-aparece-por-rol-
 ### POLÍTICA 2. La carga de información varia según el rol
 
 - **Vendedor**: Desde la carga del tablero aparecerán las promesas de cobranza del vendedor.
-- **Gerente**: La tabla de registros de promesas (PCXC) (y por consecuente la tabla de detalle de promesa) aparecerá vacía, por lo tanto el Gerente tendrá que hacer uso del buscador de vendedores que se encuentra en la parte superior derecha ya sea por nombre o por el NVEN asignado al vendedor.
+- **Gerente**: La tabla de registros de promesas (PCXC) y por consecuente la tabla de detalle de promesa, aparecerá vacía, por lo tanto el Gerente tendrá que hacer uso del buscador de vendedores que se encuentra en la parte superior derecha ya sea por nombre o por el NVEN asignado al vendedor.
 
 <a id="politica-3-el-tablero-tiene-los-siguientes-bloques"></a>
 ### POLÍTICA 3. El tablero tiene los siguientes bloques
