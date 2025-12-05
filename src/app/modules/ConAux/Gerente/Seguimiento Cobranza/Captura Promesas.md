@@ -23,11 +23,12 @@ Este módulo muestra el tablero correspondiente al **Framework de Cobranza**, te
 | autocomplete   | Vendedores | Buscador de vendedor según filtro tecleado como la llave de búsqueda | Gerente |
 
 En este módulo, sólo aparece el tablero para el rol Vendedores al inicio del sistema, para el rol Gerente se debe de navegar con la ruta completa
-según lo indicado en la (`Política 1`)[#💼-políticas-generales] de `Políticas Generales`.
+según lo indicado en la [`Política 1`](#politica-1-el-tablero-aparece-por-rol-asignado) de `Políticas Generales`.
 
 ## 💼 Políticas Generales
 
-### POLITICA 1. El tablero aparece según el rol
+<a id="politica-1-el-tablero-aparece-por-rol-asignado"></a>
+### POLÍTICA 1. El tablero aparece según el rol
 
 - Vendedor: En el `dashboard` al cargar el sistema una vez iniciando sesión.
 - Gerente: En la ruta `C. Aux. / Gerente / Seguimiento Cobranza / Captura Promesas Cobranza`.
