@@ -36,8 +36,8 @@ public async Task<IActionResult> miEndpointAsync([FromHeader(Name = "x-headerPro
 
 Donde:
 
-- **headerPropagado**: Es uno de los listados en la tabla de la [`sección anterior`](#datos-sensibles-propagados-a toda-solicitud).
-- **tipoDato**: Tipo de Datos requerido por el header en el código, ej. int para x-nven (ver [`Tipo Dato`.NET``](#datos-sensibles-propagados-a toda-solicitud)).
+- **headerPropagado**: Es uno de los listados en la tabla de la [`sección anterior`](#datos-sensibles-propagados-a-toda-solicitud).
+- **tipoDato**: Tipo de Datos requerido por el header en el código, ej. int para x-nven (ver [`Tipo Dato .NET`](#datos-sensibles-propagados-a-toda-solicitud)).
 - **nombreParam**: Nombre de header para usar en el código.
 
 Deberás de reemplazarlo con el valor del campo que viene en su objeto de request, ejemplo:
