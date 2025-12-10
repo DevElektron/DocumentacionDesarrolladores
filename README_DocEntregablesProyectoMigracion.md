@@ -49,7 +49,7 @@ Plantilla para título y mensaje de los Pull Request del proyecto Frontend en Gi
 
 ## Pull Request - Proyecto API
 
-Plantilla para título y mensaje de los Pull Request del proyecto Backend en GitHub [`AdministraWeb API`](https://github.com/DevElektron/AdministraWeb-API):
+Plantilla para título y mensaje de los Pull Request del proyecto Backend en GitHub [`Backend de Nueva Arquitectura basada en Microservicios (NAMS)`](https://github.com/DevElektron/msadministraweb):
 
 ```markdown
 ## [Nombre Proyecto]
