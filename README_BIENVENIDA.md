@@ -46,32 +46,67 @@ Bienvenido(a) al equipo 👋. Este documento te guiará para que puedas configur
 
 ### ⚙️ Backend (.NET 8)
 - Arquitectura:
-  - Controladores / Servicios / Repositorio
+  - Mircoservicios
+    - Controladores / Servicios / Repositorio
 - Organización:
 
 ```bash
-  📁 Estructura del Proyecto
-  Raíz del proyecto/
-  ├── Properties/ # ⚙️ Configuraciones de compilación
-  ├── Core/
-  │ └── Data/ # 🗄️ Configuración de DbContext y conexión a BD
-  ├── Modules/ # 🧩 Agrupación por módulos funcionales
-  │ └── [Modulo]/ # Reemplazar con nombre real, ej. Usuarios/
-  │   ├── Application/ # 🧠 Lógica de negocio
-  │   │ ├── DTOs/
-  │   │ │ ├── Requests/ # 📥 Objetos de entrada
-  │   │ │ └── Responses/ # 📤 Objetos de salida
-  │   │ ├── Interfaces/ # 📑 Contratos de servicios
-  │   │ └── Services/ # 🛠️ Implementaciones de servicios
-  │   ├── Controller/ # 🎮 Controladores del módulo
-  │   ├── Domain/ # 🧬 Lógica de dominio
-  │   │ ├── Entities/ # 🧱 Entidades (ej. Folio, Eltp)
-  │   │ └── Interfaces/ # 🧾 Contratos de repositorios
-  │   ├── Infrastructure/ # 🏗️ Acceso a datos
-  │   └── Repositories/ # 🗃️ Repositorios (EF Core, SQL, etc.)
-  ├── Shared/ # ♻️ Funciones y utilidades compartidas
-  ├── appsettings.json # ⚙️ Configuración global (JWT, conexiones, etc.)
-  └── Program.cs # 🚀 Configuración de servicios y middleware
+  📁 MSADMINISTRAWEB (MICROSERVICIOS)
+  ├── BackArchivo/                # 📦 Microservicio Archivo
+  ├── BackCatalogos/              # 📦 Microservicio Catálogos
+  ├── BackConsultasAux/           # 📦 Microservicio Consultas Auxiliares
+  ├── BackCxC/                    # 📦 Microservicio Cuentas por Cobrar
+  ├── BackInventarios/            # 📦 Microservicio Inventarios
+  ├── BackPromotores/             # 📦 Microservicio Promotores
+  │   ├── bin/                    # ⚙️ Archivos de compilación
+  │   ├── obj/                    # ⚙️ Archivos temporales
+  │   ├── Helpers/                # 🔧 Utilidades propias del microservicio
+  │   ├── Modulo/                 # 🧩 Núcleo funcional (bounded contexts)
+  │   │   ├── ArticulosPromotores/# Submódulo funcional
+  │   │   │   ├── Application/    # 🧠 Casos de uso
+  │   │   │   ├── Controllers/    # 🎮 Endpoints HTTP
+  │   │   │   ├── Domain/         # 🧬 Entidades y contratos
+  │   │   │   └── Infrastructure/ # 🏗️ Repositorios
+  │   │   │
+  │   │   └── Promotores/         # Submódulo funcional
+  │   │       ├── Application/    # 🧠 Lógica de aplicación
+  │   │       │   ├── DTOs/
+  │   │       │   │   ├── Requests/
+  │   │       │   │   └── Responses/
+  │   │       │   ├── Interfaces/ # Contratos de servicios
+  │   │       │   └── Services/   # Implementación de casos de uso y reglas de negocio
+  │   │       │
+  │   │       ├── Controllers/    # 🎮 Controladores REST
+  │   │       │   └── PromotoresController.cs
+  │   │       │
+  │   │       ├── Domain/         # 🧬 Dominio del negocio
+  │   │       │   └── Interfaces/ # Contratos de repositorios
+  │   │       │
+  │   │       └── Infrastructure/ # 🏗️ Implementaciones técnicas
+  │   │           ├── Repositories/
+  │   │
+  │   ├── Properties/             # ⚙️ Configuración del proyecto
+  │   ├── .env                    # Variables de entorno
+  │   ├── appsettings.json        # Configuración del microservicio
+  │   ├── BackPromotores.csproj   # Proyecto .NET
+  │   ├── BackPromotores.sln      # Solución del microservicio
+  │   ├── Dockerfile              # 🐳 Imagen Docker
+  │   ├── Dockerlocal.env         # Variables Docker locales
+  │   ├── kubernetesqa.env        # Variables para Kubernetes
+  │   ├── Program.cs              # 🚀 Bootstrap del microservicio
+  │   └── Readme.md               # Documentación del MS
+  │
+  ├── BackUsuarios/               # 📦 Microservicio Usuarios
+  ├── BackVentas/                 # 📦 Microservicio Ventas
+  │
+  ├── ConfigAPI/                  # ⚙️ Microservicio de configuración
+  ├── EncryptionAPI/              # 🔒 Microservicio de cifrado
+  ├── Gateway/                    # 🚪 API Gateway
+  ├── ProxySecurity/              # 🛡️ Seguridad y autenticación
+  │
+  ├── docker-compose.yml          # 🐳 Orquestación local de microservicios
+  ├── ElApis.sln                  # 🧩 Solución global
+  └── README.md                   # 📘 Documentación general
 
 ```
 ---
