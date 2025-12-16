@@ -8,7 +8,7 @@
  	- Nombre.
  	- Ubicación dentro del proyecto.
  	- Descripción de funcionamiento.
-- El objetivo principal es centralizar la documentación de estos componentes para promover su reutilización, estandarizar su implementación y evitar la creación redundante de nuevos buscadores.
+- El objetivo principal es centralizar la documentación de estos componentes para promover su reutilización, estandarizar su implementación y evitar la creación redundante de nuevas directivas.
 
 </details>
 
