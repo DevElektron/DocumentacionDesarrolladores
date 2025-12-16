@@ -14,32 +14,34 @@
 
 ## 💼 Políticas Generales
 - Todos los clientes nuevos deben tener el check tildado: Timbrar la factura del cliente
-- El número de cliente, debe ser derivado de tabla de control de clientes noctuna, en donde se analiza en la noche y se asignan lugares disponibles de forma intermedia en catálogo.
-- La zona de cobranza debe coincidir con el almacén del vendedor relacionado.
+- El número de cliente se debe de generar al momento de realizar el registro, este se obtiene sumando 1 al ultimo número de cliente generado
+- Se auto asigna el vendedor que este asignado dentro de la sesión y el vendedor de truper se verifica que el vendedor del almacen sea el mismo, si no se toma el del almacén.
 
 ## 🧪 Casos de Prueba
 
 ### Capturar cliente
 #### 💼 Operación
 - [ ] No se permite capturar un RFC que ya exista en tabla.
+- [ ] No se permite capturar un CURP que ya exista en tabla.
 #### 🛡️ Validaciones
 - [ ] Debe capturarse el mínimo de información, requiriendo los campos:
     - Nombre cte. SAT
+    - Domicilio
+    - Estado
     - Código postal
     - RFC
-    - Régimen fiscal
-    - Uso CFDi
+    - Clasificación
+    - Método de pago
 - [ ] Se debe seleccionar la clasificación de cliente Schneider. (Default: Ninguno)
 
 ### Modificar cliente
 #### 🛡️ Validaciones
 - [ ] No se permite modificar el número de cliente
-- [ ] Si existe el bloqueo de datos fiscales, no se deben liberar los campos:
+- [ ] Si existe el bloqueo de datos fiscales (el cliente ya tiene facturas generadas y timbradas), no se deben liberar los campos:
     - Nombre cte. SAT
     - Código postal
     - RFC
     - Régimen fiscal
-    - Uso CFDi
 
 ### Botones ABC de contactos
 #### 🛡️ Validaciones
@@ -48,9 +50,9 @@
 ## 📎 Observaciones adicionales
 - Observaciones adicionales, modos de prueba o ambientes específicos de uso.
 
-> 🗓️ **Fecha de última modificación:** 2025-06-01
-> 👤 **Ignacio Carranza**
-> 🏷️ **Versión:** 3
+> 🗓️ **Fecha de última modificación:** 2025-12-15
+> 👤 **Daniel Salazar**
+> 🏷️ **Versión:** 4
 
 ---
 # Comunicaciones
