@@ -66,7 +66,7 @@ Durante el desarrollo de módulos de tableros (dashboard) para el proyecto, la p
 
 1. Cambiamos el valor de `idRol` de un `Vendedor` al identificador de `Gerente` en el `localStorage` accediendo a las `Herramientas de Desarrollador` del navegador.
 2. Recargamos la pestaña del navegador, antes prestando atención al menú lateral izquierdo para observar las opciones habilitadas.
-3. **Resultado**: Las opciones habilitadas del menú lateral son correspondiente al rol `Gerente`.
+3. **Resultado**: Las opciones habilitadas del menú lateral son correspondientes al rol `Gerente`.
 
 ### Conclusiones de Prueba
 
