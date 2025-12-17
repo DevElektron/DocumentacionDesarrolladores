@@ -60,7 +60,7 @@ Con esta forma de uso los headers propagados:
 
 ## Detección de Necesidad
 
-Durante el desarrollo de módulos de tableros (dashboard) para el proyecto, la primera fase de seguridad se basado con el `localStorage` del navegador, un almacenamiento plano que proveía los datos sensibles con una llave que se llamaba `auth-user` que contenía todos los pares `llave - valor` descritos en [`la lista de headers propagados`](#datos-sensibles-propagados-a-toda-solicitud).
+Durante el desarrollo de módulos de tableros (dashboard) para el proyecto, la primera fase de seguridad se basó con el `localStorage` del navegador, un almacenamiento plano que proveía los datos sensibles con una llave que se llamaba `auth-user` que contenía todos los pares `llave - valor` descritos en [`la lista de headers propagados`](#datos-sensibles-propagados-a-toda-solicitud).
 
 ### Prueba
 
