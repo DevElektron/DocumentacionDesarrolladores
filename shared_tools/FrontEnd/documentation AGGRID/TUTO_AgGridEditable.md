@@ -2,7 +2,7 @@
 
 ## 🎯 ¿Qué hace?
 
-La información mostrada en el componente `ag-grid-angular` puede ser editable gracias a la configuración de la definición de columnas. A continuación un tutorial de cómo puede hacerlo.
+La información mostrada en el componente `ag-grid-angular` puede ser editable gracias a la configuración de la definición de columnas. A continuación un tutorial de cómo pueden hacerlo.
 
 ---
 
