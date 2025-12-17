@@ -148,7 +148,7 @@ y las validaciones que hace este parser son:
 4. Notación científica (e/E) será rechazada y convertida a cero.
 5. Rango permitido: número entero entre 0 y 999,999,999.
 
-> NOTA: Los `parsers` está ligados al `cellEditor` configurado en la def. de columna (ver [`CellEditor disponibles`](#2-5-nota-celleditor-disponibles)).
+> NOTA: Los valueParser se ejecutan sobre el valor devuelto por el cellEditor configurado en la definición de columna. En otras palabras, el parser intercepta la salida del editor y transforma el dato antes de guardarlo en el rowData (ver [`CellEditor disponibles`](#2-5-nota-celleditor-disponibles)).
 
 #### 2.2 Opcional - `valueFormatter` para cambiar formato visual del valor de una celda
 
