@@ -35,6 +35,14 @@ En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente ten
         - **_El tablero que contiene los clientes no ha sido desarrollado, más ese tablero ya está listo para esta funcionalidad_**.
         - Las cotizaciones cuyo cliente sean el que se envió para la carga del tablero.
 
+3. El _Filtro de Estado_ de las Cotizaciones Relevantes **opera con el campo `Estado del registro de la cotización relevante`** y **NO con el campo calculado de Estado que se ve como primera columna simbolizado como un icono circular**. La primera columna es calculada según el tipo de usuario que usa el módulo y las _Fechas Estimadas de Cierre_ que el Vendedor, Gerente de Plaza y Gerente de Zona actualizan en la ventana  [`Actualizar Estatus de la Cotización`](#7-uso-del-boton-actualizar-estatus-de-cotizacion).
+
+4. Las Cotizaciones se ordenarán por los siguientes criterios, esto para facilitar la localización de las cotizaciones de interés:
+
+    1. **Estado calculado (icono de la primera columna):** Representa el estado de la cotización respecto a las fechas estimadas de cierre propuestas por vendedores, gerentes de plaza y zona, indicado en [`paso 2 de prueba 3. Visualización del tablero`](#3-visualizacion-del-tablero-tanto-en-dashboard-como-ruta-completa) (comenzando por `Pendientes`).
+    2. **Total (descendente):** Importe total de la cotización de mayor a menor cantidad.
+    3. **Folio (Letra y despúes Número):** Para identificar la cotización.
+
 ## 🧪 Casos de Prueba
 
 ### 1. No carga del tablero por iniciar sesión o con ruta completa con rol no permitido
@@ -69,6 +77,9 @@ En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente ten
 #### 💼 Operación
 
 - [ ] 1. Esto ocurre debido a que el usuario con el que iniciaste sesión _no tiene ninguna cotización relevante_. Entra al sistema con las credenciales de un usuario (ej. usuario con NVEN = 94, gerente de zona) que tenga el rol de `Vendedor` o de `Gerente`.
+
+<a id="3-visualizacion-del-tablero-tanto-en-dashboard-como-ruta-completa"></a>
+
 - [ ] 2. Al carga el sistema, en el dashboard (conjunto de tableros) verás entre las pestañas `Listado de Cotizaciones Relevantes`, con información cargada con el filtro de estado `Pendiente`, habiendo 6 estados disponibles:
 
     1. Todas.
@@ -138,6 +149,8 @@ En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente ten
 
 - [ ] Cotización cancelada al dar clic con el botón mencionado.
 - [ ] Intento de encontrar la cotización marcada como cancelada mediante filtros de columnas `Folio`.
+
+<a id="7-uso-del-boton-actualizar-estatus-de-cotizacion"></a>
 
 ### 7. Uso del botón `Actualizar Estatus de Cotización`
 
@@ -249,5 +262,6 @@ En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente ten
 
 ## Comunicaciones
 
-|Dir|Fecha       |Firma|Comentario                    |
-|---|------------|-----|------------------------------|
+| Dir | Fecha      | Firma | Comentario                                                   |
+|-----|------------|-------|--------------------------------------------------------------|
+| ⏩  | 2025/12/19 | ST    | [FIX] Cotizaciones Relevantes Gerente: Arreglo filtro y orden. |
