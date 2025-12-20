@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Con motivo de mejorar la seguridad del `AdministraWeb` de Elektron, cuyo proyecto y como lo dice su nombre es tecnología web, se implementó para mejorar la seguridad una estrategia de `Headers Propagadas para Datos Sensibles` para el pase de parámetros iniciales de los módulos hacia el Backend con la `Nueva Arquitectura de Microservicios (NAMS)`.
+Con motivo de mejorar la seguridad del `AdministraWeb` de Elektron, cuyo proyecto y como lo dice su nombre es tecnología web, se implementó una estrategia de `Headers Propagados para Datos Sensibles`, mejorando la seguridad para el pase de parámetros iniciales de los módulos desde el Frontend hacia el Backend con la `Nueva Arquitectura de Microservicios (NAMS)`.
 
 A continuación los detalles.
 
