@@ -60,17 +60,18 @@ Con esta forma de uso los headers propagados:
 
 ## Detección de Necesidad
 
-Durante el desarrollo de módulos de tableros (dashboard) para el proyecto, la primera fase de seguridad se basó con el `localStorage` del navegador, un almacenamiento plano que proveía los datos sensibles con una llave que se llamaba `auth-user` que contenía todos los pares `llave - valor` descritos en [`la lista de headers propagados`](#datos-sensibles-propagados-a-toda-solicitud).
+Durante el desarrollo de módulos de tableros (dashboard) para el proyecto, la primera fase de seguridad se basó con el `localStorage` del navegador, un almacenamiento plano del lado del cliente (navegador) que proveía los datos sensibles con una llave que se llamaba `auth-user` que contenía todos los pares `llave - valor` descritos en [`la lista de headers propagados`](#datos-sensibles-propagados-a-toda-solicitud).
 
 ### Prueba
 
 1. Cambiamos el valor de `idRol` de un `Vendedor` al identificador de `Gerente` en el `localStorage` accediendo a las `Herramientas de Desarrollador` del navegador.
-2. Recargamos la pestaña del navegador, antes prestando atención al menú lateral izquierdo para observar las opciones habilitadas.
-3. **Resultado**: Las opciones habilitadas del menú lateral son correspondientes al rol `Gerente`.
+2. Presta atención al menú lateral izquierdo para observar las opciones habilitadas.
+3. Recargamos la pestaña del navegador.
+4. **Resultado**: Las opciones habilitadas del menú lateral son correspondientes al rol `Gerente`.
 
 ### Conclusiones de Prueba
 
-**_Esto supone un fallo de seguridad grave (security breach)_**, ya que cualquier usuario que tenga el conocimiento de acceder a las `Herramientas de Desarrollador` del navegador y se dé cuenta que los datos sensible de la sesión del usuario se encuentran en texto plano, podrá realizar pruebas para ver qué usuario (nven), almacén (nalm) o rol (idRol) le puede dar los permisos necesarios para realizar operaciones que no le fueron concedidas por el equipo de `Mesa de Ayuda`.
+**_Esto supone un fallo de seguridad grave (security breach)_**, ya que cualquier usuario que tenga el conocimiento de acceder a las `Herramientas de Desarrollador` del navegador y se dé cuenta que los datos sensibles de la sesión del usuario se encuentran en texto plano, podrá realizar pruebas para ver qué usuario (nven), almacén (nalm) o rol (idRol) le puede dar los permisos necesarios para realizar operaciones que no le fueron concedidas por el equipo de `Mesa de Ayuda`.
 
 ## Aprendizaje de Seguridad
 
