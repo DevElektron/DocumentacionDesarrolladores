@@ -38,7 +38,7 @@ var ctrl = await _dbUtils.obtenerConfiguracionesElctrlAsync("A");
 var ctrlns = await _dbUtils.obtenerConfiguracionesElctrlnAsync(1);
 ```
 
-Esto es el equivalente a las siguiente consultas `SQL`:
+Esto es el equivalente a las siguientes consultas `SQL`:
 
 ```sql
 SELECT
