@@ -1,5 +1,5 @@
 # 📦 Módulo: Cotizaciones Relevantes Gerente
-#### 📁 **Código:** `/modules/gerente/cotizaciones-relevantes`
+#### 📁 **Código:** `/modules/conaux/gerente/cotizaciones-relevantes`
 #### 💻 **Menú:** Menú > > >  [Ver en QA](http://192.168.2.16:1089//app/conauxiliares/gerente/cotizaciones-relevantes)
 #### 💻 **Menú:** Menú > > >  [Ver en QA](http://192.168.2.16:1089/app/dashboard)
 
