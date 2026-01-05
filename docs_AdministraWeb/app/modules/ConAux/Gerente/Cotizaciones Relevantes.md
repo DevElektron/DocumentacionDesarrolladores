@@ -255,7 +255,7 @@ En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente ten
 2. Debido a que en las pruebas en varios gerentes cargaron +100 cotizaciones, se optó por hacer paginación para una lectura de los registros más cómoda.
 3. Por esta ocasión, las validaciones del formulario para actualizar el ECR de la cotización seleccionada se hacer al momento de dar clic al botón `Guardar`; se tomó esta decisión debido a la _habilitación condicional de los controles según el tipo de usuario_ (vendedor, geretente de plaza, etcétera), el poco espacio inferior en el maquetado del modal en los campos de los controles por el tipo de valor que contendrían valores numéricos (ej. las probabilidades de éxito de cada usuario interesado en la cotización) y a que en varios controles el valor vacío es válido.
 
-> 🗓️ **Fecha de última modificación:** 2025-10-31
+> 🗓️ **Fecha de última modificación:** 2026-01-05
 > 👤 **Sergio Tostado**
 > 🏷️ **Versión:** 2
 
