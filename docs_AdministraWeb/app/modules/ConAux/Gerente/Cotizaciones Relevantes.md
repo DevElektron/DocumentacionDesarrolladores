@@ -14,10 +14,11 @@ Este módulo muestra la información de las cotizaciones relevantes, es decir, c
 | dashboard   | Mostrar módulo | Permite mostrar el módulo en el panel de inicio. | Gerente / Vendedor |
 | ventana   | Mostrar opción | Permite mostrar la opción en el menú principal. | Gerente / Vendedor |
 
-En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente tendrán acceso a realizar cualquier actividad con el tablero, salvo a excepción del botón `Actualizar Estatus de Cotización` y su habilitación condicional según lo indicado en la (`Política 1`)[#💼-políticas-generales] de `Políticas Generales`.
+En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente tendrán acceso a realizar cualquier actividad con el tablero, salvo a excepción del botón `Actualizar Estatus de Cotización` y su habilitación condicional según lo indicado en la [`Política 1`](#politicas-generales) de `Políticas Generales`.
 
 ## 💼 Políticas Generales
 
+<a id="politicas-generales"></a>
 1. Para hacer distinción de la habilitación del botón `Actualizar Estatus de Cotización`, se siguen estas reglas:
 
     - Vendedor: Sólo puede actualizar cotizaciones con la columna almacén que coincidan con el almacén configurado para el vendendor.
@@ -156,9 +157,9 @@ En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente ten
 
 #### 💼 Operación
 
-- [ ] 1. Ya en la pantalla del `LISTADO DE COTIZACIONES RELEVANTES`, y con un usuario con un rol permitido (`Vendedor` o `Gerente`), selecciona una cotización, y da clic en el botón `Actualizar Estatus de Cotización`. Si lo ves deshabilitado, es porque entraste con un usurio con el rol `Vendedor` y la cotización resaltada no tiene el mismo almacén configurado para tu vendedor.
+- [ ] 1. Ya en la pantalla del `LISTADO DE COTIZACIONES RELEVANTES`, y con un usuario con un rol permitido (`Vendedor` o `Gerente`), selecciona una cotización, y da clic en el botón `Actualizar Estatus de Cotización`.
 - [ ] 2. Se abrirá una ventana (modal) que tendrá los datos del Detalle ECR guardados en el sistema de la cotización seleccionada.
-- [ ] 3. De acuerdo al tipo de usuario, se habilitará las zonas de `Probabilidad - Fecha Estimada de Cierre - Estatus`.
+- [ ] 3. De acuerdo al tipo de usuario, se habilitará las zonas de `Probabilidad - Fecha Estimada de Cierre - Estatus` de cada puesto interesado en la cotización.
 - [ ] 4. Al modificar o ingresar información de actualización, se hará la validación de los valores capturados al darle clic en `Guardar`. Dichas validaciones son:
 
     1. Si intentas actualizar una cotización con estatus de Cancelado ...
@@ -166,7 +167,7 @@ En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente ten
     2. Si los diversos campos capturados con porcentaje (%) no está entre cero y cien (0 - 100) o no corresponden a un valor numérico (como `0-1.00`) ...
         - MENSAJE 1: `Error de Captura: Valor no numérico detectado en [CAMPO CON EL ERROR].`.
         - MENSAJE 2: `Error de Captura: [CAMPO CON EL ERROR] debe estar entre 0 y 100.`
-    3. Si no pones una Fecha Estimada de Cierre habilitada por tu tipo de usuario ...
+    3. Si no pones una Fecha Estimada de Cierre habilitada por tu tipo de usuario (las fechas pasadas serán bloquedas por el sistema) ...
         - MENSAJE: `Error de Captura: ¡Por favor ingrese una Fecha Estimada de Cierre, [TIPO USUARIO]!`.
     4. Si tienes habilitado el campo `Otro` debido a la selección de los valores `Perdida` en la lista `Estado` y el valor `Otro(s)` de la lista `¿Contra quién?` y no establecer un valor ...
         - MENSAJE: `Error de Captura: ¡Por favor ingrese un valor para el campo Otro!`.
@@ -256,12 +257,16 @@ En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente ten
 
 > 🗓️ **Fecha de última modificación:** 2025-10-31
 > 👤 **Sergio Tostado**
-> 🏷️ **Versión:** 1
+> 🏷️ **Versión:** 2
 
 ---
 
 ## Comunicaciones
 
-| Dir | Fecha      | Firma | Comentario                                                   |
-|-----|------------|-------|--------------------------------------------------------------|
-| ⏩  | 2025/12/19 | ST    | [FIX] Cotizaciones Relevantes Gerente: Arreglo filtro y orden. |
+| Dir | Fecha      | Firma | Comentario                                                                   |
+|-----|------------|-------|------------------------------------------------------------------------------|
+| ⏩  | 2025/12/19 | ST    | [FIX] Arreglo filtro y orden.                                                |
+| ⏩  | 2026/01/02 | ST    | [FIX] Botón de Actualizar Estatus de Cotización disponible para ambos roles. |
+| ⏩  | 2026/01/03 | ST    | [FIX] Formulario de Actualizar Estatus con errores de validación anticipada. |
+| ⏩  | 2026/01/05 | ST    | [IMP] Mensajes de error más concretos con mejora del servicio.               |
+| ⏩  | 2026/01/05 | ST    | [FIX] Carga de Detalles de Cotización cuando se filtraban registros.         |
