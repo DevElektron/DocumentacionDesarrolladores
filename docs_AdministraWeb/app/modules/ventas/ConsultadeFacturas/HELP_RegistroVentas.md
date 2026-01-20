@@ -36,20 +36,22 @@ Este módulo permite realizar el registro de nuevas ventas a clientes, puede imp
 
 #### 🛡️ Validaciones  
 - [ ] Se debe capturar al menos la siguiente información obligatoria:  
-  - Almacén  
-  - Fecha del documento  
+  - Fecha factura  
   - Cliente  
-  - Uso de CFDI  
-  - Forma de pago  
-  - Método de pago  
-  - Tipo de moneda  
-  - Vendedor  
-  - Importe  
+  - Forma Pago  
+  - Vendedor
+  - Tipo de Pago
+  - Uso de CFDI
   - Almacén de facturación
-  - Almacén de salida
-- [ ] Se debe seleccionar un cliente válido, ya sea haciendo clic en el registro o presionando Tab al ingresar el número de cliente.  
-- [ ] Se debe seleccionar un vendedor válido, ya sea haciendo clic en el registro o presionando Tab al ingresar el número de vendedor.
-- [ ] Se debe seleccionar un vendedor válido, ya sea haciendo clic en el registro o presionando Tab al ingresar el número de vendedor.
+  - Almacén de Salida  
+  - Tipo de moneda  
+  - Forma de entrega
+  - Plataforma pago (cuando el cliente es de venta en línea)
+  - Cantidad
+  - Artículo
+  - Precio Lista
+- [ ] Se debe seleccionar un cliente válido, ya sea haciendo clic en el registro o presionando Tab al ingresar el número de cliente.
+- [ ] Se debe seleccionar un almacén salida válido, ya sea haciendo clic en el registro o presionando Tab al ingresar el número de almacén.  
 
 ### Captura de Factura de Anticipo (Cliente Mostrador)  
 #### 💼 Operación  
