@@ -33,6 +33,7 @@ Este módulo permite realizar el registro de nuevas ventas a clientes, puede imp
 #### 💼 Operación  
 - [ ] No se permite guardar folios duplicados.  
 - [ ] No se permite guardar facturas con datos inválidos.
+- [ ] No se permite guardar facturas sin detalles registrados.
 
 #### 🛡️ Validaciones  
 - [ ] Se debe capturar al menos la siguiente información obligatoria:  
@@ -51,17 +52,19 @@ Este módulo permite realizar el registro de nuevas ventas a clientes, puede imp
   - Artículo
   - Precio Lista
 - [ ] Se debe seleccionar un cliente válido, ya sea haciendo clic en el registro o presionando Tab al ingresar el número de cliente.
-- [ ] Se debe seleccionar un almacén salida válido, ya sea haciendo clic en el registro o presionando Tab al ingresar el número de almacén.  
+- [ ] Se debe seleccionar un almacén salida válido, ya sea haciendo clic en el registro o presionando Tab al ingresar el número de almacén.
+- [ ] Artículo de tramos
+  - [ ] Cuando se selecciona un artículo de tramos, se deberá abrir en automático un modal para la selección de tramos, el usuario esta obligado a seleccionar por lo menos un metro, de lo contrario, la partida no será válida.
 
-### Captura de Factura de Anticipo (Cliente Mostrador)  
+### Captura de Factura de Venta (Cliente Mostrador)  
 #### 💼 Operación  
-- [ ] Se aplican las mismas operaciones que en la captura de cliente regular.  
+- [ ] Se aplican las mismas operaciones que en la captura regular.  
 - [ ] Al ingresar un cliente mostrador (`CTE:MODIF_VENTA == 1`), deberá abrirse un modal para modificar los datos del cliente.  
 - [ ] Al seleccionar un cliente, aparecerá un botón azul en la parte inferior izquierda del modal; al hacer clic en él, también se abrirá el mismo modal.  
 - [ ] En el nuevo modal, al seleccionar la opción "Seleccionar datos de registro previo", deberá abrirse un segundo modal donde se pueda elegir información previamente registrada del cliente.
 
 #### 🛡️ Validaciones  
-- [ ] Se aplican las mismas validaciones que en la captura de cliente regular.  
+- [ ] Se aplican las mismas validaciones que en la captura regular.  
 - [ ] En la ventana “Captura los datos del cliente para la impresión de la factura”, deberán capturarse al menos los siguientes campos:  
   - Nombre  
   - Nombre del Cliente SAT  
@@ -75,22 +78,67 @@ Este módulo permite realizar el registro de nuevas ventas a clientes, puede imp
   - Régimen Fiscal  
 - [ ] En la ventana "Seleccionar cliente de mostrador", se debe seleccionar un registro de la tabla (si existen registros).
 
+### Captura de Factura de Venta (Cliente Tiene Anticipos)  
+#### 💼 Operación  
+- [ ] Se aplican las mismas operaciones que en la captura regular.  
+- [ ] Al ingresar un cliente que tenga anticipos fiscales por aplicar, aparecerá una advertencia avisando al usuario.  
+- [ ] Cuando el usuario capture el encabezado y capture por lo menos una partida válida, en la sección de (`Datos Adicionales`). Se habilitarán los anticipos disponibles.  
+- [ ] El usuario deberá seleccionar la cantidad a tomar de cada anticipo sin pasar su disponible.
+
+#### 🛡️ Validaciones  
+- [ ] Se aplican las mismas validaciones que en la captura regular.
+
+### Captura de Factura de Venta (Importación pedido)  
+#### 💼 Operación  
+- [ ] El sistema traera la información del pedido, encabezado y partidas, siempre y cuando pase las validaciones.
+- [ ] El usuario ya no podrá agregar más partidas
+- [ ] En caso de que el cliente tenga anticipos, si podrá aplicarlos
+
+#### 🛡️ Validaciones  
+- [ ] Se aplican las mismas validaciones que en la captura regular para guardar
+- [ ] No se podrá importar pedidos de un almacén diferente al del capturista
+- [ ] No se podrá importar pedidos totalmente facturados
+- [ ] No se podrá importar pedidos cancelados.
+- [ ] Cuando el origen es CAT, no se podrá importar pedidos donde el cliente no sea el mismo.
+- [ ] Cuando el origen es CAT, no se permite importar pedidos con forma de entrega (`Presente`)
+- [ ] No se podrá importar pedidos donde el cliente no este activo
+- [ ] No se podrá importar pedidos sin detalles.
+
+### Captura de Factura de Venta (Importación factura)  
+#### 💼 Operación  
+- [ ] El sistema traera la información del pedido, encabezado y partidas, siempre y cuando pase las validaciones.
+- [ ] El usuario podrá agregar más partidas
+- [ ] En caso de que el cliente tenga anticipos, si podrá aplicarlos
+
+#### 🛡️ Validaciones  
+- [ ] Se aplican las mismas validaciones que en la captura regular para guardar
+- [ ] No se podrá importar facturas de un almacén diferente al del capturista
+- [ ] Cuando el origen es CAT, no se podrá importar facturas donde el cliente no sea el mismo.
+- [ ] Cuando el origen es CAT, no se permite importar facturas con forma de entrega (`Presente`)
+- [ ] No se podrá importar facturas donde el cliente no este al corriente
+- [ ] No se podrá importar facturas que no cuenten con existencia suficiente para surtir todos los artículos.
+
 ## 📎 Observaciones adicionales  
-- Al guardar la factura de anticipo, el sistema deberá preguntar:  
-  **¿Desea imprimir la factura del anticipo?**  
+- Al guardar la factura de venta, el sistema deberá mostrar un modal con:
+  -  Folio factura
+  -  Folio nota de abono
+  -  Tiempo estimado de corte (Si aplica)
+  -  Un input para ingresar un número de celular
+- El sistema intentará timbrar la factura y la nota de abono (si aplica)
+- El sistema descargará la factura timbrada o prefactura y la nota de abono (Solo si la factura fue timbrada correctamente y existieron descuentos por nota de abono)
 - Se deberá mostrar un modal con las cuentas de correo a las que se enviará el documento, permitiendo añadir una o más direcciones.  
   - Se validará que los correos sean válidos y estén separados por comas en caso de haber varios.  
-- Se mostrará un modal con el folio generado y el número de caja donde se creó.  
-- En caso de errores o advertencias durante el proceso de guardado, el sistema deberá mostrarlos al usuario.  
-- Se deberá preguntar: **¿Este anticipo es para un pedido en específico?**  
-  - Si la respuesta es afirmativa, se abrirá un modal que permitirá vincular uno o más pedidos a la factura.  
-- Se deberá notificar si el proceso se completó con éxito o si hubo algún fallo.
+- El sistema enviará los correos necesarios con los documentos generados
+- El sistema intentará timbrar los anticipos (si aplica)
+- El sistema descargará los anticipos (si aplica)
+- En caso de errores o advertencias durante el proceso de guardado, el sistema deberá mostrarlos al usuario.
+- El sistema mostrará el folio de la factura generada.
 
-> 🗓️ **Fecha de última modificación:** 2025-08-05  
+> 🗓️ **Fecha de última modificación:** 2026-01-20
 > 👤 **Luis Guillermo Pérez Fuentes**  
 > 🏷️ **Versión:** 1
 ---
 # Comunicaciones
 |Dir|Fecha       |Firma|Comentario                    |
 |---|------------|-----|------------------------------|
-|⏪| 2025/07/02 | GP |Entrega|
+|⏪| 2026/01/20  | GP |Entrega|
