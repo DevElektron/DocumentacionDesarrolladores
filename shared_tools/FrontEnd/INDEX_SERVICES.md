@@ -65,8 +65,6 @@ El objetivo principal es centralizar la documentación de estos componentes para
 -   Logs en consola para debugging.
 -   Integración simple con el ciclo de vida del componente.
 
-</details>
-
 ## 🎯 Patrón de Uso Recomendado
 
 ### Implementación en Componente con AG-Grid:
@@ -94,3 +92,6 @@ export class MiGridComponent implements OnInit, OnDestroy {
     this.destroy$.complete();
   }
 }
+
+</details>
+
