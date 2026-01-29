@@ -241,7 +241,6 @@ En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente ten
 #### 🛡️ Validaciones
 
 - [ ] Apertura de la ventana de Actualizar ECR.
-- [ ] Bloqueo de botón `Actualizar Estatus de Cotización` cuando entraste con rol `Vendedor` y el almacén configurado para erl usuario no sea igual al de la cotización seleccionada.
 - [ ] Habilitación condicional según tipo de usuario de bloques ECR (`Probabilidad - Fecha Estimada de Cierre - Estatus`).
 - [ ] Eventos de lista `Estado` están como son descritos.
 - [ ] Eventos de lista `Contra Quién` están como son descritos.
@@ -257,16 +256,18 @@ En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente ten
 
 > 🗓️ **Fecha de última modificación:** 2026-01-05
 > 👤 **Sergio Tostado**
-> 🏷️ **Versión:** 2
+> 🏷️ **Versión:** 5
 
 ---
 
 ## Comunicaciones
 
-| Dir | Fecha      | Firma | Comentario                                                                   |
-|-----|------------|-------|------------------------------------------------------------------------------|
-| ⏩  | 2025/12/19 | ST    | [FIX] Arreglo filtro y orden.                                                |
-| ⏩  | 2026/01/02 | ST    | [FIX] Botón de Actualizar Estatus de Cotización disponible para ambos roles. |
-| ⏩  | 2026/01/03 | ST    | [FIX] Formulario de Actualizar Estatus con errores de validación anticipada. |
-| ⏩  | 2026/01/05 | ST    | [IMP] Mensajes de error más concretos con mejora del servicio.               |
-| ⏩  | 2026/01/05 | ST    | [FIX] Carga de Detalles de Cotización cuando se filtraban registros.         |
+| Dir | Fecha      | Firma | Comentario                                                                                                   |
+|-----|------------|-------|--------------------------------------------------------------------------------------------------------------|
+| ⏩  | 2025/12/19 | ST    | [FIX] Arreglo filtro y orden.                                                                                |
+| ⏩  | 2026/01/02 | ST    | [FIX] Botón de Actualizar Estatus de Cotización disponible para ambos roles.                                 |
+| ⏩  | 2026/01/03 | ST    | [FIX] Formulario de Actualizar Estatus con errores de validación anticipada.                                 |
+| ⏩  | 2026/01/05 | ST    | [IMP] Mensajes de error más concretos con mejora del servicio.                                               |
+| ⏩  | 2026/01/05 | ST    | [FIX] Carga de Detalles de Cotización cuando se filtraban registros.                                         |
+| ⏩  | 2026/01/29 | ST    | [REF] Nueva seguridad aplicada.                                                                              |
+| ⏩  | 2026/01/29 | ST    | [DEL] Eliminación de validación del mismo almacén de cotización de vendedor para la actualización de Estatus |
