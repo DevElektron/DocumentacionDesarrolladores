@@ -14,20 +14,15 @@ Este módulo muestra la información de las cotizaciones relevantes, es decir, c
 | dashboard   | Mostrar módulo | Permite mostrar el módulo en el panel de inicio. | Gerente / Vendedor |
 | ventana   | Mostrar opción | Permite mostrar la opción en el menú principal. | Gerente / Vendedor |
 
-En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente tendrán acceso a realizar cualquier actividad con el tablero, salvo a excepción del botón `Actualizar Estatus de Cotización` y su habilitación condicional según lo indicado en la [`Política 1`](#politicas-generales) de `Políticas Generales`.
+En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente tendrán acceso a realizar cualquier actividad con el tablero, salvo a excepción de la actualización del Estatus según lo indicado en la [`Política 1`](#politicas-generales) de `Políticas Generales`.
 
 ## 💼 Políticas Generales
 
 <a id="politicas-generales"></a>
-1. Para hacer distinción de la habilitación del botón `Actualizar Estatus de Cotización`, se siguen estas reglas:
-
-    - Vendedor: Sólo puede actualizar cotizaciones con la columna almacén que coincidan con el almacén configurado para el vendendor.
-    - Gerente: Siempre está habilitado.
-
-2. Las cotizaciones se cargan en el tablero de acuerdo a un criterio según el tipo de usuario que inició sesión, teniendo en cuenta que su dato "Estado" del apartado del _Estado de Cotización Relevante (ECR)_ sea ausente (cero):
+1. Las cotizaciones se cargan en el tablero de acuerdo a un criterio según el tipo de usuario que inició sesión, teniendo en cuenta que su dato "Estado" del apartado del _Estado de Cotización Relevante (ECR)_ sea ausente (cero):
 
     - Vendedor:
-        - Las cotizaciones cuyo cliente tenga asignado al vendedor que inicó sesión.
+        - Las cotizaciones cuyo cliente tenga asignado al vendedor que inició sesión.
     - Gerente de Plaza:
         - Cotizaciones cuyo Total sea mayor igual al límite de Gerente Sucursal, sean de todos los almacenes que sea el usuario configurado como "Gerente de Plaza/Sucursal".
     - Gerente de Zona:
@@ -36,9 +31,9 @@ En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente ten
         - **_El tablero que contiene los clientes no ha sido desarrollado, más ese tablero ya está listo para esta funcionalidad_**.
         - Las cotizaciones cuyo cliente sean el que se envió para la carga del tablero.
 
-3. El _Filtro de Estado_ de las Cotizaciones Relevantes **opera con el campo `Estado del registro de la cotización relevante`** y **NO con el campo calculado de Estado que se ve como primera columna simbolizado como un icono circular**. La primera columna es calculada según el tipo de usuario que usa el módulo y las _Fechas Estimadas de Cierre_ que el Vendedor, Gerente de Plaza y Gerente de Zona actualizan en la ventana  [`Actualizar Estatus de la Cotización`](#7-uso-del-boton-actualizar-estatus-de-cotizacion).
+2. El _Filtro de Estado_ de las Cotizaciones Relevantes **opera con el campo `Estado del registro de la cotización relevante`** y **NO con el campo calculado de Estado que se ve como primera columna simbolizado como un icono circular**. La primera columna es calculada según el tipo de usuario que usa el módulo y las _Fechas Estimadas de Cierre_ que el Vendedor, Gerente de Plaza y Gerente de Zona actualizan en la ventana  [`Actualizar Estatus de la Cotización`](#7-uso-del-boton-actualizar-estatus-de-cotizacion).
 
-4. Las Cotizaciones se ordenarán por los siguientes criterios, esto para facilitar la localización de las cotizaciones de interés:
+3. Las Cotizaciones se ordenarán por los siguientes criterios, esto para facilitar la localización de las cotizaciones de interés:
 
     1. **Estado calculado (icono de la primera columna):** Representa el estado de la cotización respecto a las fechas estimadas de cierre propuestas por vendedores, gerentes de plaza y zona, indicado en [`paso 2 de prueba 3. Visualización del tablero`](#3-visualizacion-del-tablero-tanto-en-dashboard-como-ruta-completa) (comenzando por `Pendientes`).
     2. **Total (descendente):** Importe total de la cotización de mayor a menor cantidad.
