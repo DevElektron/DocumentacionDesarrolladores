@@ -233,6 +233,8 @@ En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente ten
 - [ ] 6. Si todas las validaciones son cumplidas, entonces los datos ingresados son correcto y se aparece una mensaje de confirmación, si damos clic en `Sí` la actualización ECR de la cotización se guardará y se cerrará la ventana de captura, recargando las cotizaciones, y si seleccionas la cotización actualizada, en los bloques del fondo del tablero aparecerán los valores capturados; si damos clic a `No` seguimos en la ventana.
 - [ ] 7. En dado caso de que queramos cancelar la captura, damos clic en el `Cancelar` o en la `X` que está en la esquina superior-derecha del modal, aparecerá un mensaje de Confirmación, si damos clic en `Sí` se cerrará la ventana de actualización ECR;  si damos clic a `No` seguimos en la ventana.
 
+> **ATENCIÓN: _Sólo las cotizaciones con Estado PENDIENTE podrán abrir la ventana de actualización de Estatus que se explica en esta prueba, el tablero te mostrará mensaje si intentas dar clic al botón para modificar el estatus_.**
+
 #### 🛡️ Validaciones
 
 - [ ] Apertura de la ventana de Actualizar ECR.
@@ -242,6 +244,7 @@ En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente ten
 - [ ] Evento de campo lista `% Ganada` están como es descrito.
 - [ ] Actualización ECR exitosa.
 - [ ] Cancelación de la captura exitosa.
+- [ ] Cotizaciones sin Estado PENDIENTE no podrán abrir la ventana de actualización de Estatus.
 
 ## 📎 Observaciones adicionales
 
@@ -251,7 +254,7 @@ En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente ten
 
 > 🗓️ **Fecha de última modificación:** 2026-01-05
 > 👤 **Sergio Tostado**
-> 🏷️ **Versión:** 5
+> 🏷️ **Versión:** 6
 
 ---
 
@@ -266,3 +269,5 @@ En este módulo, cualquier usuario que tenga los roles de Vendedor o Gerente ten
 | ⏩  | 2026/01/05 | ST    | [FIX] Carga de Detalles de Cotización cuando se filtraban registros.                                         |
 | ⏩  | 2026/01/29 | ST    | [REF] Nueva seguridad aplicada.                                                                              |
 | ⏩  | 2026/01/29 | ST    | [DEL] Eliminación de validación del mismo almacén de cotización de vendedor para la actualización de Estatus |
+| ⏩  | 2026/01/30 | ST    | [IMP] Nueva seguridad con estrategia `Front > Back`                                                          |
+| ⏩  | 2026/01/31 | ST    | [ADD] Cotizaciones que no sean Pendientes no abrirán ventana de actualización de Estatus                     |
