@@ -214,13 +214,24 @@ dotnet run
 1. Posicionarte en tu rama `qa` del repositorio descargado (ya sea del `Back` o `Front`).
 2. Traer cambios de rama `qa` con `git pull origin qa` para que tu `qa` local esté actualizada antes de iniciar tu desarrollo.
 3. Crear tu rama (de acuerdo a las convenciones de este documento) a partir de tu rama actualizada `qa`, por ejemplo con el comando: `git checkout -b tu_rama`.
-4. Trabajar en tu desarrollo con comandos `git add, commit y push` en `tu rama`.
-5. Traer cambios de rama `qa` con `git pull origin qa` para que `tu_rama` local esté actualizada con cambios que algunos del equipo podría haber hecho mientras tú estabas trabajando en tu desarrollo, de ser necesario resolver conflictos.
-6. Push de tu rama al repo de Github con `git push origin tu_rama`.
-7. Verificar que `tu_rama` y tus cambios estén en el repositorio designado.
-8. Crear un PR (pull request) con rama `base` = `qa` y rama `compare` = `tu rama`.
-9. Esperar a revisión por parte del equipo.
-10. Si la revisión salió correcta, se hará `MERGE` a `qa` con los cambios de `tu_rama`.
+4. Trabajar en tu desarrollo con comandos `git add, commit y push` en `tu rama`. para los mensajes de tus commits, seguiremos el siguiente estándar:
+5. Seguiremos el siguiente estándar para los mensajes de tus commits:
+   - **[*] _Alias de proyecto_: _Mensaje_.**
+   - Donde * puede ser:
+      - [**MERGE**] = Bajar cambios de rama principal, correcciones por conflictos.
+      - [**ADD**] = Agregar código.
+      - [**IMP**] = Mejora de código / proceso.
+      - [**UPD/REF**] = Modificación de código existente.
+      - [**DEL**] = Borrado de código.
+      - [**FIX**] = Reparación / Bug resuelto.
+      - [**TEST**] = Código con fines de prueba.
+      - [**DailyUpdate**] = Commit del fin del día.
+7. Traer cambios de rama `qa` con `git pull origin qa` para que `tu_rama` local esté actualizada con cambios que algunos del equipo podría haber hecho mientras tú estabas trabajando en tu desarrollo, de ser necesario resolver conflictos.
+8. Push de tu rama al repo de Github con `git push origin tu_rama`.
+9. Verificar que `tu_rama` y tus cambios estén en el repositorio designado.
+10. Crear un PR (pull request) con rama `base` = `qa` y rama `compare` = `tu rama`.
+11. Esperar a revisión por parte del equipo.
+12. Si la revisión salió correcta, se hará `MERGE` a `qa` con los cambios de `tu_rama`.
 
 ---
 
