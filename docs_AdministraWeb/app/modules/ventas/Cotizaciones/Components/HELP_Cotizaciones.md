@@ -3,7 +3,7 @@
 #### 💻 **Menú:** Ventas > Cotizaciones [Ver en QA](http://192.168.2.16:1089/app/ventas/cotizaciones)
 ---
 #### Pruebas
-<details> <summary> Revisión 202601010838-IC </summary>
+<details> <summary> Revisión 202601010838-IC </summary> 
 
 ## NO HACER CASO A ÉSTE, ES PARA EJEMPLIFICAR
 
@@ -22,6 +22,18 @@
 
 </details>
 
+<details> <summary> Acotaciones </summary>
+
+| Estatus | Descripción |
+|:---|:---:|
+| Pendiente | No se ha iniciado la revisión |
+| Iniciado | Revisión Iniciada |
+| Error | Errores en la revisión (Revisar la sección de errores) |
+| Completa | Revisión completada satisfactoriamente |
+
+</details>
+
+
 ### Errores
 <details> <summary> Revisión 202602181235-MH </summary>
 
@@ -32,8 +44,6 @@
 | | | | | | `screenshots/error-001.png` | | | |
 
 </details>
-
-
 
 ---
 ---
