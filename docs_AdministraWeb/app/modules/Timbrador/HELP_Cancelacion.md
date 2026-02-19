@@ -58,27 +58,27 @@ Backend de cancelación directa de documentos CFDi en el SAT, a través del API 
 
 
 #### Pruebas
-<details> <summary> Revisión 202602191256-IC </summary> 
-
-## NO HACER CASO A ÉSTE, ES PARA EJEMPLIFICAR
+<details> <summary> Revisión 202602101600-IC </summary> 
 
 | Pruebas | Estatus | Descripción | Revisión en QA | Notas / comentarios |
 |:---:|:---:|:---|:---:|:---|
-| 1 | Pendiente | Cotización normal, 2 artículos, tramos y regular, sin exceder los descuentos | 202602181235-IC | |
-| 1.1 | Revisado | Guardar un registro en ELCOTA, verificar que todos los datos sean correctos | | |
+| 1 | Revisado | Cancelación de nota de abono por aplicación de anticipo en RespDiario | 202602101038-IC | |
 
 </details>
-<details open> <summary> Revisión 202602181235-IC </summary>
-  
-## NO HACER CASO A ÉSTE, ES PARA EJEMPLIFICAR
-  
+<details> <summary> Revisión 202602151250-IC </summary> 
+
 | Pruebas | Estatus | Descripción | Revisión en QA | Notas / comentarios |
 |:---:|:---:|:---|:---:|:---|
-| 1 | Pendiente | Cotización normal, 2 artículos, tramos y regular, sin exceder los descuentos | 202602181235-IC | |
-| 1.1 | Revisado | Guardar un registro en ELCOTA, verificar que todos los datos sean correctos | | |
+| 1 | Revisado | Cancelación de factura de activo en RespDiario | 202602150830-IC | |
 
 </details>
+<details> <summary> Revisión 202602191629-IC </summary> 
 
+| Pruebas | Estatus | Descripción | Revisión en QA | Notas / comentarios |
+|:---:|:---:|:---|:---:|:---|
+| 1 | Revisado | Cancelación de pago en RespDiario | 202602181235-IC | |
+
+</details>
 <details> <summary> Acotaciones </summary>
 
 | Estatus | Descripción |
@@ -89,16 +89,12 @@ Backend de cancelación directa de documentos CFDi en el SAT, a través del API 
 | Completa | Revisión completada satisfactoriamente |
 
 </details>
-
-
 ### Errores
-<details> <summary> Revisión 202602181235-MH </summary>
-
-## NO HACER CASO A ÉSTE, ES PARA EJEMPLIFICAR
-
+<details> <summary> Revisión 202602170800-IC </summary>
+	
 | Error | Severidad | Pasos para reproducir | Comportamiento actual | Comportamiento esperado | Evidencia | Usuario contacto | Fecha corrección | Notas / comentarios |
 |:---|:---:|:---|:---|:---|:---:|:---|:---:|:---|
-| | | | | | `screenshots/error-001.png` | | | |
+|Error al propagar variable de endpoint|Grave|Se descarga la rama a local y al compilar docker, manda error|||||20260218||
 
 </details>
 
@@ -107,7 +103,7 @@ Backend de cancelación directa de documentos CFDi en el SAT, a través del API 
 #### Otros ejemplos de control de QA
 <details> <summary> Otros ejemplos de control de QA </summary>
 
-## NO HACER CASO A ÉSTE, ES PARA EJEMPLIFICAR
+## Para agregar a documentación: extender uso
 
 ## Checklist de Migración
 - [x] Funcionalidades principales migradas
