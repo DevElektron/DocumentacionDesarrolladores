@@ -58,25 +58,29 @@ Backend de cancelación directa de documentos CFDi en el SAT, a través del API 
 
 
 #### Pruebas
+<!-- Para mantener desplegada una sección en la vista previa, 
+	agregar open a la etiqueta de apertura de detalles.
+	Ej.: <details open>...</details>
+-->
 <details> <summary> Revisión 202602101600-IC </summary> 
 
 | Pruebas | Estatus | Descripción | Revisión en QA | Notas / comentarios |
 |:---:|:---:|:---|:---:|:---|
-| 1 | Revisado | Cancelación de nota de abono por aplicación de anticipo en RespDiario | 202602101038-IC | |
+| 1 | Completa | Cancelación de nota de abono por aplicación de anticipo en RespDiario | 202602101038-IC | |
 
 </details>
 <details> <summary> Revisión 202602151250-IC </summary> 
 
 | Pruebas | Estatus | Descripción | Revisión en QA | Notas / comentarios |
 |:---:|:---:|:---|:---:|:---|
-| 1 | Revisado | Cancelación de factura de activo en RespDiario | 202602150830-IC | |
+| 1 | Completa | Cancelación de factura de activo en RespDiario | 202602150830-IC | |
 
 </details>
 <details> <summary> Revisión 202602191629-IC </summary> 
 
 | Pruebas | Estatus | Descripción | Revisión en QA | Notas / comentarios |
 |:---:|:---:|:---|:---:|:---|
-| 1 | Revisado | Cancelación de pago en RespDiario | 202602181235-IC | |
+| 1 | Completa | Cancelación de pago en RespDiario | 202602181235-IC | |
 
 </details>
 <details> <summary> Acotaciones </summary>
@@ -89,6 +93,7 @@ Backend de cancelación directa de documentos CFDi en el SAT, a través del API 
 | Completa | Revisión completada satisfactoriamente |
 
 </details>
+
 ### Errores
 <details> <summary> Revisión 202602170800-IC </summary>
 	
@@ -98,7 +103,6 @@ Backend de cancelación directa de documentos CFDi en el SAT, a través del API 
 
 </details>
 
----
 ---
 #### Otros ejemplos de control de QA
 <details> <summary> Otros ejemplos de control de QA </summary>
