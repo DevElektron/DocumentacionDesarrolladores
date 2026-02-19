@@ -53,13 +53,20 @@ Backend de cancelación directa de documentos CFDi en el SAT, a través del API 
 - Existe un manual de consumo del API Rest en el presente repositorio, en la siguiente liga:
 - 
 - Si está en la raíz del repo:
--[Ver Manual](/WSE-Manual_CancelaCFDI_API_Rest.pdf)
+-[Ver Manual](/WSE_Manual_CancelaCFDi_API_Rest.pdf)
 
 - Si está en otra carpeta:
--[Ver Manual](/docs_AdministraWeb/app/modules/Timbrador/WSE-Manual_CancelaCFDI_API_Rest.pdf)
+-[Ver Manual](/docs_AdministraWeb/app/modules/Timbrador/WSE_Manual_CancelaCFDi_API_Rest.pdf)
 
 - Usando ruta relativa con ./ 
--[Ver Manual](./docs_AdministraWeb/app/modules/Timbrador/WSE-Manual_CancelaCFDI_API_Rest.pdf)
+-[Ver Manual](./docs_AdministraWeb/app/modules/Timbrador/WSE_Manual_CancelaCFDi_API_Rest.pdf)
+
+- Ruta relativa otro ./:
+-[Ver Manual](./WSE_Manual_CancelaCFDi_API_Rest.pdf)
+
+- Usando la ruta completa
+-[Ver Manual](https://github.com/DevElektron/DocumentacionDesarrolladores/edit/main/docs_AdministraWeb/app/modules/Timbrador/HELP_Cancelacion.md)
+
 
 
 
