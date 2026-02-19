@@ -3,63 +3,61 @@
 #### 💻 **Menú:** Es un Backend actualmente sin acceso (están en desarrollo los callers)
 ---
 
-# Documentación en proceso...
-
 #### Datos Generales
 <details>
-<summary> Actualizar el resto de la documentación / indicar en dónde está </summary>
+<summary> Ver aquí la documentación </summary>
 
 ## 📝 Descripción
-Especificar.
+Backend de cancelación directa de documentos CFDi en el SAT, a través del API Rest de CEPDI.
 
 ## 🔐 Seguridad
-| Tipo UI | Elemento          | Descripción                    | Rol permitido |
-|---------|-------------------|--------------------------------|----------------|
-| Botón   | Añadir contacto   | Permite añadir un contacto especial     | Ventas       |
-| Botón   | Modificar contacto   | Permite modificar un contacto especial     | Ventas       |
-| Botón   | Eliminar contacto   | Permite eliminar un contacto especial     | Ventas       |
+|Tipo UI|Elemento|Descripción|Rol permitido|
+|:---|:---|:---|:---|
+|Llamada directa|Cancelación|Ejecuta la cancelación del documento especificado|Heredado|
 
 ## 💼 Políticas Generales
-- Todos los clientes nuevos deben tener el check tildado: Timbrar la factura del cliente
-- El número de cliente, debe ser derivado de tabla de control de clientes noctuna, en donde se analiza en la noche y se asignan lugares disponibles de forma intermedia en catálogo.
-- La zona de cobranza debe coincidir con el almacén del vendedor relacionado.
+- El documento a cancelar, debe estar timbrado y vigente en las tablas correspondientes.
+
+</details>
 
 ## 🧪 Casos de Prueba
 
-### Capturar cliente
 #### 💼 Operación
-- [ ] No se permite capturar un RFC que ya exista en tabla.
-#### 🛡️ Validaciones
-- [ ] Debe capturarse el mínimo de información, requiriendo los campos:
-    - Nombre cte. SAT
-    - Código postal
-    - RFC
-    - Régimen fiscal
-    - Uso CFDi
-- [ ] Se debe seleccionar la clasificación de cliente Schneider. (Default: Ninguno)
+- [ ] No se permite cancelar un documento previamente cancelado.
 
-### Modificar cliente
 #### 🛡️ Validaciones
-- [ ] No se permite modificar el número de cliente
-- [ ] Si existe el bloqueo de datos fiscales, no se deben liberar los campos:
-    - Nombre cte. SAT
-    - Código postal
-    - RFC
-    - Régimen fiscal
-    - Uso CFDi
+- [ ] Los datos requeridos para ejecutar cualquier cancelación en el SAT, son:
+	- UUID
+	- RFC del receptor (puede ser genérico)
+	- Total del documento
 
-### Botones ABC de contactos
-#### 🛡️ Validaciones
-- [ ] El nombre del contacto es requerido
+#### Cancelar nota de abono por aplicación de factura de anticipo a factura de venta.
+1. Se hace factura de ANTICIPO
+2. Se hace factura de VENTA y se relaciona el anticipo anterior
+	Ésta operación, genera una nota de abono relacionada a la factura de VENTA para equilibrar los movimientos
+3. Se cancela la factura de VENTA
+   ---> Aquí estamos, al cancelar la fac. de venta, se debe cancelar la NA relacionada (cancelación del presente documento)
+
+#### Cancelación de factura de activo
+1. Se elabora una factura de activo.
+2. Se cancela la factura de activo.
+
+#### Cancelación de pago de cliente
+1. Se captura un pago de cliente.
+2. Se cancela el pago de cliente.
 
 ## 📎 Observaciones adicionales
-- Observaciones adicionales, modos de prueba o ambientes específicos de uso.
+- Existen 2 ambientes proporcionados por CEPDI, uno demo y otro productivo.
+	- El ambiente demo, responde siempre lo mismo, para cambiar el tipo de respuesta recibida, hay que contactar al personal de CEPDI para solicitarlo.
 
-> 🗓️ **Fecha de última modificación:** 2025-06-01
+- Existe un manual de consumo del API Rest en la siguiente liga:
+
+
+
+> 🗓️ **Fecha de última modificación:** 2026-02-19
 > 👤 **Ignacio Carranza**
-> 🏷️ **Versión:** 2
+> 🏷️ **Versión:** 1
 
-</details>
 
 
 #### Pruebas
