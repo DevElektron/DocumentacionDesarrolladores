@@ -51,7 +51,7 @@ Backend de cancelación directa de documentos CFDi en el SAT, a través del API 
 	- El ambiente demo, responde siempre lo mismo, para cambiar el tipo de respuesta recibida, hay que contactar al personal de CEPDI para solicitarlo.
 
 - Existe un manual de consumo del API Rest en el presente repositorio, en la siguiente liga:
-#### [Ver Manual](docs_AdministraWeb/app/modules/Timbrador/WSE-Manual CancelaCFDI - API Rest.pdf)
+#### [Ver Manual](docs_AdministraWeb/app/modules/Timbrador/WSE-Manual%20CancelaCFDI%20-%20API%20Rest.pdf)
 
 
 
