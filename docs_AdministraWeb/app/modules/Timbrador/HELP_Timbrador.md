@@ -66,7 +66,7 @@ Backend del timbrado de documentos CFDi en el SAT, a través del API Rest de CEP
 2. Se captura la cantidad en moneda de uno o más anticipos fiscales ligados al cliente.
 3. El proceso se encarga de timbrar los documentos en segundo plano.
 
-#### :fa-info-circle: Los documentos sin definición de ruta de ejecución, están listos en BackEnd y pendientes de implementación en FrontEnd.
+#### :fa-info-circle:  Los documentos sin definición de ruta de ejecución, están listos en BackEnd y pendientes de implementación en FrontEnd.
 
 ---
 
@@ -89,11 +89,18 @@ Backend del timbrado de documentos CFDi en el SAT, a través del API Rest de CEP
 Para mantener desplegada una sección en la vista previa, agregar open a la etiqueta de apertura de detalles.
 Ej.: <details open>...</details>
 -->
-<details> <summary> Revisión 202512281104-IC </summary> 
+<details open> <summary> Revisión 202512281104-IC </summary> 
 
 | Pruebas | Estatus | Descripción | Revisión en QA | Notas / comentarios |
 |:---:|:---:|:---|:---:|:---|
-| 1 | Completa | Timbrado de factura de venta en ambiente de pruebas | 202602150830-IC | |
+| 1 | Completa | Timbrado de factura de venta en ambiente de pruebas | 202512281104-IC | |
+| 2 | Completa | Timbrado de factura de activo en ambiente de pruebas | 202601060800-IC | |
+| 3 | Completa | Timbrado de factura de anticipo en ambiente de pruebas | 202601060800-IC | |
+| 4 | Completa | Timbrado de nota de abono (1) en ambiente de pruebas | 202601060800-IC | |
+| 5 | Completa | Timbrado de nota de abono (2) en ambiente de pruebas | 202601060800-IC | |
+| 6 | Completa | Timbrado de nota de abono (3) en ambiente de pruebas | 202601060800-IC | |
+| 7 | Completa | Timbrado de nota de abono (4) en ambiente de pruebas | 202601060800-IC | |
+| 8 | Completa | Timbrado de nota de abono (6) en ambiente de pruebas | 202601060800-IC | |
 
 </details>
 <details> <summary> Acotaciones </summary>
@@ -109,7 +116,7 @@ Ej.: <details open>...</details>
 
 ## Errores
 <details> <summary> Revisión 202602170800-IC </summary>
-	
+
 | Error | Severidad | Pasos para reproducir | Comportamiento actual | Comportamiento esperado | Evidencia | Usuario contacto | Fecha corrección | Notas / comentarios |
 |:---|:---:|:---|:---|:---|:---:|:---|:---:|:---|
 |Error al propagar variable de endpoint|Grave|Se descarga la rama a local y al compilar docker, manda error|||||20260218||
