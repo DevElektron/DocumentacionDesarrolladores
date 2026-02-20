@@ -89,7 +89,7 @@ Backend del timbrado de documentos CFDi en el SAT, a través del API Rest de CEP
 Para mantener desplegada una sección en la vista previa, agregar open a la etiqueta de apertura de detalles.
 Ej.: <details open>...</details>
 -->
-<details open> <summary> Revisión 202512281104-IC </summary> 
+<details> <summary> Revisión 202512281104-IC </summary> 
 
 | Pruebas | Estatus | Descripción | Revisión en QA | Notas / comentarios |
 |:---:|:---:|:---|:---:|:---|
