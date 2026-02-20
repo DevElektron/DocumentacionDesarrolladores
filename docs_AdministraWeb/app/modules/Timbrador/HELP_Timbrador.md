@@ -3,7 +3,7 @@
 #### 💻 **Menú:** Ventas > Facturación de anticipos > Botón "Timbrar el documento seleccionado" [Ver en QA](http://192.168.2.16:1089/app/ventas/facturacionanticipos)
 ---
 
-#### Datos Generales
+## Datos Generales
 <details>
 <summary> Ver aquí la documentación </summary>
 
@@ -33,8 +33,6 @@ Backend del timbrado de documentos CFDi en el SAT, a través del API Rest de CEP
 	- RFC del receptor (puede ser genérico)
 	- Nombre fiscal del receptor (para el genérico, se usa la leyenda PÚBLICO GENERAL)
 	- Domicilio fiscal del receptor (es el código postal del cliente)
-
-</details>
 
 ---
 
@@ -82,32 +80,20 @@ Backend del timbrado de documentos CFDi en el SAT, a través del API Rest de CEP
 > 👤 **Ignacio Carranza**
 > 🏷️ **Versión:** 1
 
+</details>
 
 
-#### Pruebas
-<!-- Para mantener desplegada una sección en la vista previa, 
-	agregar open a la etiqueta de apertura de detalles.
-	Ej.: <details open>...</details>
+
+## Pruebas
+<!--
+Para mantener desplegada una sección en la vista previa, agregar open a la etiqueta de apertura de detalles.
+Ej.: <details open>...</details>
 -->
-<details> <summary> Revisión 202602101600-IC </summary> 
+<details> <summary> Revisión 202512281104-IC </summary> 
 
 | Pruebas | Estatus | Descripción | Revisión en QA | Notas / comentarios |
 |:---:|:---:|:---|:---:|:---|
-| 1 | Completa | Cancelación de nota de abono por aplicación de anticipo en RespDiario | 202602101038-IC | |
-
-</details>
-<details> <summary> Revisión 202602151250-IC </summary> 
-
-| Pruebas | Estatus | Descripción | Revisión en QA | Notas / comentarios |
-|:---:|:---:|:---|:---:|:---|
-| 1 | Completa | Cancelación de factura de activo en RespDiario | 202602150830-IC | |
-
-</details>
-<details> <summary> Revisión 202602191629-IC </summary> 
-
-| Pruebas | Estatus | Descripción | Revisión en QA | Notas / comentarios |
-|:---:|:---:|:---|:---:|:---|
-| 1 | Completa | Cancelación de pago en RespDiario | 202602181235-IC | |
+| 1 | Completa | Timbrado de factura de venta en ambiente de pruebas | 202602150830-IC | |
 
 </details>
 <details> <summary> Acotaciones </summary>
@@ -121,27 +107,11 @@ Backend del timbrado de documentos CFDi en el SAT, a través del API Rest de CEP
 
 </details>
 
-### Errores
+## Errores
 <details> <summary> Revisión 202602170800-IC </summary>
 	
 | Error | Severidad | Pasos para reproducir | Comportamiento actual | Comportamiento esperado | Evidencia | Usuario contacto | Fecha corrección | Notas / comentarios |
 |:---|:---:|:---|:---|:---|:---:|:---|:---:|:---|
 |Error al propagar variable de endpoint|Grave|Se descarga la rama a local y al compilar docker, manda error|||||20260218||
-
-</details>
-
----
-#### Otros ejemplos de control de QA
-<details> <summary> Otros ejemplos de control de QA </summary>
-
-## Para agregar a documentación: extender uso
-
-## Checklist de Migración
-- [x] Funcionalidades principales migradas
-- [x] Datos persistentes correctos
-- [ ] APIs responden igual que EXE
-- [x] UI/UX similar
-- [ ] Rendimiento aceptable
-- [ ] Documentación actualizada
 
 </details>
