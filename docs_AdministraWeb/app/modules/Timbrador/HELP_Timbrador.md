@@ -17,32 +17,46 @@ Backend del timbrado de documentos CFDi en el SAT, a través del API Rest de CEP
 
 ## 💼 Políticas Generales
 - El documento a timbrar, NO debe estar timbrado y estar dentro de las 72 horas para facturas y notas de abono y 10 días del mes siguiente para pagos de cliente.
+- No se permite timbrar documentos de clientes sin RFC, éstos se incluyen en una factura global.
 
 ## 🧪 Casos de Prueba
 
 #### 💼 Operación
-- [ ] No se permite cancelar un documento previamente cancelado.
+- [x] No se permite timbrar un documento previamente timbrado.
+- [x] Para timbrar un documento, primero se elabora éste como XML y se codifica en base 64, para ésto, se procesa el documento con el servicio del módulo del generador de XMLs (GeneradorXML).
+- [x] Existe un registro de timbrado en curso para procesos iniciados de timbrado en diferentes estaciones, éste se encuentra en la bitácora de mensajes (Bitacora_Mensa) y se libera 2 horas después de iniciado el timbrado en la primera instancia.
+- [x] Existe un candado para la validación del ambiente de timbrado contra la base de datos productiva, en donde, si se detecta una anomalía, se envía una alerta de ajuste de datos para el timbrado real. Hay que ajustar los datos en el registro de iniciales para liberarlo.
 
 #### 🛡️ Validaciones
-- [ ] Los datos requeridos para ejecutar cualquier cancelación en el SAT, son:
-	- UUID
+- [ ] Los datos requeridos para ejecutar cualquier timbrado de documento en el SAT, versión CFDi 4.0, son:
 	- RFC del receptor (puede ser genérico)
-	- Total del documento
+	- Nombre fiscal del receptor (para el genérico, se usa la leyenda PÚBLICO GENERAL)
+	- Domicilio fiscal del receptor (es el código postal del cliente)
 
-#### Cancelar nota de abono por aplicación de factura de anticipo a factura de venta.
-1. Se hace factura de ANTICIPO
-2. Se hace factura de VENTA y se relaciona el anticipo anterior
-	Ésta operación, genera una nota de abono relacionada a la factura de VENTA para equilibrar los movimientos
-3. Se cancela la factura de VENTA
-   ---> Aquí estamos, al cancelar la fac. de venta, se debe cancelar la NA relacionada (cancelación del presente documento)
+</details>
 
-#### Cancelación de factura de activo
-1. Se elabora una factura de activo.
-2. Se cancela la factura de activo.
 
-#### Cancelación de pago de cliente
-1. Se captura un pago de cliente.
-2. Se cancela el pago de cliente.
+#### Timbrar factura de venta
+1. Se captura una factura de venta en el menú Ventas > Facturación > Botón "Nueva factura".
+2. El proceso se encarga de timbrar la factura en segundo plano.
+
+#### Timbrar factura de anticipo
+1. Se elabora una factura de anticipo en el menú Ventas > Facturación de anticipos > Botón "Timbrar el documento seleccionado"
+2. Actualmente, NO está implementado el timbrado al finalizar la captura de éste documento.
+
+#### Timbrar factura de activo
+
+#### Timbrar nota de abono por descuento directo en detalle de la factura de venta
+1. Se captura una factura de venta en el menú Ventas > Facturación > Botón "Nueva factura".
+2. Se define uno o varios descuentos en los detalles de la factura de venta.
+3. El proceso se encarga de timbrar las notas de abono en segundo plano.
+
+# #### AQUÍ VOY # # # # #
+
+
+#### Los documentos sin definición de ruta de ejecución, están listos en BackEnd y pendientes de implementación en FrontEnd.
+
+
 
 ## 📎 Observaciones adicionales
 - Existen 2 ambientes proporcionados por CEPDI, uno demo y otro productivo.
@@ -54,7 +68,6 @@ Backend del timbrado de documentos CFDi en el SAT, a través del API Rest de CEP
 > 👤 **Ignacio Carranza**
 > 🏷️ **Versión:** 1
 
-</details>
 
 
 #### Pruebas
