@@ -18,6 +18,7 @@ Backend del timbrado de documentos CFDi en el SAT, a través del API Rest de CEP
 ## 💼 Políticas Generales
 - El documento a timbrar, NO debe estar timbrado y estar dentro de las 72 horas para facturas y notas de abono y 10 días del mes siguiente para pagos de cliente.
 - No se permite timbrar documentos de clientes sin RFC, éstos se incluyen en una factura global.
+- Para el timbrado a través del API Rest de CEPDI, es el PAC el que incluye el sello del emisor del documento. Para la configuración de la bóveda del PAC, consultar: [**Manual de carga de CSD (PDF)**](./PRD_Carga_de_CSD_portal_facturación_CEPDI_Multi_RFC.pdf)
 
 ## 🧪 Casos de Prueba
 
@@ -35,36 +36,49 @@ Backend del timbrado de documentos CFDi en el SAT, a través del API Rest de CEP
 
 </details>
 
+---
 
-#### Timbrar factura de venta
+#### Timbrar la factura de venta
 1. Se captura una factura de venta en el menú Ventas > Facturación > Botón "Nueva factura".
-2. El proceso se encarga de timbrar la factura en segundo plano.
+2. El proceso se encarga de timbrar los documentos en segundo plano.
 
-#### Timbrar factura de anticipo
-1. Se elabora una factura de anticipo en el menú Ventas > Facturación de anticipos > Botón "Timbrar el documento seleccionado"
-2. Actualmente, NO está implementado el timbrado al finalizar la captura de éste documento.
+#### Timbrar la factura de anticipo
+1. Entrar en menú Ventas > Facturación de anticipos.
+2. Seleccionar un documento del listado.
+3. Dar clic en el botón "Timbrar el documento seleccionado".
 
-#### Timbrar factura de activo
+#### Timbrar la factura de activo
 
-#### Timbrar nota de abono por descuento directo en detalle de la factura de venta
+---
+
+#### Timbrar nota de abono (1) por cancelación de factura de venta
+
+#### Timbrar nota de abono (2) por cancelación de factura de anticipo / activo
+
+#### Timbrar nota de abono (3) por devolución de mercancía
+
+#### Timbrar nota de abono (4) por descuento
+##### &rarr; Descuento especial directo en detalle de la factura de venta
 1. Se captura una factura de venta en el menú Ventas > Facturación > Botón "Nueva factura".
 2. Se define uno o varios descuentos en los detalles de la factura de venta.
-3. El proceso se encarga de timbrar las notas de abono en segundo plano.
+3. El proceso se encarga de timbrar los documentos en segundo plano.
 
-# #### AQUÍ VOY # # # # #
+#### Timbrar nota de abono (6) por aplicación de factura de anticipo a factura de venta
+1. Se captura una factura de venta en el menú Ventas > Facturación > Botón "Nueva factura".
+2. Se captura la cantidad en moneda de uno o más anticipos fiscales ligados al cliente.
+3. El proceso se encarga de timbrar los documentos en segundo plano.
 
+#### :fa-info-circle: Los documentos sin definición de ruta de ejecución, están listos en BackEnd y pendientes de implementación en FrontEnd.
 
-#### Los documentos sin definición de ruta de ejecución, están listos en BackEnd y pendientes de implementación en FrontEnd.
-
-
+---
 
 ## 📎 Observaciones adicionales
 - Existen 2 ambientes proporcionados por CEPDI, uno demo y otro productivo.
-	- El ambiente demo, responde siempre lo mismo, para cambiar el tipo de respuesta recibida, hay que contactar al personal de CEPDI para solicitarlo.
 
-- Existe un manual de consumo del API Rest en el presente repositorio, en la siguiente liga: [WSE_Manual_CancelaCFDi_API_Rest.pdf](./WSE_Manual_CancelaCFDi_API_Rest.pdf)
+- Existe un manual de carga de CSD para la generación del sello de parte de CEPDI en el presente repositorio, en la siguiente liga: [PRD_Carga_de_CSD_portal_facturación_CEPDI_Multi_RFC.pdf](./PRD_Carga_de_CSD_portal_facturación_CEPDI_Multi_RFC.pdf)
 
-> 🗓️ **Fecha de última modificación:** 2026-02-19
+
+> 🗓️ **Fecha de última modificación:** 2026-02-20
 > 👤 **Ignacio Carranza**
 > 🏷️ **Versión:** 1
 
