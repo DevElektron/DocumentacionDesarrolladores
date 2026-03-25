@@ -25,6 +25,7 @@ El objetivo principal es centralizar la documentación de estos componentes para
     -   `success`: Muestra un diálogo de operación correcta.
     -   `warning`: Muestra un diálogo de advertencia o aviso.
     -   `observations`: Muestra un diálogo con observaciones.
+    -   `question`: Muestra un diálogo con botones de opciones, máximo 3 mínimo 1.
 
 </details>
 
