@@ -9,7 +9,7 @@ El servicio de mensajeria de sms es un endpoint RESTful para el envío de mensaj
 
 ### Envío de SMS
 **Método:** `POST`  
-**Ruta Dinamica:** `/api/ventas/consultadecotizaciones`
+**Ruta Dinamica:** `/api/ventas/consultadecotizaciones`  
 **Endpoint :** `send-sms`  
 **Autenticación:** Requerida
 
