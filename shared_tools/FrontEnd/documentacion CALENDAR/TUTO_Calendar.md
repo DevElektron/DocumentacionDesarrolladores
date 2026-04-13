@@ -55,10 +55,10 @@ Selector de fechas nivel empresarial completamente configurable. Permite selecci
       placeholder="Rango de Fechas"
       labelStart="Fecha Inicial"
       labelEnd="Fecha Final"
-      [initialStartDate]="startDate"
-      [initialEndDate]="endDate"
       [minDate]="minDate"
       [maxDate]="maxDate"
+      [initialStartDate]="startDate"
+      [initialEndDate]="endDate"
       (dateChange)="onDateFilter($event)">
     </app-date-range-select>
 ```
