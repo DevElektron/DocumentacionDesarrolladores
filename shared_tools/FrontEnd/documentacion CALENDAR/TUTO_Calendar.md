@@ -57,9 +57,10 @@ Selector de fechas nivel empresarial completamente configurable. Permite selecci
       labelEnd="Fecha Final"
       [initialStartDate]="startDate"
       [initialEndDate]="endDate"
+      [minDate]="minDate"
+      [maxDate]="maxDate"
       (dateChange)="onDateFilter($event)">
     </app-date-range-select>
-  </div>
 ```
 
 ## 💻 Ejemplo de Uso
@@ -81,6 +82,11 @@ export class ConsultaFacturacionArticulosComponent {
   // Fechas iniciales
   startDate = '2026-01-05';
   endDate = '2026-03-12';
+
+  // Definir fechas mínima y máxima
+  minDate = new Date(2024, 0, 1);   // 01/01/2024
+  maxDate = new Date(2026, 11, 31); // 31/12/2026
+
   
   // Fechas seleccionadas para mostrar
   selectedStartDate: Date | null = null;
