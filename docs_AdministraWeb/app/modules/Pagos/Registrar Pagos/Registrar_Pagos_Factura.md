@@ -4,14 +4,14 @@
 
 ## 📝 Descripción
 
-Este módulo muestra la pantalla correspondiente a **Registrar Pagos**, cuyo objetivo es armar y guardar los registros de las Formas de Pago y sus datos para una factura cargada, teniendo 2 tipos de facturas a procesar (Anticipo y Otras) y un basto número de validaciones para cada forma de pago así como de las cantidades totales. La pantalla se divide en 4 zonas:
+Este módulo muestra la pantalla correspondiente a **Registrar Pagos**, cuyo objetivo es armar y guardar los registros de las Formas de Pago y sus datos para una factura cargada, teniendo 2 tipos de facturas a procesar (Anticipo y Otras) y un vasto número de validaciones para cada forma de pago así como de las cantidades totales. La pantalla se divide en 4 zonas:
 
 1. **Zona de búsqueda de factura**, en donde se encuentran:
     - _CORTE:_ Es el número de Turno del corte asignado a un almacén por el día de hoy.
     - _Buscador de Facturas:_ El campo que te ayuda a seleccionar las facturas, teniendo la posibilidad de escanero o búsqueda manual.
     - _Botones de acción:_ Por el momento sólo 2, _Cancelar captura_ (limpia la ventana de todo valor ingresado) y _Manual Registrar Pagos_ (muestra una ventana de ayuda).
 2. **Zona de Información de Factura**, que muestra:
-    - _Folio de la factura seleccionada_, en donde se presenta un borde coloreado segn el tipo de factura cargada, rojo = Otra, azul = Anticipo.
+    - _Folio de la factura seleccionada_, en donde se presenta un borde coloreado según el tipo de factura cargada, rojo = Otra, azul = Anticipo.
     - _Fecha de la factura_, formato _`día de la semana`, `no. día` `mes` `año`_.
     - _Forma de Pago_, `Contado` o `Crédito`.
     - _Ubicación original_, Estado de Entrega de la factura.
@@ -60,12 +60,12 @@ Para llegar a esta pantalla, sólo aparece la ruta para los roles _Vendedor / Ve
 1. Buscar o escanear la factura a pagar.
 2. La pantalla detecta el estado de la factura en el sistema (si ya fue entregada, tipo, información adicional), si detecta que puedes entregarla, el módulo lo puede hacer, de otra manera puedes cancelar la captura de pago o continuar.
 3. Observa el tipo de factura segn la zona del folio (azul = Anticipo, rojo = Otra).
-4. Una seleccionaba la factura, se habilitará la tabla principal, ahora indica la o las formas de pago que el cliente pagará la factura:
+4. Una vez seleccionada la factura, se habilitará la tabla principal, ahora indica la o las formas de pago que el cliente pagará la factura:
     - 4.1 Cada Forma de pago tiene sus reglas, y dependiendo de la seleccionada puede requerirte algunas columnas e información adicional (como escanear Nota de Abono o registrar un Cheque Protegido).
-    - 4.2 Cada fila que esté en la tabla principal tiene un icono en la primera columna, en donde además se encuentra el número de la fila, y el color del icono indica si es válida o no toda la información de la foma de pago; si es valida (icono en verde), te permitirá agregar otra fila tecleando `flecha abajo`, pero si no es válida (icono en rojo) no te permitirá agregar otra fila hasta que hayas corregido las indicaciones en rojo.
+    - 4.2 Cada fila que esté en la tabla principal tiene un icono en la primera columna, en donde además se encuentra el número de la fila, y el color del icono indica si es válida o no toda la información de la forma de pago; si es válida (icono en verde), te permitirá agregar otra fila tecleando `flecha abajo`, pero si no es válida (icono en rojo) no te permitirá agregar otra fila hasta que hayas corregido las indicaciones en rojo.
     - 4.3 Al hacer clic en una fila, si la forma de pago incluye parcialización, lo puedes ver en la zona de totales centrales, en las tarjetas amarillo y verde.
-    - 4.4 Si eliges la forma de pago `EFECTIVO`, se habiliitará el campo _RECIBÍ_, en la que tendrá que captura la cantidad de efectivo recibida para pagar el o los montos de las formas de pago en efectivo.
-5. Al finalizar la captura de las formas de pago, da clic en el botón `Aceptar`, se aparecerá un mensaje de confirmación, da clic en _SÍ_ para confirmar la captura de pago y espera a que aparezca uno de 2 mensajes, ambos significa que la factura fue para, más hay algunas formas de pago que activan procesos después del pago:
+    - 4.4 Si eliges la forma de pago `EFECTIVO`, se habilitará el campo _RECIBÍ_, en la que tendrá que captura la cantidad de efectivo recibida para pagar el o los montos de las formas de pago en efectivo.
+5. Al finalizar la captura de las formas de pago, da clic en el botón `Aceptar`, se aparecerá un mensaje de confirmación, da clic en _SÍ_ para confirmar la captura de pago y espera a que aparezca uno de 2 mensajes, ambos significan que la factura fue pagada, más hay algunas formas de pago que activan procesos después del pago:
     a. _**Éxito! Operación Realizada, Pago(s) registrado(s) con éxito** a la factura ###-######_.
     b. _**Pago exitoso con detalles** ... Se han registrado los pagos, pero con algunas observaciones. Revisa los detalles para más información_.
 
@@ -79,7 +79,7 @@ Las columnas de la tabla principal son:
 2. **Forma de Pago (obligatoria)**, listado de las vías que tiene el cliente para pagar el saldo de la factura.
 3. **Banco**, listado de los bancos registrados en el sistema.
 4. **Monto**, cantidad que se va a dar como pago para la Forma de Pago indicada.
-5. **Número de Referencia**, campo detexto libre que se usa para dar mayor información de la forma de pago, ejemplo de uso es capturar los últimos 4 dígitos de una tarjeta.
+5. **Número de Referencia**, campo de texto libre que se usa para dar mayor información de la forma de pago, ejemplo de uso es capturar los últimos 4 dígitos de una tarjeta.
 6. **Nota de Abono (_sólo lectura_)**, para algunas formas de pago, es un documento que indica el saldo que la empresa _le debe a un cliente_, y ese documento tiene un saldo que también funciona como pago.
 7. **Cuenta Bancaria Interna**, listado de las cuentas bancarias registradas en el sistema destino del monto especificado con la forma de pago seleccionada.
 
@@ -91,21 +91,21 @@ Los registros de la tabla principal tienen a la _**Forma de Pago (segunda column
 2. **Lectura Código de Barras de Notas de Abono**, en la que se tendrá que escanear (o en su defecto teclear) un código de barras que hace referencia a una Nota de Abono y que aparecerá la información en la columna 6.
 3. **Registro de Cheque Protegido**, en la que aparecerá un formulario para registrar los datos de un cheque protegido.
 
-Para una forma de pago puede ser obligatorio especificar un Número de Referencia, pero para otras no, **es por eso que la forma de pago es el primer dato a seleccionar** del un registros de pago para activar las validaciones correspondientes.
+Para una forma de pago puede ser obligatorio especificar un Número de Referencia, pero para otras no, **es por eso que la forma de pago es el primer dato a seleccionar** de un registro de pago para activar las validaciones correspondientes.
   
 Una validación que todas las Formas de Pagos comparten es referente al _Monto_:
 
 1. Tiene que ser mayor a cero.
 2. Es obligatorio capturar un monto.
-3. La cantidad deberá de ser menor igual al máximo configurado de la forma de pago (a excepción de la forma de pago DIFERENCIA EN PESOS, sólo permitiendo montos entre 0.01 a 0.99).
+3. La cantidad deberá ser menor o igual al máximo configurado de la forma de pago (a excepción de la forma de pago DIFERENCIA EN PESOS, sólo permitiendo montos entre 0.01 a 0.99).
 
-> NOTA: Cuando el usuario capture una cantidad mayor a la permitidad de una forma de pago, se mostrará un mensaje de advertencia en la que dirá que se pondrá en su lugar el límite máximo.
+> NOTA: Cuando el usuario capture una cantidad mayor a la permitida de una forma de pago, se mostrará un mensaje de advertencia en la que dirá que se pondrá en su lugar el límite máximo.
 
 <a id="politica-4-formas-pago-con-parcializacion"></a>
 
 ### POLÍTICA 4. Formas de Pago con Parcialización
 
-Algunas Formas de Pagos tiene configurado en el sistema un porcentaje de comisión, lo cual genera una series de cálculos para mostrar al usuario 3 datos, divididos en 2 tarjetaa en la parte inferior central de la pantalla:
+Algunas Formas de Pagos tiene configurado en el sistema un porcentaje de comisión, lo cual genera una serie de cálculos para mostrar al usuario 3 datos, divididos en 2 tarjetas en la parte inferior central de la pantalla:
 
 1. Parcializado (AMARILLO):
     - _MONTO_: Cantidad base del cálculo.
@@ -137,7 +137,7 @@ Esta pantalla permite pagar una factura con más de una forma de pago (salvo que
 **a. Primera columna con icono en verde:** Agregará la nueva fila.
 **b. Primera columna con icono en rojo:** No agregará la nueva fila, se deberá capturar los datos obligatorios faltantes que las formas de pago indiquen.
   
-Para las facturas de anticipo, que se podrán reconocer en la zona superior izquierda del folio con borde azul, _**sólo se podrá pagar con una sóla forma de pago**_, en caso de que el usuario intente agregar otra fila de formade pago, se le mostrará un mensaje de error: _**Las Facturas de Anticipo sólo permiten una Forma de Pago.**_, no agregando la nueva fila.
+Para las facturas de anticipo, que se podrán reconocer en la zona superior izquierda del folio con borde azul, _**sólo se podrá pagar con una sola forma de pago**_, en caso de que el usuario intente agregar otra fila de forma de pago, se le mostrará un mensaje de error: _**Las Facturas de Anticipo sólo permiten una Forma de Pago.**_, no agregando la nueva fila.
 
 <a id="politica-7-formas-pago-con-autorizacion"></a>
 
@@ -199,7 +199,7 @@ Cuando se seleccione como forma de pago **7 - NOTA DE CREDITO** o **8 - SALDO A 
 
 - [ ] 1. Accede al sistema con un usuario que tenga el rol de `Vendedor` o `Vendedor Mostrador` y da clic en la opción del menú `Pagos > Registrar Pagos Factura`.
 - [ ] 2. Busca o escanea una factura de anticipo.
-- [ ] 3. Al seleccionar la factura y si no está entregada, se aparecerá un mensaje de 3 opciones: _**¿Qué operación desea realizar, Marcar Como Entregada (sin realizar Pagos), Recibir Pagos de la factura seleccionada o Cancelar Modificaciones?**_, selecciona `Pagar`.
+- [ ] 3. Al seleccionar la factura y si no está entregada, aparecerá un mensaje de 3 opciones: _**¿Qué operación desea realizar, Marcar Como Entregada (sin realizar Pagos), Recibir Pagos de la factura seleccionada o Cancelar Modificaciones?**_, selecciona `Pagar`.
 - [ ] 4. Revisa que la barra de búsqueda de las facturas esté **bloqueada**, esto es **a propósito**, ya que **el usuario no podrá hacer una carga de otro folio si el proceso de captura no es cancelado**; si quieres cancelarlo, ver a [cómo cancelar una captura (paso 3)](#prueba-15-cancelar-captura).
 - [ ] 5. Observarás en la parte superior izquierda una tarjeta con borde **azul** con la leyenda _FOLIO ANTICIPO_ y el Folio de la factura.
 
@@ -227,7 +227,7 @@ Cuando se seleccione como forma de pago **7 - NOTA DE CREDITO** o **8 - SALDO A 
 
 - [ ] 1. Accede al sistema con un usuario que tenga el rol de `Vendedor` o `Vendedor Mostrador` y da clic en la opción del menú `Pagos > Registrar Pagos Factura`.
 - [ ] 2. Busca o escanea una factura de anticipo.
-- [ ] 3. Al seleccionar la factura y si no está entregada, se aparecerá un mensaje de 3 opciones: _**¿Qué operación desea realizar, Marcar Como Entregada (sin realizar Pagos), Recibir Pagos de la factura seleccionada o Cancelar Modificaciones?**_, selecciona `Entregar`.
+- [ ] 3. Al seleccionar la factura y si no está entregada, aparecerá un mensaje de 3 opciones: _**¿Qué operación desea realizar, Marcar Como Entregada (sin realizar Pagos), Recibir Pagos de la factura seleccionada o Cancelar Modificaciones?**_, selecciona `Entregar`.
 - [ ] 4. Se presentara un mensaje de éxito: _**Factura ###-###### entregada.**_
 - [ ] 5. Buscar o escanea la misma factura, ahora se mostrará el mismo mensaje de error que en el Caso 3.
 
@@ -246,11 +246,11 @@ Cuando se seleccione como forma de pago **7 - NOTA DE CREDITO** o **8 - SALDO A 
 - [ ] 2. Busca o escanea una factura que no sea de anticipo.
 - [ ] 3. Si no está entregada, observarás en la parte superior izquierda una tarjeta con borde **rojo** con la leyenda _FOLIO FACTURA_ y el Folio de la factura, y en la parte derecha datos de la factura necesarios para que el usuario haga el proceso de pago.
 - [ ] 4. Se habilitará la tabla principal debajo de la información de la factura cargada con el saldo inicial diferente de cero, con una fila precargada con el estatus de `no válida` (icono rojo con número 1), debido a que falta información acerca del pago, teniendo el mensaje de error en la celda de `Monto` _"Selecciona una forma de pago primero"_. Selecciona la forma de pago **1 - EFECTIVO** en el listado de la segunda columna _Forma de Pago / Descripción_.
-- [ ] 5. Se activarán el resto de las celdas (a excepción de Nota de Abono, es _sólo lectura_), el campo _**RECIBÍ**_ con el mensaje de error _**Debe ser mayor a cero**_ que se encuentra al lado de los botones de **Aceptar** / **Cancelar**; captura una cambiar menor al Monto del registro de pago EFECTIVO, te aparacerá el mensaje _**Debe ser mayor igual al total en efectivo.**_.
+- [ ] 5. Se activarán el resto de las celdas (a excepción de Nota de Abono, es _sólo lectura_), el campo _**RECIBÍ**_ con el mensaje de error _**Debe ser mayor a cero**_ que se encuentra al lado de los botones de **Aceptar** / **Cancelar**; captura una cantidad menor al Monto del registro de pago EFECTIVO, te aparecerá el mensaje _**Debe ser mayor igual al total en efectivo.**_.
 - [ ] 6. Ahora en el campo **RECIBÍ** borra todo el contenido, te aparecerá el mensaje _**Ingrese cantidad**_.
-- [ ] 7. Teclea en el campo **RECIBÍ** un cantidad mayor igual al monto del registro de pago, se calculará el campo **CAMBIO** y notarás que al salirte de la edición del campo deja el formato de moneda de 2 decimales (si es más que 999 verás el separador de millares, la coma).
+- [ ] 7. Teclea en el campo **RECIBÍ** una cantidad mayor o igual al monto del registro de pago, se calculará el campo **CAMBIO** y notarás que al salirte de la edición del campo deja el formato de moneda de 2 decimales (si es más que 999 verás el separador de millares, la coma).
 - [ ] 8. El botón **Aceptar** sigue inhabilitado, debido a que el registro de EFECTIVO le falta la _**Cuenta Bancaria Interna**_, selecciona una y verás que el icono de estatus de la primera columna se torna **verde**, indicando que la fila del registro de pago ya es válida, y el botón **Aceptar** ya se muestra en color azul listo para hacer clic.
-- [ ] 9. Da clic en el botón **Aceptar**, y aparecerá un mensaje de confirmación: _**¿Estás seguro de que deseas guardar los registros de pago?**_, da clic en **No** para confirmar la información de pago de factura, da otra vez clic en **Aceptar** y ahora elige **Sí**, y aparecerá el mensaje de éxito: _**Pago(s) registrado(s) con éxito a la factura ###-######.**_, da clic en aceptar y se limpiar toda la información de la pantalla relativa al pago y a la factura.
+- [ ] 9. Da clic en el botón **Aceptar**, y aparecerá un mensaje de confirmación: _**¿Estás seguro de que deseas guardar los registros de pago?**_, da clic en **No** para confirmar la información de pago de factura, da otra vez clic en **Aceptar** y ahora elige **Sí**, y aparecerá el mensaje de éxito: _**Pago(s) registrado(s) con éxito a la factura ###-######.**_, da clic en aceptar y se limpiará toda la información de la pantalla relativa al pago y a la factura.
 - [ ] 10. Buscar o escanea la misma factura, ahora se mostrará el mismo mensaje de error que en el Caso 3.
 
 #### 🛡️ Validaciones
@@ -268,10 +268,10 @@ Cuando se seleccione como forma de pago **7 - NOTA DE CREDITO** o **8 - SALDO A 
 
 - [ ] 1. Accede al sistema con un usuario que tenga el rol de `Vendedor` o `Vendedor Mostrador` y da clic en la opción del menú `Pagos > Registrar Pagos Factura`.
 - [ ] 2. Busca o escanea una factura de anticipo.
-- [ ] 3. Al seleccionar la factura y si no está entregada, se aparecerá un mensaje de 3 opciones: _**¿Qué operación desea realizar, Marcar Como Entregada (sin realizar Pagos), Recibir Pagos de la factura seleccionada o Cancelar Modificaciones?**_, selecciona `Pagar`.
+- [ ] 3. Al seleccionar la factura y si no está entregada, aparecerá un mensaje de 3 opciones: _**¿Qué operación desea realizar, Marcar Como Entregada (sin realizar Pagos), Recibir Pagos de la factura seleccionada o Cancelar Modificaciones?**_, selecciona `Pagar`.
 - [ ] 4. Observarás en la parte superior izquierda una tarjeta con borde **azul** con la leyenda _FOLIO ANTICIPO_ y el Folio de la factura, y en la parte derecha datos de la factura necesarios para que el usuario haga el proceso de pago. Se habilitará la tabla principal debajo de la información de la factura cargada con el saldo inicial diferente de cero, con una fila precargada con el estatus de `no válida` (icono rojo con número 1), debido a que falta información acerca del pago, teniendo el mensaje de error en la celda de `Monto` _"Selecciona una forma de pago primero"_. Selecciona la forma de pago **17 - TARJETA DE DEBITO** en el listado de la segunda columna _Forma de Pago / Descripción_.
 - [ ] 5. Llena los datos requeridos, verás que el icono de la primera columna se torna **verde** indicando que los datos del pago son válidos.
-- [ ] 6. 9. Da clic en el botón **Aceptar**, y aparecerá un mensaje de confirmación: _**¿Estás seguro de que deseas guardar los registros de pago?**_, da clic en **No** para confirmar la información de pago de factura, da otra vez clic en **Aceptar** y ahora elige **Sí**, y aparecerá el mensaje de éxito: _**Pago(s) registrado(s) con éxito a la factura ###-######.**_, da clic en aceptar y se limpiar toda la información de la pantalla relativa al pago y a la factura. Nótese que esta vez no se habilitó el campo de _RECIBÍ_ ya que la forma de pago que seleccionaste NO fue efectivo.
+- [ ] 6. 9. Da clic en el botón **Aceptar**, y aparecerá un mensaje de confirmación: _**¿Estás seguro de que deseas guardar los registros de pago?**_, da clic en **No** para confirmar la información de pago de factura, da otra vez clic en **Aceptar** y ahora elige **Sí**, y aparecerá el mensaje de éxito: _**Pago(s) registrado(s) con éxito a la factura ###-######.**_, da clic en aceptar y se limpiará toda la información de la pantalla relativa al pago y a la factura. Nótese que esta vez no se habilitó el campo de _RECIBÍ_ ya que la forma de pago que seleccionaste NO fue efectivo.
 - [ ] 7. Da clic en _Aceptar_ y la pantalla se limpiará de toda la información de factura y sus registros de pagos lista para cargar otra factura a pagar.
 - [ ] 8. Buscar o escanea la misma factura, ahora se mostrará el mismo mensaje de error que en el Caso 3.
 
@@ -290,10 +290,10 @@ Cuando se seleccione como forma de pago **7 - NOTA DE CREDITO** o **8 - SALDO A 
 - [ ] 2. Busca o escanea una factura que no sea de anticipo.
 - [ ] 3. Si no está entregada, observarás en la parte superior izquierda una tarjeta con borde **rojo** con la leyenda _FOLIO FACTURA_ y el Folio de la factura, y en la parte derecha datos de la factura necesarios para que el usuario haga el proceso de pago.
 - [ ] 4. Se habilitará la tabla principal debajo de la información de la factura cargada con el saldo inicial diferente de cero, con una fila precargada con el estatus de `no válida` (icono rojo con número 1), debido a que falta información acerca del pago, teniendo el mensaje de error en la celda de `Monto` _"Selecciona una forma de pago primero"_. Selecciona la forma de pago **18 - TC 3 MESES 5.5%** en el listado de la segunda columna _Forma de Pago / Descripción_.
-- [ ] 5. Ahora en la zona de totales (parte inferior de la pantalla) se podrán ver las tarjeta de **PARCIALIZADO** y **SIN PACIALIZAR**, indicando el monto base, las mensualidades y la comisión que se va a generar con el monto del registro de pago. Completa los datos requeridos de la forma de pago.
-- [ ] 6. Da clic en el botón **Aceptar** y aparecerás un mensaje de confirmación adicional: _**Seleccionó al menos una Forma de Pago que requiere Confirmación. ¿El pago fue APROBADO en la Terminal?**_, selecciona _NO_, y te mostrará un mensaje de advertencia: _**Espere a que el pago sea aprobado en la Terminal. Una vez aprobado de clic nuevamente en el botón Aceptar para realizar los pagos.**_.
-- [ ] 7. Da clic en el botón **Aceptar** y aparecerás un mensaje de confirmación adicional: _**Seleccionó al menos una Forma de Pago que requiere Confirmación. ¿El pago fue APROBADO en la Terminal?**_, selecciona _SÍ_ y espera un momento para que los pagos sean confirmados, ya que esta forma de pago genera también una _**Factura de Comisión**_ por lo cuál el sistema requiere la fabricación y el timbrado de este nuevo documento fiscal, al finalizar pueden pasar los siguientes resultados:
-    a. **Pago exitoso con detalles. Se han registrado los pagos, pero con algunas observaciones. Revisa los detalles para más información.**: El sistema ha registrado los pagos exitósamente, más el proceso de facturación ha reportado advertencias y/o errores, el diálogo permite desplegar tanto advertencias como errores, y cada registro se puede distinguir con UUID (formato ########-####-####-####-############) y/o el número de registro de pago del cuál se refiere el contenido de la observación, estos datos son útiles para la localización del detalle del proceso de facturación.
+- [ ] 5. Ahora en la zona de totales (parte inferior de la pantalla) se podrán ver las tarjetas de **PARCIALIZADO** y **SIN PARCIALIZAR**, indicando el monto base, las mensualidades y la comisión que se va a generar con el monto del registro de pago. Completa los datos requeridos de la forma de pago.
+- [ ] 6. Da clic en el botón **Aceptar** y aparecerá un mensaje de confirmación adicional: _**Seleccionó al menos una Forma de Pago que requiere Confirmación. ¿El pago fue APROBADO en la Terminal?**_, selecciona _NO_, y te mostrará un mensaje de advertencia: _**Espere a que el pago sea aprobado en la Terminal. Una vez aprobado de clic nuevamente en el botón Aceptar para realizar los pagos.**_.
+- [ ] 7. Da clic en el botón **Aceptar** y aparecerá un mensaje de confirmación adicional: _**Seleccionó al menos una Forma de Pago que requiere Confirmación. ¿El pago fue APROBADO en la Terminal?**_, selecciona _SÍ_ y espera un momento para que los pagos sean confirmados, ya que esta forma de pago genera también una _**Factura de Comisión**_ por lo cuál el sistema requiere la fabricación y el timbrado de este nuevo documento fiscal, al finalizar pueden pasar los siguientes resultados:
+    a. **Pago exitoso con detalles. Se han registrado los pagos, pero con algunas observaciones. Revisa los detalles para más información.**: El sistema ha registrado los pagos exitosamente, más el proceso de facturación ha reportado advertencias y/o errores, el diálogo permite desplegar tanto advertencias como errores, y cada registro se puede distinguir con UUID (formato ########-####-####-####-############) y/o el número de registro de pago del cual se refiere el contenido de la observación, estos datos son útiles para la localización del detalle del proceso de facturación.
     b. **Pago(s) registrado(s) con éxito a la factura ###-######.**: Tanto el pago de la factura así como la facturación de comsión ha resultado correctos.
 - [ ] 8. Da clic en Aceptar en el mensaje de resultado de realización de pagos y busca o escanea la misma factura, ahora se mostrará el mismo mensaje de error que en el Caso 3.
 
@@ -317,7 +317,7 @@ Cuando se seleccione como forma de pago **7 - NOTA DE CREDITO** o **8 - SALDO A 
 - [ ] 5. Ve que el icono de la primera columna se ha cambiado a **verde**, lo cuál indica que _el registro es válido_ y la tabla está habilitada para agregar otra forma de pago, ahora teclea _**flecha abajo**_ para agregar otra fila, observarás que en esta nueva fila el monto inicial es el restante de la cantidad que apareció primero al cargar la factura menos la cantidad de la forma de pago EFECTIVO que acabaste de llenar.
 - [ ] 6. Elige **17 - TARJETA DE DEBITO** como forma de pago en la segunda fila y completa los datos obligatorios hasta que sea válida la fila.
 - [ ] 7. Notarás que el botón _Aceptar_ esta inhabilitado debido a que el campo RECIBÍ está habilitado y con cantidad de cero (lo cuál está prohibido), ya que hay al menos una forma de pago EFECTIVO, ingresa una cantidad mayor igual al total del monto de EFECTIVO, no es necesario que cubra ambas formas de pago.
-- [ ] 8. Ahora sí el botón _Aceptar_ está activado, da cli en él y confirma tu captura de pagos.
+- [ ] 8. Ahora sí el botón _Aceptar_ está activado, da clic en él y confirma tu captura de pagos.
 - [ ] 9. Busca o escanea la misma factura, ahora se mostrará el mismo mensaje de error que en el Caso 3.
 
 #### 🛡️ Validaciones
@@ -336,7 +336,7 @@ Cuando se seleccione como forma de pago **7 - NOTA DE CREDITO** o **8 - SALDO A 
 - [ ] 1. Accede al sistema con un usuario que tenga el rol de `Vendedor` o `Vendedor Mostrador` y da clic en la opción del menú `Pagos > Registrar Pagos Factura`.
 - [ ] 2. Busca o escanea una factura de no anticipo.
 - [ ] 3. Sí no está entregada, observarás en la parte superior izquierda una tarjeta con borde **rojo** con la leyenda _FOLIO FACTURA_ y el Folio de la factura, y en la parte derecha datos de la factura necesarios para que el usuario haga el proceso de pago. Se habilitará la tabla principal debajo de la información de la factura cargada con el saldo inicial diferente de cero, con una fila precargada con el estatus de `no válida` (icono rojo con número 1), debido a que falta información acerca del pago, teniendo el mensaje de error en la celda de `Monto` _"Selecciona una forma de pago primero"_. Selecciona la forma de pago **7 - NOTA DE CREDITO** en el listado de la segunda columna _Forma de Pago / Descripción_.
-- [ ] 4. Aparecerá una nueva ventana con el título _**Teclee o escanee una Nota de Abono del cliente <No. de Cliente>**_, en la cual se te pedira escanera o teclear el código de barras de una nota abono que, como el título lo dice, sea del mismo cliente de la factura a pagar [ver Pólitica 8](#politica-8-forma-pago-na), intenta escanear una Nota de Abono de otro cliente, da clic en _Aceptar_, y te mostrará mensajes de advertencia y/o error: **No se obtuvieron los valores de la Nota de Abono para la Forma de Pago seleccionada. Favor de buscar la Nota de Abono y reingresar la forma de pago.**, al darle al botón _Aceptar / Entendido_, notarás que se ha borrado la información del registro para que vuelvas a ingresarla (a excepción del monto), ya que si surgen detalles al seleccionar una forma de pago no se podrá continuar con la operación.
+- [ ] 4. Aparecerá una nueva ventana con el título _**Teclee o escanee una Nota de Abono del cliente <No. de Cliente>**_, en la cual se te pedirá escanear o teclear el código de barras de una nota abono que, como el título lo dice, sea del mismo cliente de la factura a pagar [ver Pólitica 8](#politica-8-forma-pago-na), intenta escanear una Nota de Abono de otro cliente, da clic en _Aceptar_, y te mostrará mensajes de advertencia y/o error: **No se obtuvieron los valores de la Nota de Abono para la Forma de Pago seleccionada. Favor de buscar la Nota de Abono y reingresar la forma de pago.**, al darle al botón _Aceptar / Entendido_, notarás que se ha borrado la información del registro para que vuelvas a ingresarla (a excepción del monto), ya que si surgen detalles al seleccionar una forma de pago no se podrá continuar con la operación.
 - [ ] 5. Vuelve a realizar el paso 4 más con la diferencia de escanear o teclear un código de barras de una Nota de Abono que sí sea del cliente de la factura a pagar, das clic en _Aceptar_ y enseguida en tu registro de pago, en la sexta columna, aparecerá tanto el Folio como el saldo de la Nota de Abono.
 - [ ] 6. Completa los datos del registro (si es que te lo pide el mismo) y has clic en _Aceptar_, confirma la captura y la ventana te mostrará el mensaje de éxito en tu pago de la factura.
 - [ ] 7. Busca o escanea la misma factura, ahora se mostrará el mismo mensaje de error que en el Caso 3.
@@ -361,9 +361,9 @@ Cuando se seleccione como forma de pago **7 - NOTA DE CREDITO** o **8 - SALDO A 
 - [ ] 2. Busca o escanea una factura de no anticipo.
 - [ ] 3. Sí no está entregada, observarás en la parte superior izquierda una tarjeta con borde **rojo** con la leyenda _FOLIO FACTURA_ y el Folio de la factura, y en la parte derecha datos de la factura necesarios para que el usuario haga el proceso de pago. Se habilitará la tabla principal debajo de la información de la factura cargada con el saldo inicial diferente de cero, con una fila precargada con el estatus de `no válida` (icono rojo con número 1), debido a que falta información acerca del pago, teniendo el mensaje de error en la celda de `Monto` _"Selecciona una forma de pago primero"_. Selecciona la forma de pago **9 - CHEQUE POSTFECHADO CHECKPLU** en el listado de la segunda columna _Forma de Pago / Descripción_.
 - [ ] 4. El módulo te mostrará un mensaje de observaciones: _**Antes de seleccionar una cuenta para esta forma de pago, deberás de introducir Número de Referencia y Monto mayor a cero.**_, esto te dice directamente qué datos son obligatorios en esta forma de pago. Da clic en _Entendido_.
-- [ ] 5. Completa la información requerida dejando al último la _Cuenta Bancaria Interna_, y cuando selecciones la cuenta bancaria interna, se mostrar una nueva ventana con un formulario para el _Registro de Cheques Protegidos_, en donde se activan todos los mensajes de error para que el usuario esté conciente de la información a llenar para continuar.
+- [ ] 5. Completa la información requerida dejando al último la _Cuenta Bancaria Interna_, y cuando selecciones la cuenta bancaria interna, se mostrará una nueva ventana con un formulario para el _Registro de Cheques Protegidos_, en donde se activan todos los mensajes de error para que el usuario esté conciente de la información a llenar para continuar.
 - [ ] 6. Haz clic en el botón _Cancelar_ o en la _cruz_ de la esquina superior derecha de la ventana del formulario, esto para cancelar la captura de un cheque protegido, enseguida se mostrará el mensaje: _**No se registró el cheque protegido para la Forma de Pago seleccionada. Favor de reingresar la información de la forma de pago.**_.
-- [ ] 7. Vuelve a capturar la información de la captura del registro de pago con la forma de pago **9 - CHEQUE POSTFECHADO CHECKPLU** y ahora llenar el formulario del cheque protegido, y haz clic en _Guardar_, y te mostrará el mensaje: _**Información de Cheque Protegido registrada con éxito (Consecutivo del nuevo cheque protegido)**_.
+- [ ] 7. Vuelve a capturar la información de la captura del registro de pago con la forma de pago **9 - CHEQUE POSTFECHADO CHECKPLU** y ahora llena el formulario del cheque protegido y haz clic en _Guardar_, y te mostrará el mensaje: _**Información de Cheque Protegido registrada con éxito (Consecutivo del nuevo cheque protegido)**_.
 - [ ] 8. Haz clic en _Aceptar_ en el mensaje de éxito de guardado del cheque protegido, y revisa si el registro de pago es válido, si no es así, completa el registro.
 - [ ] 9. Si ya es válido el registro, ya te mostrará habilitado el botón de _Aceptar_, haz clic en él y confirma el pago.
 - [ ] 10. Busca o escanea la misma factura, ahora se mostrará el mismo mensaje de error que en el Caso 3.
@@ -387,7 +387,7 @@ Cuando se seleccione como forma de pago **7 - NOTA DE CREDITO** o **8 - SALDO A 
 
 - [ ] 1. Accede al sistema con un usuario que tenga el rol de `Vendedor` o `Vendedor Mostrador` y da clic en la opción del menú `Pagos > Registrar Pagos Factura`.
 - [ ] 2. Busca o escanea una factura de anticipo.
-- [ ] 3. Al seleccionar la factura y si no está entregada, se aparecerá un mensaje de 3 opciones: _**¿Qué operación desea realizar, Marcar Como Entregada (sin realizar Pagos), Recibir Pagos de la factura seleccionada o Cancelar Modificaciones?**_, selecciona `Pagar`.
+- [ ] 3. Al seleccionar la factura y si no está entregada, aparecerá un mensaje de 3 opciones: _**¿Qué operación desea realizar, Marcar Como Entregada (sin realizar Pagos), Recibir Pagos de la factura seleccionada o Cancelar Modificaciones?**_, selecciona `Pagar`.
 - [ ] 4. Observarás en la parte superior izquierda una tarjeta con borde **azul** con la leyenda _FOLIO ANTICIPO_ y el Folio de la factura, y en la parte derecha datos de la factura necesarios para que el usuario haga el proceso de pago. Se habilitará la tabla principal debajo de la información de la factura cargada con el saldo inicial diferente de cero, con una fila precargada con el estatus de `no válida` (icono rojo con número 1), debido a que falta información acerca del pago, teniendo el mensaje de error en la celda de `Monto` _"Selecciona una forma de pago primero"_. Selecciona la forma de pago **17 - TARJETA DE DEBITO** en el listado de la segunda columna _Forma de Pago / Descripción_.
 - [ ] 5. Llena los datos requeridos, verás que el icono de la primera columna se torna **verde** indicando que los datos del pago son válidos.
 - [ ] 6. Teclea _flecha abajo_ y te mostrará el mensaje de error: _**Las Facturas de Anticipo sólo permiten una Forma de Pago.**_.
@@ -411,8 +411,8 @@ Cuando se seleccione como forma de pago **7 - NOTA DE CREDITO** o **8 - SALDO A 
 - [ ] 8. Ahora vamos a usar ese saldo a favor generado en el pago anterior. Carga una factura a pagar de no anticipo del _mismo cliente_ de la factura anterior.
 - [ ] 9. Obtén el Folio de la cuenta por cobrar del cliente para ingresarla como forma de pago.
 - [ ] 10. Sí no está entregada la factura a pagar, observarás en la parte superior izquierda una tarjeta con borde **rojo** con la leyenda _FOLIO FACTURA_ y el Folio de la factura, y en la parte derecha datos de la factura necesarios para que el usuario haga el proceso de pago. Se habilitará la tabla principal debajo de la información de la factura cargada con el saldo inicial diferente de cero, con una fila precargada con el estatus de `no válida` (icono rojo con número 1), debido a que falta información acerca del pago, teniendo el mensaje de error en la celda de `Monto` _"Selecciona una forma de pago primero"_. Selecciona la forma de pago **8 - SALDO A FAVOR** en el listado de la segunda columna _Forma de Pago / Descripción_.
-- [ ] 11. Al igual dque la forma de pago _7 - NOTA DE CREDITO_ se te pedirá que escanees o teclees el código de barras del Folio del Anticipo, una vez ingresado, haz clic en _Aceptar_ y verás en la sexta columna tanto el folio y el saldo del anticipo generado en el pago anterior.
-- [ ] 12. Si al hacer clic en _Aceptar_ para confirmar el pago se aparece el mensaje de erroor _**Error de Captura: La Factura debe de ser pagada completamente.**_, es debido a que el saldo del anticipo no fue suficiente, completa con otra forma de pago con su registro válido para completar el importe a pagar.
+- [ ] 11. Al igual que la forma de pago _7 - NOTA DE CREDITO_ se te pedirá que escanees o teclees el código de barras del Folio del Anticipo, una vez ingresado, haz clic en _Aceptar_ y verás en la sexta columna tanto el folio como el saldo del anticipo generado en el pago anterior.
+- [ ] 12. Si al hacer clic en _Aceptar_ para confirmar el pago aparece el mensaje de error _**Error de Captura: La Factura debe de ser pagada completamente.**_, es debido a que el saldo del anticipo no fue suficiente, completa con otra forma de pago con su registro válido para completar el importe a pagar.
 - [ ] 13. Nuevamente da clic en _Aceptar_ para confirmar el pago y mira el mensaje de pago exitoso.
 - [ ] 14. Busca o escanea las facturas pagadas, y se mostrará el mismo mensaje de error que en el Caso 3.
 
@@ -474,7 +474,7 @@ Cuando se seleccione como forma de pago **7 - NOTA DE CREDITO** o **8 - SALDO A 
 - [ ] 4. Llena los datos requeridos, y cambia el `Monto` por una cantidad menor que el monto inicial.
 - [ ] 5. Ve que el icono de la primera columna se ha cambiado a **verde**, lo cuál indica que _el registro es válido_ y la tabla está habilitada para agregar otra forma de pago, ahora teclea _**flecha abajo**_ para agregar otra fila, observarás que en esta nueva fila el monto inicial es el restante de la cantidad que apareció primero al cargar la factura menos la cantidad de la forma de pago EFECTIVO que acabaste de llenar.
 - [ ] 6. Elige **17 - TARJETA DE DEBITO** como forma de pago en la segunda fila y completa los datos obligatorios hasta que sea válida la fila.
-- [ ] 7. Aparecerá iconos de **bote de basura rojos** al final de las filas de pagos, haz clic en cualquier de esos iconos, y la fila del icono seleccionado desaparecerá, y los cálculos de los totales lo tomarán en cuenta.
+- [ ] 7. Aparecerán iconos de **bote de basura rojos** al final de las filas de pagos, haz clic en cualquier de esos iconos, y la fila del icono seleccionado desaparecerá, y los cálculos de los totales lo tomarán en cuenta.
 - [ ] 8. Cancela la captura y vuelve a realizar la prueba pero esta vez borra la otra fila con el icono de eliminación.
 - [ ] 9. Cancela la captura y vuelve a realizar la prueba hasta que queden las 2 formas de pago en la tabla principal (no es necesario que la segunda forma de pago está válida).
 - [ ] 10. Sitúate en cualquier celda de captura del segundo registro, y teclea _**flecha arriba**_ para borrar la segunda fila, este es otro método de eliminación de registros en la tabla principal. Si tecleas _**flecha arriba**_ en el primer registro, no funciona la eliminación, ya que esta funcionalidad no está en el primer registro.
