@@ -9,7 +9,11 @@ Este módulo muestra la pantalla correspondiente a **Registrar Pagos**, cuyo obj
 1. **Zona de búsqueda de factura**, en donde se encuentran:
     - _CORTE:_ Es el número de Turno del corte asignado a un almacén por el día de hoy.
     - _Buscador de Facturas:_ El campo que te ayuda a seleccionar las facturas, teniendo la posibilidad de escanero o búsqueda manual.
-    - _Botones de acción:_ Por el momento sólo 2, _Cancelar captura_ (limpia la ventana de todo valor ingresado) y _Manual Registrar Pagos_ (muestra una ventana de ayuda).
+    - _Botones de acción:_ Son los siguientes:
+        1. _Generar Reporte de Resumen de Pagos_: Abre una _ventana de parámetros de reporte (VPR)_ para descargar un PDF con  el reporte de resumen de pagos (pares _forma de pagos - monto total_).
+        2. _Generar Reporte de Pagos_: Abre una VPR para descargar un PDF con el reporte de pagos con secciones opcionales y detalles de pagos del corte.
+        3. _Cancelar captura_: Limpia la ventana de todo valor ingresado.
+        4. _Manual Registrar Pagos_: Muestra una ventana de ayuda.
 2. **Zona de Información de Factura**, que muestra:
     - _Folio de la factura seleccionada_, en donde se presenta un borde coloreado según el tipo de factura cargada, rojo = Otra, azul = Anticipo.
     - _Fecha de la factura_, formato _`día de la semana`, `no. día` `mes` `año`_.
@@ -41,7 +45,7 @@ Este módulo muestra la pantalla correspondiente a **Registrar Pagos**, cuyo obj
 | botón   | Guardar (registrar cheque protegido)       | Guarda la información capturada en la ventana de Registro de Cheques Protegidos.   | Vendedor / Vendedor Mostrador |
 | botón   | Aceptar (leer código de barras de N.A.*)   | Acepta el código de barras ingresado en la ventana de solicitud de Notas de Abono. | Vendedor / Vendedor Mostrador |
 
-> *N.A. = Nota de Abono.
+> *N.A. = Nota de Abono (Crédito).
 
 ## 💼 Políticas Generales
 
@@ -486,6 +490,70 @@ Cuando se seleccione como forma de pago **7 - NOTA DE CREDITO** o **8 - SALDO A 
 - [ ] Fila borrada del segundo registro con la tecla FLECHA ARRIBA.
 - [ ] Fila única de tabla principal sin icono de eliminación.
 
+### 19. Generar Reporte de Resumen de Pagos
+
+#### 💼 Operación
+
+- [ ] 1. Entra al sistema con las credenciales de un usuario que tenga el rol de `Vendedor` o de `Vendedor Mostrador`.
+- [ ] 2. Al cargar el sistema, en el menú lateral principal, da clic en la ruta `Pagos > Registrar Pagos Factura`.
+- [ ] 3. Al cargar la pantalla, observa que hay 2 botones color verde con iconos de archivos, da clic en el primero de izquierda a derecha.
+- [ ] 4. Se abrirá la VPR de ese reporte, en donde podrás encontrar:
+    1. _Buscador de cortes de cajas_, datos obligatorio para generar el reporte.
+    2. _Buscador de forma de pago_, para filtrar en el resumen de montos por forma de pago del reporte por el seleccionado (dato opcional).
+    3. _Checkboxes de secciones opcionales del reporte_ (datos opcionales), en donde podrás elegir qwué secciones aparecerá en tu reporte generado:
+        1. Imprimir Detalles de Corte de Caja.
+        2. Imprimir Folios Pendientes.
+        3. Imprimir Folios Faltantes.
+        4. Imprimir Consecutivo del día.
+- [ ] 5. Ingresa un corte en el buscador, el buscador puede encontrar el corte ya sea por número de turno exacto (valor númerico) o por la descripción del almacén (valor de texto), y selecciona un registro de la lista desplegable con un clic, o navegando con las teclas _flechas arriba / abajo_ dando _Enter_, o si quieres seleccionar el primer registro de la lista sólo teclea _Tab_.
+- [ ] 6. Ingresa si lo prefiere una forma de pago (si lo dejas vació significa que quieres todas las formas de pagos en tu resumen de pagos en el reporte).
+- [ ] 7. Selecciona las secciones opcionales que desea que muestre el reporte generado, si no dejas a ninguno seleccionado no hay problema, el reporte siempre vendrá con el resumen de pagos.
+- [ ] 8. Ahora puede ocurrir una de 2 situaciones:
+    1. **Reporte sin datos**: Te aparecerá un mensaje de error que dirá _Error al generar ReportePagosCorte (NTurno={Turno de Corte seleccionado}, CForma={Forma de pago seleccionada}): Error al generar el PDF del Reporte de Pagos: No hay datos del reporte que previsualizar_, da clic en _Entendido_ e intenta con otro corte.
+    2. **Reporte con datos**: Te descargará un PDF con el reporte de resumen del corte seleccionado con el resumen y las secciones opcionales del VPR.
+- [ ] 9. La VPR se mantendrá por si quiere generar el reporte de resumen de otro corte. Si lo que quieres es salir de la VPR, haz clic en el botón `Cancelar` o en la `crux (x)` de la esquina superior derecha.
+
+#### 🛡️ Validaciones
+
+- [ ] Se encuentra `Pagos > Registrar Pagos Factura` en el menú al cargar sistema.
+- [ ] Botones de acción de color verde con icono de archivo.
+- [ ] Estructura de la VPR con buscador y tabla vacía.
+- [ ] Mensajes de validación de datos obligatorios debajo del buscador de cortes de caja.
+- [ ] Mensaje de validación de reporte vació (paso 6.1, si aplica).
+- [ ] Carga del corte seleccionado en el buscador con eventos descritos.
+- [ ] Carga de la previsualización de reporte en tabla (si aplica).
+- [ ] Descarga del reporte en PDF al dar clic en botón _Generar_.
+- [ ] Salida de VPR con botón _Cancelar_ o _cruz de salir_.
+
+### 20. Generar Reporte de Pagos (Detalle Completo)
+
+#### 💼 Operación
+
+- [ ] 1. Entra al sistema con las credenciales de un usuario que tenga el rol de `Vendedor` o de `Vendedor Mostrador`.
+- [ ] 2. Al cargar el sistema, en el menú lateral principal, da clic en la ruta `Pagos > Registrar Pagos Factura`.
+- [ ] 3. Al cargar la pantalla, observa que hay 2 botones color verde con iconos de archivos, da clic en el segundo de izquierda a derecha.
+- [ ] 4. Se abrirá la VPR de ese reporte, en donde podrás encontrar un _buscador de cortes de cajas_ y una _tabla vacía_ que mostrará la previsualización de los datos del reporte.
+- [ ] 5. Ingresa un corte en el buscador ya que es un dato obligatorio para la generación del reporte, el buscador puede encontrar el corte ya sea por número de turno exacto (valor númerico) o por la descripción del almacén (valor de texto), y selecciona un registro de la lista desplegable con un clic, o navegando con las teclas _flechas arriba / abajo_ dando _Enter_, o si quieres seleccionar el primer registro de la lista sólo teclea _Tab_.
+- [ ] 6. Ahora puede ocurrir una de 2 situaciones:
+    1. **Reporte sin datos**: Te aparecerá un mensaje de error que dirá _No hay datos del reporte que previsualizar_, da clic en _Entendido_ e intenta con otro corte.
+    2. **Reporte con datos**: Te cargará las formas de pagos y su monto total, con su suma en la fila del fondo con letra _azul_ en la tabla de previsualización, da clic en `Generar` y te descargará un PDF con el reporte de resumen del corte seleccionado.
+- [ ] 7. La VPR se mantendrá por si quiere generar el reporte de resumen de otro corte. Si lo que quieres es salir de la VPR, haz clic en el botón `Cancelar` o en la `crux (x)` de la esquina superior derecha.
+
+#### 🛡️ Validaciones
+
+- [ ] Se encuentra `Pagos > Registrar Pagos Factura` en el menú al cargar sistema.
+- [ ] Botones de acción de color verde con icono de archivo.
+- [ ] Estructura de la VPR con se indica en paso 4.
+- [ ] Mensajes de validación de datos obligatorios debajo del buscador de cortes de caja.
+- [ ] Mensaje de validación de reporte vació (paso 8.1, si aplica).
+- [ ] Carga del corte seleccionado en el buscador con eventos descritos.
+- [ ] Carga de la forma de pago seleccionadoa en el buscador (si usa el filtro).
+- [ ] Carga inicial de secciones opcionales de reporte.
+- [ ] Descarga del reporte en PDF al dar clic en botón _Generar_.
+- [ ] Resumen de Pagos en el PDF no importando qué parámetros haya seleccionado en VPR.
+- [ ] Secciones opcionales en el PDF de acuerdo a lo seleccionado en VPR.
+- [ ] Salida de VPR con botón _Cancelar_ o _cruz de salir_.
+
 ## 📎 Observaciones adicionales
 
 - Nuevo diálogo en DialogService: **QuestionDialogComponent**, muestra las opciones (hasta 3) a las que pueden dar clic y devolver el valor configurado para cada una de las opciones.
@@ -498,9 +566,9 @@ Cuando se seleccione como forma de pago **7 - NOTA DE CREDITO** o **8 - SALDO A 
 - Agregado de nueva detección de mensaje en Dialog Service `error` para excepciones que tengan que ver con permisos.
 - Si en algún momento te marca en rojo la celda **Banco**, intentaste capturar un valor, si ya no quieres capturar un valor para ello, la primera opción del listado de bancos es el registro en blanco, seleccionando esa opción ya no te reporta como inválida la celda.
 
-> 🗓️ **Fecha de última modificación:** 2026-04-22
+> 🗓️ **Fecha de última modificación:** 2026-05-08
 > 👤 **Sergio Tostado**
-> 🏷️ **Versión:** 1
+> 🏷️ **Versión:** 2
 
 ---
 
@@ -509,3 +577,4 @@ Cuando se seleccione como forma de pago **7 - NOTA DE CREDITO** o **8 - SALDO A 
 |Dir |Fecha       |Firma|Comentario                    |
 |----|------------|-----|------------------------------|
 | ⏩ | 2025/04/22 | ST  | Primera versión              |
+| ⏩ | 2025/05/08 | ST  | Reportes de Pagos de Cortes  |
