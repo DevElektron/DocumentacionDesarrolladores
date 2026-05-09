@@ -483,7 +483,7 @@ Cuando se seleccione como forma de pago **7 - NOTA DE CREDITO** o **8 - SALDO A 
 - [ ] 7. Aparecerán iconos de **bote de basura rojos** al final de las filas de pagos, haz clic en cualquier de esos iconos, y la fila del icono seleccionado desaparecerá, y los cálculos de los totales lo tomarán en cuenta.
 - [ ] 8. Cancela la captura y vuelve a realizar la prueba pero esta vez borra la otra fila con el icono de eliminación.
 - [ ] 9. Cancela la captura y vuelve a realizar la prueba hasta que queden las 2 formas de pago en la tabla principal (no es necesario que la segunda forma de pago sea válida).
-- [ ] 10. Sitúate en cualquier celda de captura del segundo registro, y teclea _**flecha arriba**_ para borrar la segunda fila, este es otro método de eliminación de registros en la tabla principal. Si tecleas _**flecha arriba**_ en el primer registro, no funciona la eliminación, ya que esta funcionalidad no está en el primer registro.
+- [ ] 10. Cancela la captura y vuelve a realizar la prueba hasta que queden las 2 formas de pago en la tabla principal. Sitúate en cualquier celda de captura del segundo registro, y teclea _**flecha arriba**_ para borrar la segunda fila, este es otro método de eliminación de registros en la tabla principal. Si tecleas _**flecha arriba**_ en el primer registro, no funciona la eliminación, ya que esta funcionalidad no está en el primer registro.
 - [ ] 9. En los 3 casos, cuando sólo hay una fila, no aparece el icono de basura de la fila restante, ya que siempre debe de haber una fila en la tabla principal.
 
 #### 🛡️ Validaciones
