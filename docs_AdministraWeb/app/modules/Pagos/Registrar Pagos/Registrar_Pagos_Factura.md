@@ -224,7 +224,8 @@ Cuando se seleccione como forma de pago **7 - NOTA DE CREDITO** o **8 - SALDO A 
 
 #### 🛡️ Validaciones
 
-- [ ] Tarjeta con Folio de factura con borde rojo y leyenda indicada. 
+- [ ] Tarjeta con Folio de factura con borde rojo y leyenda indicada.
+- [ ] Carga de facturas bloqueada una vez cargaba la factura de anticipo.
 
 ### 6. Entrega de factura Anticipo sin realizar pagos
 
