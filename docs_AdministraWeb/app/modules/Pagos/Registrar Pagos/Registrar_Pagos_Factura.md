@@ -192,6 +192,7 @@ Cuando se seleccione como forma de pago **7 - NOTA DE CREDITO** o **8 - SALDO A 
 - [ ] 1. Accede al sistema con un usuario que tenga el rol de `Vendedor` o `Vendedor Mostrador` y da clic en la opción del menú `Pagos > Registrar Pagos Factura`.
 - [ ] 2. Busca una factura de fecha pasada en el buscador que se encuentra en la parte superior central  (usualmente ya están entregadas).
 - [ ] 3. Al seleccionarla, la pantalla intentará cargar los detalles de información de la factura, y te mostrará un mensaje de error, indicando que la factura ya fue entregada con la fecha y hora en que ocurrió dicha entrega.
+- [ ] 4. Da clic en el botón _Entendido_, y verás que la pantalla ha limpiado la barra de búsqueda de facturas lista para otra búsqueda.
 
 #### 🛡️ Validaciones
 
@@ -231,7 +232,7 @@ Cuando se seleccione como forma de pago **7 - NOTA DE CREDITO** o **8 - SALDO A 
 
 - [ ] 1. Accede al sistema con un usuario que tenga el rol de `Vendedor` o `Vendedor Mostrador` y da clic en la opción del menú `Pagos > Registrar Pagos Factura`.
 - [ ] 2. Busca o escanea una factura de anticipo.
-- [ ] 3. Al seleccionar la factura y si no está entregada, aparecerá un mensaje de 3 opciones: _**¿Qué operación desea realizar, Marcar Como Entregada (sin realizar Pagos), Recibir Pagos de la factura seleccionada o Cancelar Modificaciones?**_, selecciona `Entregar`.
+- [ ] 3. Al seleccionar la factura y si no está entregada, aparecerá un mensaje de 3 opciones: _**¿Qué operación desea realizar, Marcar Como Entregada (sin realizar Pagos), Recibir Pagos de la factura seleccionada o Cancelar Modificaciones?**_, selecciona `Marcar`.
 - [ ] 4. Se presentara un mensaje de éxito: _**Factura ###-###### entregada.**_
 - [ ] 5. Buscar o escanea la misma factura, ahora se mostrará el mismo mensaje de error que en el Caso 3.
 
