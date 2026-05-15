@@ -12,7 +12,7 @@ También permite capturar anticipos tanto para clientes de mostrador como para c
 | Botón   | Añadir anticipo                               | Abre la ventana de captura de anticipo |                                 |
 | Botón   | Desvincular Pedidos del Anticipo Seleccionado | Desvincula pedidos del anticipo        | Vendedor / Vendedor Mostrador * |
 
-> * Se podrá ver el botón, pero si el rol no es cualquier de los indicados producirá error al realizar la acción: _**Acceso Denegado**_.
+> * Se podrá ver el botón, pero si el rol no es cualquiera de los indicados producirá error al realizar la acción: _**Acceso Denegado**_.
 
 ## 💼 Políticas Generales  
 1. Para poder capturar, el usuario debe tener un almacén asignado.  
