@@ -7,9 +7,12 @@ Este módulo permite consultar las facturas de anticipos, incluyendo sus detalle
 También permite capturar anticipos tanto para clientes de mostrador como para clientes regulares.
 
 ## 🔐 Seguridad  
-| Tipo UI | Elemento        | Descripción                          | Rol permitido |
-|---------|-----------------|--------------------------------------|----------------|
-| Botón   | Añadir anticipo | Abre la ventana de captura de anticipo |                |
+| Tipo UI | Elemento                                      | Descripción                            | Rol permitido                  |
+|---------|-----------------------------------------------|----------------------------------------|--------------------------------|
+| Botón   | Añadir anticipo                               | Abre la ventana de captura de anticipo |                                |
+| Botón   | Desvincular Pedidos del Anticipo Seleccionado | Desvincula pedidos del anticipo        | Vendedor / Vendedor Mostrado * |
+
+> * Se podrá ver el botón, pero si el rol no es cualquier de los indicados producirá error al realizar la acción: _**Acceso Denegado**_.
 
 ## 💼 Políticas Generales  
 1. Para poder capturar, el usuario debe tener un almacén asignado.  
@@ -21,12 +24,15 @@ También permite capturar anticipos tanto para clientes de mostrador como para c
 
 ## 🧪 Casos de Prueba  
 
-### Captura de Factura de Anticipo (Cliente Regular)  
+### 1. Captura de Factura de Anticipo (Cliente Regular)  
+
 #### 💼 Operación  
+
 - [ ] No se permite guardar folios duplicados.  
 - [ ] No se permite guardar facturas con datos inválidos.
 
 #### 🛡️ Validaciones  
+
 - [ ] Se debe capturar al menos la siguiente información obligatoria:  
   - Almacén  
   - Fecha del documento  
@@ -42,14 +48,17 @@ También permite capturar anticipos tanto para clientes de mostrador como para c
 - [ ] Se debe seleccionar un cliente válido, ya sea haciendo clic en el registro o presionando Tab al ingresar el número de cliente.  
 - [ ] Se debe seleccionar un vendedor válido, ya sea haciendo clic en el registro o presionando Tab al ingresar el número de vendedor.
 
-### Captura de Factura de Anticipo (Cliente Mostrador)  
+### 2. Captura de Factura de Anticipo (Cliente Mostrador)  
+
 #### 💼 Operación  
+
 - [ ] Se aplican las mismas operaciones que en la captura de cliente regular.  
 - [ ] Al ingresar un cliente mostrador (`CTE:MODIF_VENTA == 1`), deberá abrirse un modal para modificar los datos del cliente.  
 - [ ] Al seleccionar un cliente, aparecerá un botón azul en la parte inferior izquierda del modal; al hacer clic en él, también se abrirá el mismo modal.  
 - [ ] En el nuevo modal, al seleccionar la opción "Seleccionar datos de registro previo", deberá abrirse un segundo modal donde se pueda elegir información previamente registrada del cliente.
 
 #### 🛡️ Validaciones  
+
 - [ ] Se aplican las mismas validaciones que en la captura de cliente regular.  
 - [ ] En la ventana “Captura los datos del cliente para la impresión de la factura”, deberán capturarse al menos los siguientes campos:  
   - Nombre  
@@ -63,6 +72,28 @@ También permite capturar anticipos tanto para clientes de mostrador como para c
   - Método de pago  
   - Régimen Fiscal  
 - [ ] En la ventana "Seleccionar cliente de mostrador", se debe seleccionar un registro de la tabla (si existen registros).
+
+### 3. Desvincular pedidos de un anticipo
+
+#### 💼 Operación  
+
+- [ ] 1. Entra al sistema con un usuario que no tenga el rol de `Vendedor` o `Vendedor Mostrador`.
+- [ ] 2. Entra a la ruta de Factura de Anticipos.
+- [ ] 3. En la parte superior derecha, aparecerá los botones de acción, ubica el botón amarillo _Desvincular Pedidos del Anticipo Seleccionado_.
+- [ ] 4. Selecciona un anticipo de la tabla principal, da clic en _Desvincular Pedidos del Anticipo Seleccionado_ y te mostrará un mensaje de error: _Acceso Denegado_.
+- [ ] 5. Cierra sesión con ese usuario, y entra con otro que tenga los roles permitidos (`Vendedor` o `Vendedor Mostrador`).
+- [ ] 6. Repite los paso del 3 al 4, y esta vez te mostra uno de 2 mensajes:
+      - **Desvinculación exitosa**: _El Anticipo {anticipo lFolio}-{anticipo nFolio} ha sido desvinculado de los Pedidos exitosamente_.
+      - **Desvinculación no realizada**: _No existen anticipos relacionados por Pedido de la Factura {anticipo lFolio}-{anticipo nFolio}_.
+- [ ] 7. Actualiza la pestaña del navegador, y _sin seleccionar un anticipo_, intenta dar clic en el botón _Desvincular Pedidos del Anticipo Seleccionado_; no podrás dar clic, ya que el botón estará bloqueado hasta que hayas seleccionado un anticipo.
+
+#### 🛡️ Validaciones  
+
+- [ ] Botón _Desvincular Pedidos del Anticipo Seleccionado_ visible para todos los roles que tengan acceso a _Facturación de Anticipo_.  
+- [ ] Mensaje de acceso denegado cuando el usuario tenga un rol no permitido.
+- [ ] Mensaje de éxito cuando un anticipo haya tenido pedidos.
+- [ ] Mensaje de error cuando un anticipo no haya tenido pedidos.
+- [ ] Botón _Desvincular Pedidos del Anticipo Seleccionado_ inhabilitado de clics cuando no se haya seleccionado un anticipo.
 
 ## 📎 Observaciones adicionales  
 - Al guardar la factura de anticipo, el sistema deberá preguntar:  
