@@ -7,10 +7,10 @@ Este módulo permite consultar las facturas de anticipos, incluyendo sus detalle
 También permite capturar anticipos tanto para clientes de mostrador como para clientes regulares.
 
 ## 🔐 Seguridad  
-| Tipo UI | Elemento                                      | Descripción                            | Rol permitido                  |
-|---------|-----------------------------------------------|----------------------------------------|--------------------------------|
-| Botón   | Añadir anticipo                               | Abre la ventana de captura de anticipo |                                |
-| Botón   | Desvincular Pedidos del Anticipo Seleccionado | Desvincula pedidos del anticipo        | Vendedor / Vendedor Mostrado * |
+| Tipo UI | Elemento                                      | Descripción                            | Rol permitido                   |
+|---------|-----------------------------------------------|----------------------------------------|---------------------------------|
+| Botón   | Añadir anticipo                               | Abre la ventana de captura de anticipo |                                 |
+| Botón   | Desvincular Pedidos del Anticipo Seleccionado | Desvincula pedidos del anticipo        | Vendedor / Vendedor Mostrador * |
 
 > * Se podrá ver el botón, pero si el rol no es cualquier de los indicados producirá error al realizar la acción: _**Acceso Denegado**_.
 
