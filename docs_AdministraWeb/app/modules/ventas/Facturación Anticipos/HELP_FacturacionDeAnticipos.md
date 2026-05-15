@@ -106,7 +106,7 @@ También permite capturar anticipos tanto para clientes de mostrador como para c
   - Si la respuesta es afirmativa, se abrirá un modal que permitirá vincular uno o más pedidos a la factura.  
 - Se deberá notificar si el proceso se completó con éxito o si hubo algún fallo.
 
-> 🗓️ **Fecha de última modificación:** 2025-08-05  
+> 🗓️ **Fecha de última modificación:** 2026-05-15  
 > 👤 **Luis Guillermo Pérez Fuentes, Sergio Ernesto Tostado Sánchez**  
 > 🏷️ **Versión:** 2
 
