@@ -107,19 +107,14 @@ También permite capturar anticipos tanto para clientes de mostrador como para c
 - Se deberá notificar si el proceso se completó con éxito o si hubo algún fallo.
 
 > 🗓️ **Fecha de última modificación:** 2025-08-05  
-> 👤 **Luis Guillermo Pérez Fuentes**  
-> 🏷️ **Versión:** 1
+> 👤 **Luis Guillermo Pérez Fuentes, Sergio Ernesto Tostado Sánchez**  
+> 🏷️ **Versión:** 2
+
 ---
+
 # Comunicaciones
+
 |Dir|Fecha       |Firma|Comentario                    |
 |---|------------|-----|------------------------------|
-|⏪| 2025/07/02 | GP |Entrega|
-
-
-
-
-
-
-
-
-
+|⏪ | 2025/07/02 | GP  |Entrega                       |
+|⏪ | 2026/05/15 | ST  |Desvinculación de pedidos     |
