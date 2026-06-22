@@ -7,7 +7,8 @@
 ## 📝 Descripción
 
 **Barra de acciones**
-- Botón **Cambiar Parámetros** (azul, ícono filtro): abre el dialog de parámetros en cualquier momento para ajustar los criterios de consulta.
+
+- Botón **Cambiar Parámetros** (azul, ícono filtro): abre el diálogo de parámetros en cualquier momento para ajustar los criterios de consulta.
 - Botón **PDF Detallado** (rojo): genera el PDF con desglose por documento de cada cliente. Permanece deshabilitado hasta que el grid tenga datos.
 - Botón **PDF Concentrado** (rojo): genera el PDF con totales agrupados por cliente. Permanece deshabilitado hasta que el grid tenga datos.
 
@@ -20,9 +21,11 @@ Presenta los saldos por documento con las columnas: N.Cte, Cliente, T.Doc, Folio
 **Fila de totales**
 Fila fija al pie del grid, siempre visible, que suma las columnas de importes (Imp.Vencido, Día 1, Día 2, Día 3 y Día+) considerando únicamente las filas visibles tras aplicar filtros del grid. Se recalcula automáticamente cada vez que se modifica un filtro.
 
-**Dialog de parámetros — Filtros: Saldos por Vencer**
+**Diálogo de parámetros — Filtros: Saldos por Vencer**
+Se abre automáticamente al ingresar al módulo. Contiene:
+
 - **Rango de Clientes**: campos *Cliente Inicial* y *Cliente Final* (autocompletadores por nombre o número).
-- **Parámetros**: campo *Fecha de Corte* (requerida) y selector *Anticipos* (Sin Anticipos / Con Anticipos Detallado / Con Anticipos Concentrado).
+- **Parámetros**: campo *Fecha de Corte* (requerida; default: hoy) y selector *Anticipos* (Sin Anticipos / Con Anticipos Detallado / Con Anticipos Concentrado).
 - **Días de Análisis**: tres campos numéricos — *1er Período*, *2do Período* y *3er Período* — que definen los rangos de días para las columnas Día 1, Día 2, Día 3 y Día+ (valores por defecto: 30, 60 y 90 días).
 - **Filtros de Catálogos**: *Zona de Cobranza* y *Vendedor* (autocompletadores; dejar vacío para incluir todos).
 - **Tipo de Cliente**: selector Todos / Crédito / Contado.
@@ -43,9 +46,9 @@ El módulo completo está protegido a nivel de ruta por `authGuard`. No se defin
 ## 💼 Políticas Generales
 
 <a id="politica-1-apertura-automatica"></a>
-### POLÍTICA 1. Apertura automática del dialog de parámetros
+### POLÍTICA 1. Apertura automática del diálogo de parámetros
 
-Al ingresar al módulo, el dialog de parámetros se abre automáticamente. Los últimos parámetros utilizados se recuperan de `localStorage` y precargan el formulario, de modo que el usuario solo necesita confirmar o ajustar los valores antes de ejecutar la consulta.
+Al ingresar al módulo, el diálogo de parámetros se abre automáticamente. Los últimos parámetros utilizados se recuperan de `localStorage` y precargan el formulario, de modo que el usuario solo necesita confirmar o ajustar los valores antes de ejecutar la consulta.
 
 <a id="politica-2-periodos-de-dias"></a>
 ### POLÍTICA 2. Configuración de períodos de días de análisis
@@ -76,7 +79,7 @@ El selector *Anticipos* controla si los anticipos del cliente aparecen en la con
 <a id="politica-5-rango-de-clientes"></a>
 ### POLÍTICA 5. Rango de clientes
 
-Los campos *Cliente Inicial* y *Cliente Final* permiten acotar la consulta a un subconjunto de clientes. Si ambos se dejan vacíos, el sistema consulta todos los clientes (equivale al rango 0–0, que internamente se interpreta como "sin restricción"). Si solo se indica el cliente final, este no puede ser menor que el inicial.
+Los campos *Cliente Inicial* y *Cliente Final* permiten acotar la consulta a un subconjunto de clientes. Si ambos se dejan vacíos, el sistema consulta todos los clientes. Si se indica un cliente final, este no puede ser menor que el inicial.
 
 <a id="politica-6-fila-de-totales-del-grid"></a>
 ### POLÍTICA 6. Fila de totales del grid
@@ -101,12 +104,12 @@ Los botones muestran un indicador de carga individual (spinner) mientras se proc
 
 #### 💼 Operación
 - [ ] 1. Ingresar al módulo **Saldos por Vencer** desde el menú CxC > Reportes.
-- [ ] 2. El sistema abre automáticamente el dialog de parámetros con los valores por defecto (o los últimos guardados).
+- [ ] 2. El sistema abre automáticamente el diálogo de parámetros con los valores por defecto (o los últimos guardados).
 - [ ] 3. Verificar que la Fecha de Corte esté establecida en la fecha actual y los períodos en 30, 60 y 90 días.
 - [ ] 4. Hacer clic en **Aceptar**.
 
 #### 🛡️ Validaciones
-- [ ] El dialog se cierra y el grid carga los registros de saldos.
+- [ ] El diálogo se cierra y el grid carga los registros de saldos.
 - [ ] La fila **TOTAL** al pie del grid muestra la suma de las columnas de importes.
 - [ ] Los botones **PDF Detallado** y **PDF Concentrado** se habilitan.
 
@@ -135,7 +138,7 @@ Los botones muestran un indicador de carga individual (spinner) mientras se proc
 
 #### 🛡️ Validaciones
 - [ ] El sistema muestra el mensaje *"La Fecha de Corte es Requerida"* (advertencia, título *"Datos Incompletos"*).
-- [ ] El dialog permanece abierto; no se ejecuta ninguna consulta.
+- [ ] El diálogo permanece abierto; no se ejecuta ninguna consulta.
 
 ---
 
@@ -160,7 +163,7 @@ Los botones muestran un indicador de carga individual (spinner) mientras se proc
 
 #### 🛡️ Validaciones
 - [ ] El sistema muestra *"El Cliente Final no Puede ser Menor que el Inicial"* (advertencia, título *"Error de Rango"*).
-- [ ] El dialog permanece abierto.
+- [ ] El diálogo permanece abierto.
 
 ---
 
@@ -202,11 +205,23 @@ Los botones muestran un indicador de carga individual (spinner) mientras se proc
 
 ---
 
+### 9. Persistencia de parámetros
+
+#### 💼 Operación
+- [ ] 1. Configurar parámetros en el diálogo y hacer clic en **Aceptar**.
+- [ ] 2. Salir del módulo y volver a ingresar.
+
+#### 🛡️ Validaciones
+- [ ] El diálogo de parámetros se abre con los valores configurados en la sesión anterior.
+
+---
+
 ## 📎 Observaciones adicionales
 
-- El análisis original indicaba usar `MatInput` numérico para los campos *Cliente Inicial* y *Cliente Final*; la implementación final usa `ClienteAutocompleteComponent` en ambos campos para una mejor experiencia de usuario.
+- El análisis original indicaba usar `MatInput` numérico para *Cliente Inicial* y *Cliente Final*; la implementación final usa `ClienteAutocompleteComponent` en ambos campos para una mejor experiencia de usuario.
 - Los campos *Fecha Inicial* y *Fecha Final* de la consulta SQL son fijos y no se exponen al usuario: la fecha inicial se establece en 1982-02-22 y la fecha final en cien años a partir de hoy, de modo que la consulta retorna el historial completo. El único parámetro de fecha controlable por el usuario es la **Fecha de Corte**.
 - Los botones PDF son ambos de color rojo (`btn-danger`); se distinguen exclusivamente por el tooltip y el texto del spinner.
+- Cambios a componentes compartidos: Ninguno.
 
 ---
 
@@ -215,6 +230,7 @@ Los botones muestran un indicador de carga individual (spinner) mientras se proc
 > 🏷️ **Versión:** 1
 
 ---
+
 ## Comunicaciones
 
 | Dir | Fecha      | Firma | Comentario      |
