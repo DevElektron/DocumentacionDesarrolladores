@@ -627,4 +627,4 @@ El botón _Generar Reporte CSV_ abre una ventana de parámetros donde el usuario
 | Dir | Fecha      | Firma | Comentario                                                                                |
 |-----|------------|-------|-------------------------------------------------------------------------------------------|
 | ⏩  | 2026/06/09 | ST    | Primera versión                                                                           |
-| ⏩  | 2026/06/09 | ST    | Participación en análisis de fabricación del módulo y mejora de autocomplete de rotativos |
+| ⏩  | 2026/06/09 | SV   | Participación en análisis de fabricación del módulo y mejora de autocomplete de rotativos |
