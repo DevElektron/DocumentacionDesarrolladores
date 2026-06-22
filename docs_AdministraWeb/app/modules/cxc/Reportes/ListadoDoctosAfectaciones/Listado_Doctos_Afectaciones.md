@@ -267,23 +267,7 @@ Al confirmar los parámetros, el sistema genera el reporte en segundo plano (mos
 
 ---
 
-### 13. Error al generar el reporte
-
-#### 💼 Operación
-
-- [ ] 1. Completa los parámetros correctamente.
-- [ ] 2. Simula un error (ej. servicio backend no disponible).
-- [ ] 3. Da clic en _Generar_.
-
-#### 🛡️ Validaciones
-
-- [ ] El sistema muestra: _Error al generar el reporte de documentos y afectaciones_.
-- [ ] No se descarga ningún archivo.
-- [ ] El formulario conserva los valores ingresados para reintento.
-
----
-
-### 14. Reabrir parámetros desde la pantalla principal
+### 13. Reabrir parámetros desde la pantalla principal
 
 #### 💼 Operación
 
