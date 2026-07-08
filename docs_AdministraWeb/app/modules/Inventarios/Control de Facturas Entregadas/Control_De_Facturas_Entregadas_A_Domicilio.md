@@ -293,10 +293,11 @@ Este reporte no depende de una ruta seleccionada: se genera a partir de los par�
 
 #### 💼 Operación
 - [ ] 1. Hacer clic en "Reporte Control de Facturas".
-- [ ] 2. Sin modificar los valores por defecto, hacer clic en "Generar".
+- [ ] 2. Sin modificar los valores por defecto, hacer clic en "Generar". Si hay datos de rutas con los parámetros, se generará un reporte y se mostrará un diálogo de confirmación, de lo contrario se mostrará el mensaje "No se encontraron facturas con los parámetros seleccionados.".
 
 #### 🛡️ Validaciones
-- [ ] El PDF se descarga automáticamente (listado de todas las facturas del día, todos los estados y almacenes).
+- [ ] El PDF se descarga automáticamente de haber datos del reporte (listado de todas las facturas del día, todos los estados y almacenes).
+- [ ] La pantalla muestra el mensaje de error (no hay datos que mostrar en el reporte).
 - [ ] El diálogo permanece abierto con los mismos valores capturados.
 
 ### 17. Reporte Control de Facturas con fecha final menor a la inicial
