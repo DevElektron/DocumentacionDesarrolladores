@@ -207,7 +207,7 @@ Este reporte no depende de una ruta seleccionada: se genera a partir de los par�
 [ver Política 3](#politica-3-eliminar-ruta)
 
 #### 💼 Operación
-- [ ] 1. Seleccionar una ruta en estado "En Ruta" o "Ruta Terminada".
+- [ ] 1. Seleccionar una ruta en estado "En Ruta" o "Ruta Terminada" e intenta hacer clic en el botón de Eliminar.
 
 #### 🛡️ Validaciones
 - [ ] El botón "Eliminar" permanece deshabilitado (no es posible provocar el mensaje de error de estado desde la UI normal, ya que el botón nunca se habilita).
