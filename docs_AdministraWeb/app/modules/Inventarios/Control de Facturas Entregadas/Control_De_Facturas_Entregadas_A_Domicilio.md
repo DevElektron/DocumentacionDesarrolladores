@@ -309,7 +309,7 @@ Este reporte no depende de una ruta seleccionada: se genera a partir de los par�
 
 #### 🛡️ Validaciones
 - [ ] Se muestra la advertencia: *"La fecha final no puede ser menor a la fecha inicial"* (título "Error de Rango").
-- [ ] No se envía la solicitud del reporte.
+- [ ] No se genera el reporte.
 
 ### 18. Reporte Control de Facturas con almacén final menor al inicial
 
