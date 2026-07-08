@@ -81,7 +81,7 @@ Los botones de impresión (Imprimir Folio, Reporte Contrarecibo, Control de Entr
 Al capturar una nueva ruta desde el botón "Agregar":
 
 - El encabezado (Almacén, Zona, Supervisor, Chofer) es obligatorio en su totalidad.
-- Debe capturarse al menos una factura en la tabla de detalle; cada línea se completa buscando la factura por su autocompletador (el sistema solo permite seleccionar facturas existentes).
+- Debe capturarse al menos una factura en la tabla de detalle; cada línea se completa buscando la factura por su buscador (el sistema solo permite seleccionar facturas existentes).
 - No se permite capturar la misma factura dos veces en la lista.
 - Al confirmar, el sistema asigna automáticamente el número de consecutivo de la nueva ruta.
 - Tras registrar exitosamente la ruta, el sistema genera en paralelo el reporte "Bitácora de Trayectos" y — si la ruta incluye al menos una factura marcada como Contrarecibo — el reporte "Contrarecibo", y pregunta al usuario si desea visualizarlos.
