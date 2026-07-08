@@ -45,17 +45,18 @@ Pantalla de consulta maestro-detalle para administrar las rutas de entrega de fa
 
 | Tipo UI | Elemento | Descripción | Rol permitido |
 |---------|----------|-------------|---------------|
-| Botón | `cfe-btn-agregar` | Botón "Agregar" (nueva ruta de entrega) |  |
-| Botón | `cfe-btn-en-ruta` | Botón "Iniciar Ruta" |  |
-| Botón | `cfe-btn-eliminar` | Botón "Eliminar" ruta |  |
-| Botón | `cfe-btn-rec-fac` | Botón "Recepción de Facturas" |  |
-| Botón | `cfe-btn-imprimir-folio` | Botón "Imprimir Folio Seleccionado" |  |
-| Botón | `cfe-btn-contrarecibo` | Botón "Imprimir Reporte Contrarecibo" |  |
-| Botón | `cfe-btn-entrega-unidades` | Botón "Control de Entrega de Facturas a Unidades" |  |
-| Botón | `cfe-btn-con-fac` | Botón "Reporte Control de Facturas" |  |
-| Pantalla | `administra.inventarios.controldefacturasentregadas` | Acceso general a la pantalla y a los grids (Rutas / Facturas) |  |
+| Botón | `cfe-btn-agregar` | Botón "Agregar" (nueva ruta de entrega) | Almacenista |
+| Botón | `cfe-btn-en-ruta` | Botón "Iniciar Ruta" | Almacenista |
+| Botón | `cfe-btn-eliminar` | Botón "Eliminar" ruta | Almacenista |
+| Botón | `cfe-btn-rec-fac` | Botón "Recepción de Facturas" | Almacenista |
+| Botón | `cfe-btn-imprimir-folio` | Botón "Imprimir Folio Seleccionado" | Almacenista |
+| Botón | `cfe-btn-contrarecibo` | Botón "Imprimir Reporte Contrarecibo" | Almacenista |
+| Botón | `cfe-btn-entrega-unidades` | Botón "Control de Entrega de Facturas a Unidades" | Almacenista |
+| Botón | `cfe-btn-con-fac` | Botón "Reporte Control de Facturas" | Almacenista |
+| Pantalla | `administra.inventarios.controldefacturasentregadas` | Acceso general a la pantalla y a los grids (Rutas / Facturas) | Almacenista |
 
-> El botón "Refrescar" no tiene permiso asociado — está siempre visible.
+> El botón "Refrescar" no tiene permiso asociado — está siempre visible.  
+> Si se desea agregar otro rol o permiso para un usuario se solicita vía Security.
 
 ---
 
