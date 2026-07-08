@@ -167,7 +167,6 @@ Este reporte no depende de una ruta seleccionada: se genera a partir de los par�
 - [ ] 3. Intentar aceptar.
 
 #### 🛡️ Validaciones
-- [ ] Se muestra el mensaje: *"Todos los campos del encabezado son requeridos."*
 - [ ] Cada campo faltante marca su error correspondiente (ej. *"Seleccionar un almacén"*, *"Seleccionar una zona"*, *"Seleccionar un supervisor"*, *"Seleccionar un chofer"*).
 
 ### 5. Intentar agregar ruta sin facturas o con filas inválidas
