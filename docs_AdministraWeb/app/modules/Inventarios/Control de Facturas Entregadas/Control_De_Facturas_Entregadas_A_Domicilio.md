@@ -130,7 +130,7 @@ Este reporte no depende de una ruta seleccionada: se genera a partir de los par�
 
 #### 🛡️ Validaciones
 - [ ] El diálogo de confirmación muestra el texto exacto: *"¿Seguro quieres poner en ruta este registro?"*
-- [ ] Al confirmar, la ruta cambia su círculo de estado a azul (En Ruta) y se registran fecha/hora de inicio.
+- [ ] Al confirmar, la ruta cambia su círculo de estado a azul (En Ruta) y se registran fecha/hora de inicio, al igual que las facturas relacionadas.
 - [ ] La misma fila permanece seleccionada tras recargar el grid.
 
 ### 2. Intentar iniciar ruta sin selección o con ruta que no está "En Espera"
